@@ -1,12 +1,15 @@
 .divCarrito{
     margin-right: 3rem;
     display: flex;
-}
+    
+    
+    .cart{
+        height: 3rem;
 
-.cart{
-    height: 2rem;
-
-}
-.spanCart{
-    color: white;
+    }
+        .spanCart{
+            color: white;
+            padding-top: 0.7rem;
+            
+    }
 }
