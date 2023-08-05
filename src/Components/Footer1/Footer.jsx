@@ -7,8 +7,8 @@ import './Footer.scss'
 export const Footer = () => {
 
     return (
-        <div class="container-fluid">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        
+            <footer class="d-flex flex-wrap justify-content-between align-items-center footer1">
                 <div class="col-md-4 d-flex align-items-center">
                     <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                         <svg class="bi" width="30" height="24"></svg>
@@ -22,7 +22,6 @@ export const Footer = () => {
                     <li className="ms-3"><Link className="text-body-secondary" to="https://www.facebook.com/" target='_blank'><FaFacebook /></Link></li>
                 </ul>
             </footer>
-        </div>
     )
 }
 

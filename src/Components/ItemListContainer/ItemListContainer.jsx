@@ -1,4 +1,4 @@
-
+import './ItemListContainer.scss'
 
 
 export const ItemListContainer = (props) => {
@@ -8,8 +8,13 @@ export const ItemListContainer = (props) => {
 
         <div>
         
-        <h1>{props.greeting}</h1>
+        <h3>{props.greeting}</h3>
+
+        
 
         </div>
     )
 }
+
+
+export default ItemListContainer;

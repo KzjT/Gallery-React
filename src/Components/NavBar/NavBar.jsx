@@ -7,6 +7,8 @@ import logo from '../../img/art_logo.svg';
 
 export const NavBar = () => {
     return (
+      
+           
         <Navbar className="Navbar" bg="dark" data-bs-theme="dark">
             <Container fluid className="navbar-container">
                 <Navbar.Brand as={NavLink} to="/" className="mr-auto full-left">
@@ -26,6 +28,8 @@ export const NavBar = () => {
             </Container>
             <CartWidget />
         </Navbar>
+    
+       
     );
 };
 

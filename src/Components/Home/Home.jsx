@@ -10,6 +10,7 @@ export const Home = () => {
 
         <h1>Welcome to Art Gallery</h1>
 
+        <hr/>
 
             
         </div>
