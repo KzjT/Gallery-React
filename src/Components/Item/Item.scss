@@ -11,6 +11,22 @@
 
 }
 
+.ItemDatosContainer{
+    height: auto;
+    
+}
+
+.Item-contenedor{
+    margin-bottom: 1rem;
+    
+}
+
+
+.ItemCountContainer{
+    display: flex;
+    justify-content: center;
+}
+
 .nameObras{
     padding-left: 5px;
 }
@@ -29,7 +45,7 @@
     width: 400px;
     height: 300px;
     border: 4px black solid;
-    padding: 2rem;
+    padding: 1rem;
 
 }
 

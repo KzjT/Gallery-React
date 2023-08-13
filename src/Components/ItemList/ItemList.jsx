@@ -2,6 +2,7 @@ import React from 'react';
 import "./ItemList.scss"
 import Item from '../Item/Item';
 
+
 export const ItemList = ({ productos }) => {
     return (
         <div className='itemList-sty'>
@@ -12,6 +13,7 @@ export const ItemList = ({ productos }) => {
                     <Item key={producto.id} producto={producto} />
                 ))
             )}
+            
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Item.scss"
+import ItemCount from "../ItemCount/ItemCount";
 
 
 
@@ -19,8 +20,8 @@ export const Item = ({producto}) => {
     
 
     return(
-        
-        <div>
+
+        <div className="Item-contenedor">
 
 
         <div className="containerObras">
@@ -28,6 +29,12 @@ export const Item = ({producto}) => {
             <img className="imgObras" src={producto.img} alt={producto.id} />
 
         </div>
+
+        
+        <div className="ItemDatosContainer">
+
+       
+
             <p className="nameObras">{producto.name} </p>
 
             <p className="artistObras">{producto.artist}</p>
@@ -39,7 +46,13 @@ export const Item = ({producto}) => {
             <span className="priceObras">{formatter.format(producto.price)}</span>
 
 
+            </div>
 
+            <div className="ItemCountContainer">
+            <ItemCount/>
+
+            </div>
+            
             </div>
 
 

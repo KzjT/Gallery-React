@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ItemCount.scss"
 
 
 
@@ -24,16 +25,12 @@ const countResta = () =>{
     return(
         <>
 
+        <button className="btn btn-dark btnCount" onClick={countResta}>-</button>
 
-        <p>asdasdaaaa</p>
-
-
-        <button className="btn btn-primary" onClick={countResta}>-</button>
-
-        <span >{count}</span>
+        <span className="countSpan">{count}</span>
 
 
-        <button className="btn btn-primary" onClick={countSuma}>+</button>
+        <button className="btn btn-success btnCount" onClick={countSuma}>+</button>
         
         
         </>

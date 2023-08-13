@@ -1,4 +1,3 @@
-import ItemCount from '../ItemCount/ItemCount';
 import './Home.scss'
 
 
@@ -13,7 +12,6 @@ export const Home = () => {
 
         <hr/>
 
-        <ItemCount/>
             
         </div>
     )
