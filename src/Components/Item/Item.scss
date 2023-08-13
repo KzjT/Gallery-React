@@ -1,0 +1,43 @@
+.containerObras{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 420px;
+    height:auto;
+    margin-right: 2rem;
+    justify-content: space-between;
+    
+    
+
+}
+
+.nameObras{
+    padding-left: 5px;
+}
+
+.artistObras{
+
+    padding-left: 5px;
+}
+
+.originObras{
+    padding-left: 5px;
+}
+
+.imgObras{
+
+    width: 400px;
+    height: 300px;
+    border: 4px black solid;
+    padding: 2rem;
+
+}
+
+.priceObras{
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.sizeObras{
+    padding-left: 5px;
+}

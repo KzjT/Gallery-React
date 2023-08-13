@@ -1,21 +1,18 @@
-import './Gallery.scss'
+import React from 'react';
+import './Gallery.scss';
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
-
-
-export const Gallery = () => {
-
+export const Gallery = ({ productos }) => {
     return (
-
-        <div>
-
+        <div className='galleryContainer'>
             <h1>Gallery</h1>
-
-            <hr/>
-
+            <hr />
 
 
-            
+            <ItemListContainer productos={productos} />
+
         </div>
+
     )
 }
 

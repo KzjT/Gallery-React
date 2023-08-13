@@ -1,0 +1,777 @@
+[
+
+{
+    "id" :"001" ,
+    "name":"Beholden" ,
+    "artist":"Shungo oe" ,
+    "origin":"Japan" ,
+    "category": "Abstracto",
+    "size":"90x100cm" ,
+    "price": 3687000 ,
+    "img": "../obras/Abstracto/obra1.jpeg"
+},
+
+{
+    "id" : "002",
+    "name": "Liquid emotions",
+    "artist":"Pin Vega" ,
+    "origin":"Spain" ,
+    "category":"Abstracto" ,
+    "size":"90x120cm" ,
+    "price": 8566000,
+    "img": "../obras/Abstracto/obra2.webp"
+},
+
+{
+    "id" : "003",
+    "name": "Deep blue sea in Amorgos",
+    "artist":"Ford Smith" ,
+    "origin": "USA",
+    "category":"Abstracto" ,
+    "size":"70x90cm" ,
+    "price": 550425000,
+    "img":"../obras/Abstracto/obra3.jpeg" 
+},
+
+{
+    "id" : "004",
+    "name": "Autumn in Kyoto",
+    "artist":"Simone Monney" ,
+    "origin": "Swiss",
+    "category":"Abstracto" ,
+    "size":"100x81cm" ,
+    "price": 1496400 ,
+    "img":"../obras/Abstracto/obra4.jpeg" 
+},
+
+
+{
+    "id" : "005",
+    "name": "",
+    "artist":"Maria Moretti" ,
+    "origin": "Argentina",
+    "category":"Abstracto" ,
+    "size":"81x130cm" ,
+    "price": 2882000,
+    "img":"../obras/Abstracto/obra5.jpeg" 
+},
+
+
+{
+    "id" : "006",
+    "name": "",
+    "artist":"Artur Kulikov" ,
+    "origin": "Russia",
+    "category":"Abstracto" ,
+    "size":"110x150cm" ,
+    "price": 2162200,
+    "img":"../obras/Abstracto/obra6.webp" 
+},
+
+
+{
+    "id" : "007",
+    "name": "",
+    "artist":"Piet Mondrian" ,
+    "origin": "Holland",
+    "category":"Abstracto" ,
+    "size":"70x90cm" ,
+    "price": 4033200,
+    "img":"../obras/Abstracto/obra7.webp"
+},
+
+
+{
+    "id" : "008",
+    "name": "",
+    "artist":"Hélène Jacqz" ,
+    "origin": "France",
+    "category":"Abstracto" ,
+    "size":"80x100cm" ,
+    "price": 3410400,
+    "img":"../obras/Abstracto/obra8.jpeg" 
+},
+
+
+{
+    "id" : "009",
+    "name": "",
+    "artist":"Jackson Pollock" ,
+    "origin": "USA",
+    "category":"Abstracto" ,
+    "size":"100x60cm" ,
+    "price": 2317000,
+    "img":"../obras/Abstracto/obra9.jpeg" 
+},
+
+
+{
+    "id" : "010",
+    "name": "",
+    "artist":"Peter Nottrott" ,
+    "origin": "Hungary",
+    "category":"Abstracto" ,
+    "size":"80x141cm" ,
+    "price": 3486500,
+    "img":"../obras/Abstracto/obra10.jpeg" 
+},
+
+
+{
+    "id" : "011",
+    "name": "",
+    "artist":"Nikolaos Schizas" ,
+    "origin": "Spain",
+    "category":"Abstracto" ,
+    "size":"120x85cm" ,
+    "price": 5041200,
+    "img":"../obras/Abstracto/obra11.jpeg" 
+},
+
+
+{
+    "id" : "012",
+    "name": "",
+    "artist":"Wayne Roth" ,
+    "origin": "USA",
+    "category":"Abstracto" ,
+    "size":"69x166cm" ,
+    "price": 4879400,
+    "img":"../obras/Abstracto/obra12.jpeg" 
+},
+
+
+{
+    "id" : "013",
+    "name": "",
+    "artist":"Christoph Schrein" ,
+    "origin": "Germany",
+    "category":"Abstracto" ,
+    "size":"120x84cm" ,
+    "price": 11195684,
+    "img":"../obras/Abstracto/obra13.jpeg" 
+},
+
+
+{
+    "id" : "014",
+    "name": "",
+    "artist":"Paul Klee" ,
+    "origin": "United Kingdom",
+    "category":"Abstracto" ,
+    "size":"100x200cm" ,
+    "price":5190400 ,
+    "img":"../obras/Abstracto/obra14.jpeg" 
+},
+
+
+{
+    "id" : "015",
+    "name": "",
+    "artist":"Mathias Wunderlich" ,
+    "origin": "Germany",
+    "category":"Abstracto" ,
+    "size":"90x150cm" ,
+    "price":2112400 ,
+    "img":"../obras/Abstracto/obra15.jpeg" 
+},
+
+
+{
+    "id" : "016",
+    "name": "",
+    "artist":"Nikolaos Schizas" ,
+    "origin": "Spain",
+    "category":"Abstracto" ,
+    "size":"30x80cm" ,
+    "price":8808000 ,
+    "img":"../obras/Abstracto/obra1.jpeg" 
+},
+
+
+{
+    "id" : "017",
+    "name": "",
+    "artist":"Marta Zawadzka" ,
+    "origin": "Poland",
+    "category":"Pop Art" ,
+    "size":"117x117cm" ,
+    "price":3380600 ,
+    "img":"../obras/ArtePop/obra16.jpeg" 
+},
+
+
+{
+    "id" : "018",
+    "name": "",
+    "artist":"Marta Zawadzka" ,
+    "origin": "Poland",
+    "category":"Pop Art" ,
+    "size":"105x60cm" ,
+    "price":9762800 ,
+    "img":"../obras/ArtePop/obra18.jpeg" 
+},
+
+
+{
+    "id" : "019",
+    "name": "",
+    "artist":"Andy Warhol" ,
+    "origin": "USA",
+    "category":"Pop Art" ,
+    "size":"105x60cm" ,
+    "price": 5433500,
+    "img":"../obras/ArtePop/obra19.jpeg" 
+},
+
+
+{
+    "id" : "020",
+    "name": "",
+    "artist":"Richard Hamilton" ,
+    "origin": "United Kingdom",
+    "category":"Pop Art" ,
+    "size":"80x60cm" ,
+    "price": 7566400,
+    "img":"../obras/ArtePop/obra20.jpeg" 
+},
+
+
+{
+    "id" : "021",
+    "name": "",
+    "artist":"Yayoi Kusama" ,
+    "origin": "Japan",
+    "category":"Pop Art" ,
+    "size":"150x100cm" ,
+    "price":2399600 ,
+    "img":"../obras/ArtePop/obra21.jpeg" 
+},
+
+
+{
+    "id" : "022",
+    "name": "",
+    "artist":"Mimmo Rotella" ,
+    "origin": "Italy",
+    "category":"Pop Art" ,
+    "size":"80x120cm" ,
+    "price": 1933600,
+    "img":"../obras/ArtePop/obra22.jpeg" 
+},
+
+
+{
+    "id" : "023",
+    "name": "",
+    "artist":"Niki de Saint Phalle" ,
+    "origin": "France",
+    "category":"Pop Art" ,
+    "size":"122x92cm" ,
+    "price": 3733200,
+    "img":"../obras/ArtePop/obra23.jpeg" 
+},
+
+
+{
+    "id" : "024",
+    "name": "",
+    "artist":"Erró" ,
+    "origin": "Island",
+    "category":"Pop Art" ,
+    "size":"102x152cm" ,
+    "price": 2383600,
+    "img":"../obras/ArtePop/obra24.jpeg" 
+},
+
+
+{
+    "id" : "025",
+    "name": "",
+    "artist":"Sigmar Polke" ,
+    "origin": "Germany",
+    "category":"Pop Art" ,
+    "size":"87x130cm" ,
+    "price":5190400 ,
+    "img":"../obras/ArtePop/obra25.jpeg" 
+},
+
+
+{
+    "id" : "026",
+    "name": "",
+    "artist":"Roy Lichtenstein" ,
+    "origin": "USA",
+    "category":"Pop Art" ,
+    "size":"50x70cm" ,
+    "price": 10399400,
+    "img":"../obras/ArtePop/obra17.jpeg" 
+},
+
+
+{
+    "id" : "027",
+    "name": "",
+    "artist":"Beeple" ,
+    "origin": "USA",
+    "category":"Digital" ,
+    "size":"107x160cm" ,
+    "price":2000400 ,
+    "img":"../obras/Digital/digital1.jpeg" 
+},
+
+
+{
+    "id" : "028",
+    "name": "",
+    "artist":"Murat Sayginer" ,
+    "origin": "Turkey",
+    "category":"Digital" ,
+    "size":"20x25cm" ,
+    "price":1209000 ,
+    "img":"../obras/Digital/digital2.jpeg" 
+},
+
+
+{
+    "id" : "029",
+    "name": "",
+    "artist":"Carla Gannis" ,
+    "origin": "USA",
+    "category":"Digital" ,
+    "size":"80x60cm" ,
+    "price":1655400 ,
+    "img":"../obras/Digital/digital3.jpeg" 
+},
+
+
+{
+    "id" : "030",
+    "name": "",
+    "artist":"Refik Anadol" ,
+    "origin": "Turkey",
+    "category":"Digital" ,
+    "size":"80x66cm" ,
+    "price":1793600 ,
+    "img":"../obras/Digital/digital4.jpeg" 
+},
+
+
+{
+    "id" : "031",
+    "name": "",
+    "artist":"Miguel Chevalier" ,
+    "origin": "France",
+    "category":"Digital" ,
+    "size":"70x50cm" ,
+    "price": 1177400,
+    "img":"../obras/Digital/digital5.jpeg" 
+},
+
+
+{
+    "id" : "032",
+    "name": "",
+    "artist":"Akuart" ,
+    "origin": "Spain",
+    "category":"Digital" ,
+    "size":"80x100cm" ,
+    "price":3733200 ,
+    "img":"../obras/Digital/digital6.jpeg" 
+},
+
+
+{
+    "id" : "033",
+    "name": "",
+    "artist":"Raphael Lacoste" ,
+    "origin": "Canada",
+    "category":"Digital" ,
+    "size":"40x60cm" ,
+    "price": 1802400,
+    "img":"../obras/Digital/digital4.jpeg" 
+},
+
+
+{
+    "id" : "034",
+    "name": "",
+    "artist":"Mario Klingemann" ,
+    "origin": "Germany",
+    "category":"Digital" ,
+    "size":"100x60cm" ,
+    "price":2387100,
+    "img":"../obras/Digital/digital1.jpeg" 
+},
+
+
+{
+    "id" : "035",
+    "name": "",
+    "artist":"Helena Sarin " ,
+    "origin": "Russia",
+    "category":"Digital" ,
+    "size":"60x90cm" ,
+    "price": 2310400,
+    "img":"../obras/Digital/digital9.jpeg" 
+},
+
+
+{
+    "id" : "036",
+    "name": "",
+    "artist":"Sarah Zucker" ,
+    "origin": "USA",
+    "category":"Digital" ,
+    "size":"140x105cm" ,
+    "price":2387000 ,
+    "img":"../obras/Digital/digital10.jpeg" 
+},
+
+
+{
+    "id" : "037",
+    "name": "",
+    "artist":"Kit Webster" ,
+    "origin": "Austria",
+    "category":"Digital" ,
+    "size":"90x100cm" ,
+    "price": 1520600,
+    "img":"../obras/Digital/digital11.jpeg" 
+},
+
+
+{
+    "id" : "038",
+    "name": "",
+    "artist":"Sougwen Chung" ,
+    "origin": "Canada",
+    "category":"Digital" ,
+    "size":"50x75cm" ,
+    "price":1256400 ,
+    "img":"../obras/Digital/digital12.jpeg" 
+},
+
+
+{
+    "id" : "039",
+    "name": "",
+    "artist":"Matt Pyke " ,
+    "origin": "United Kingdom",
+    "category":"Digital" ,
+    "size":"80x80cm" ,
+    "price": 1258800,
+    "img":"../obras/Digital/digital13.jpeg" 
+},
+
+
+{
+    "id" : "040",
+    "name": "",
+    "artist":"Cao Fei " ,
+    "origin": "China",
+    "category":"Digital" ,
+    "size":"50x41cm" ,
+    "price": 875200,
+    "img":"../obras/Digital/digital14.jpeg" 
+},
+
+
+{
+    "id" : "041",
+    "name": "",
+    "artist":"Quayola " ,
+    "origin": "Italy",
+    "category":"Digital" ,
+    "size":"120x190cm" ,
+    "price": 3178200,
+    "img":"../obras/Digital/digital15.jpeg" 
+},
+
+
+{
+    "id" : "042",
+    "name": "",
+    "artist":"Anish Kapoor" ,
+    "origin": "India",
+    "category":"Esculturas" ,
+    "size":"15x35x10cm" ,
+    "price":2815200 ,
+    "img":"../obras/Esculturas/escultura1.jpeg" 
+},
+
+
+{
+    "id" : "043",
+    "name": "",
+    "artist":"Ai Weiwei" ,
+    "origin": "China",
+    "category":"Esculturas" ,
+    "size":"18x25x20cm" ,
+    "price": 1054800,
+    "img":"../obras/Esculturas/escultura2.jpeg" 
+},
+
+
+{
+    "id" : "044",
+    "name": "",
+    "artist":"Jeff Koons" ,
+    "origin": "USA",
+    "category":"Esculturas" ,
+    "size":"30x20x15cm" ,
+    "price": 1601000,
+    "img":"../obras/Esculturas/escultura3.jpeg" 
+},
+
+
+{
+    "id" : "045",
+    "name": "",
+    "artist":"Antony Gormley " ,
+    "origin": "United Kingdom",
+    "category":"Esculturas" ,
+    "size":"67x82x17cm" ,
+    "price": 873200,
+    "img":"../obras/Esculturas/escultura4.jpeg" 
+},
+
+
+{
+    "id" : "046",
+    "name": "",
+    "artist":"Jaume Plensa" ,
+    "origin": "Spain",
+    "category":"Esculturas" ,
+    "size":"20x19x10cm" ,
+    "price": 1601000,
+    "img":"../obras/Esculturas/escultura5.webp" 
+},
+
+
+{
+    "id" : "047",
+    "name": "",
+    "artist":"Olafur Eliasson" ,
+    "origin": "Island",
+    "category":"Esculturas" ,
+    "size":"15x35x10cm" ,
+    "price": 1535200,
+    "img":"../obras/Esculturas/escultura6.jpeg" 
+},
+
+
+{
+    "id" : "048",
+    "name": "",
+    "artist":"Louise Bourgeois" ,
+    "origin": "France",
+    "category":"Esculturas" ,
+    "size":"18x25x20cm" ,
+    "price":2165400 ,
+    "img":"../obras/Esculturas/escultura7.jpeg" 
+},
+
+
+{
+    "id" : "049",
+    "name": "",
+    "artist":"Yayoi Kusama" ,
+    "origin": "Japan",
+    "category":"Esculturas" ,
+    "size":"20x19x10cm" ,
+    "price": 1236800,
+    "img":"../obras/Esculturas/escultura9.jpeg" 
+},
+
+
+{
+    "id" : "050",
+    "name": "",
+    "artist":"Richard Serra" ,
+    "origin": "USA",
+    "category":"Esculturas" ,
+    "size":"30x40x22cm" ,
+    "price": 2357200,
+    "img":"../obras/Esculturas/escultura3.jpeg" 
+},
+
+
+{
+    "id" : "051",
+    "name": "",
+    "artist":"Doris Salcedo" ,
+    "origin": "Colombia",
+    "category":"Esculturas" ,
+    "size":"51x26x15cm" ,
+    "price": 2115600,
+    "img":"../obras/Esculturas/escultura10.jpeg" 
+},
+
+
+{
+    "id" : "052",
+    "name": "",
+    "artist":"Kris Gebhardt" ,
+    "origin": "USA",
+    "category":"Photography" ,
+    "size":"140x105cm" ,
+    "price": 2096500,
+    "img":"../obras/Fotografia/photo1.jpeg" 
+},
+
+
+{
+    "id" : "053",
+    "name": "",
+    "artist":"Kris Gebhardt" ,
+    "origin": "USA",
+    "category":"Photography" ,
+    "size":"30x45cm" ,
+    "price": 2041800,
+    "img":"../obras/Fotografia/photo2.jpeg" 
+},
+
+
+{
+    "id" : "054",
+    "name": "",
+    "artist":"Ina Otzko" ,
+    "origin": "Norway",
+    "category":"Photography" ,
+    "size":"80x65cm" ,
+    "price": 112600,
+    "img":"../obras/Fotografia/photo3.jpeg" 
+},
+
+{
+    "id" : "055",
+    "name": "",
+    "artist":"Ina Otzko" ,
+    "origin": "Norway",
+    "category":"Photography" ,
+    "size":"70x105cm" ,
+    "price": 874200,
+    "img":"../obras/Fotografia/photo4.jpeg" 
+},
+
+
+{
+    "id" : "056",
+    "name": "",
+    "artist":"Ina Otzko" ,
+    "origin": "Norway",
+    "category":"Photography" ,
+    "size":"80x60cm" ,
+    "price":4231200 ,
+    "img":"../obras/Fotografia/photo5.jpeg" 
+},
+
+
+{
+    "id" : "057",
+    "name": "",
+    "artist":"Kris Gebhardt" ,
+    "origin": "USA",
+    "category":"Photography" ,
+    "size":"50x75cm" ,
+    "price": 1687600,
+    "img":"../obras/Fotografia/photo6.jpeg" 
+},
+
+
+{
+    "id" : "058",
+    "name": "",
+    "artist":"Martin Ecker" ,
+    "origin": "Germany",
+    "category":"Photography" ,
+    "size":"70x105cm" ,
+    "price": 1308200,
+    "img":"../obras/Fotografia/photo7.jpeg" 
+},
+
+
+{
+    "id" : "059",
+    "name": "",
+    "artist":"Julien Nonnon" ,
+    "origin": "France",
+    "category":"Photography" ,
+    "size":"50x70cm" ,
+    "price": 1877299,
+    "img":"../obras/Fotografia/photo8.jpeg" 
+},
+
+
+{
+    "id" : "061",
+    "name": "",
+    "artist":"Grégory Herpe" ,
+    "origin": "France",
+    "category":"Photography" ,
+    "size":"50x70cm" ,
+    "price": 546600,
+    "img":"../obras/Fotografia/photo9.jpeg" 
+},
+
+
+{
+    "id" : "062",
+    "name": "Another dimension",
+    "artist":"Victor Tsebruk" ,
+    "origin": "Rusia",
+    "category":"Photography" ,
+    "size":"60x90cm" ,
+    "price": 35000 ,
+    "img":"../obras/Fotografia/photo11.jpeg" 
+},
+
+{
+    "id" : "063",
+    "name": "Another dimension",
+    "artist":"Victor Tsebruk" ,
+    "origin": "Rusia",
+    "category":"Photography" ,
+    "size":"60x90cm" ,
+    "price": 35000 ,
+    "img":"../obras/Fotografia/photo12.jpeg" 
+},
+
+{
+    "id" : "064",
+    "name": "Another dimension",
+    "artist":"Victor Tsebruk" ,
+    "origin": "Rusia",
+    "category":"Photography" ,
+    "size":"60x90cm" ,
+    "price": 35000 ,
+    "img":"../obras/Fotografia/photo13.jpeg" 
+},
+
+{
+    "id" : "065",
+    "name": "Another dimension",
+    "artist":"Victor Tsebruk" ,
+    "origin": "Rusia",
+    "category":"Photography" ,
+    "size":"60x90cm" ,
+    "price": 35000 ,
+    "img":"../obras/Fotografia/photo14.jpeg" 
+},
+
+{
+    "id" : "066",
+    "name": "Another dimension",
+    "artist":"Victor Tsebruk" ,
+    "origin": "Rusia",
+    "category":"Photography" ,
+    "size":"60x90cm" ,
+    "price": 35000 ,
+    "img":"../obras/Fotografia/photo15.jpeg" 
+}
+
+
+
+
+]
