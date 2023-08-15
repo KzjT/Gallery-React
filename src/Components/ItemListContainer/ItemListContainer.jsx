@@ -1,16 +1,26 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ItemListContainer.scss';
 import ItemList from '../ItemList/ItemList';
-import data from '../../data/data.json';
 
 export const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        // Utiliza directamente la variable "data" que ya has importado
-        setProductos(data);
-        console.log(data); // Puedes mover este console.log aquí para mostrar los datos
 
+        const url = "../data/data.json";
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Error en la respuesta");
+                }
+                return response.json();
+            })
+            .then(data => {
+                setProductos(data);
+                console.log(data);
+            })
+            .catch(error => console.log(error));
     }, []);
 
     return (

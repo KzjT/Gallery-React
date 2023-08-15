@@ -33,7 +33,6 @@ export const Item = ({producto}) => {
         
         <div className="ItemDatosContainer">
 
-       
 
             <p className="nameObras">{producto.name} </p>
 
@@ -52,7 +51,7 @@ export const Item = ({producto}) => {
             <ItemCount/>
 
             </div>
-            
+
             </div>
 
 

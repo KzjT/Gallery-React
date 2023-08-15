@@ -1,3 +1,4 @@
+import  { Carrousel } from '../Carousel/Carousel';
 import './Home.scss'
 
 
@@ -7,10 +8,9 @@ export const Home = () => {
     return (
 
         <div>
+        
+            <Carrousel/>
 
-        <h1>Welcome to Art Gallery</h1>
-
-        <hr/>
 
             
         </div>
