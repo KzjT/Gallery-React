@@ -1,64 +1,63 @@
+.Item-contenedor{
+    margin-bottom: 2rem;
+    
+}
 .containerObras{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    width: 420px;
-    height:auto;
+    width: 300px; /* Add max-width to prevent items from becoming too wide */
+    height: 250px;
     margin-right: 2rem;
+    margin-bottom: 2rem; /* Add margin to create spacing between items */
     justify-content: space-between;
-    
-    
-
-}
-
-.ItemDatosContainer{
-    height: auto;
-    
-}
-
-.Item-contenedor{
-    margin-bottom: 1rem;
-    
-}
-
-
-.ItemCountContainer{
-    display: flex;
-    justify-content: center;
-}
-
-.nameObras{
-    display: flex;
-    text-decoration:underline;
-    justify-content: center;
     align-items: center;
-    align-content: center;
-}
 
-.artistObras{
-
-    padding-left: 5px;
- 
-}
-
-.originObras{
-    padding-left: 5px;
 }
 
 .imgObras{
 
-    width: 400px;
-    height: 300px;
+    width: 100%; /* Make the image take full width */
+    height: 250px; /* Let the height adjust automatically */
     border: 4px black solid;
-    padding: 1rem;
+    padding: 0.6rem;
+
+}
+.ItemDatosContainer{
+    flex: 1; /* Allow this container to take remaining vertical space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+}
+
+
+
+.nameObras {
+    text-align: center;
+}
+
+.artistObras,
+.catObras,
+.originObras,
+.sizeObras,
+.priceObras {
+    text-align: center;
+    margin-top: 0.2rem;
+}
+
+
+
+
+.viewContainer{
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn-viewMore{
+    width: 90px;
+    margin-top: 1rem;
 
 }
 
-.priceObras{
-    font-weight: bold;
-    padding-left: 5px;
-}
-
-.sizeObras{
-    padding-left: 5px;
-}

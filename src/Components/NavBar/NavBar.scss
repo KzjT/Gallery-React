@@ -1,38 +1,42 @@
-.Navbar {
+/* Style the Navbar and other components as needed */
+.navv{
     background-image: url(../../img/background.svg);
     border: 20px #297ea6 solid;
-    height: 200px;
+}
+/* Style the dropdown toggle */
+.navbar-link .nav-link.dropdown-toggle {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    transition: color 0.2s ease-in-out;
 }
 
-.logo {
-    height: 3.5rem;
+.navbar-link .nav-link.dropdown-toggle:hover {
+    color: #f00;
 }
 
-.asd {
-    margin-right: 2rem;
+/* Style the dropdown menu */
+.navbar-link .dropdown-menu {
+    background-color: #297ea6;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
 }
 
-.logo {
-    width: 50px;
-    margin-right: 10px;
+.navbar-link .dropdown-item {
+    color: wheat;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
 }
 
-.navbar-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
 
-    .navbar-link {
-        color: white;
-        font-size: 25px;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        margin: 0 0.5rem;
-        transition: color 0.2s ease-in-out;
 
-        &:hover {
-            color: #f00;
-        }
-    }
+.navbar-link .dropdown-item:hover {
+    background-color: wheat;
+    color: black;
 }

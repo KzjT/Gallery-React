@@ -8,6 +8,7 @@
     "category": "Abstract",
     "size":"90x100cm" ,
     "price": 3687000 ,
+    "cant" : 1,
     "img": "../obras/Abstract/obra1.jpeg"
 },
 
@@ -19,6 +20,7 @@
     "category":"Abstract" ,
     "size":"90x120cm" ,
     "price": 8566000,
+    "cant" : 1,
     "img": "../obras/Abstract/obra2.webp"
 },
 
@@ -30,6 +32,7 @@
     "category":"Abstract" ,
     "size":"70x90cm" ,
     "price": 550425000,
+    "cant" : 1,
     "img":"../obras/Abstract/obra3.jpeg" 
 },
 
@@ -41,6 +44,7 @@
     "category":"Abstract" ,
     "size":"100x81cm" ,
     "price": 1496400 ,
+    "cant" : 1,
     "img":"../obras/Abstract/obra4.jpeg" 
 },
 
@@ -53,6 +57,7 @@
     "category":"Abstract" ,
     "size":"81x130cm" ,
     "price": 2882000,
+    "cant" : 1,
     "img":"../obras/Abstract/obra5.jpeg" 
 },
 
@@ -65,6 +70,7 @@
     "category":"Abstract" ,
     "size":"110x150cm" ,
     "price": 2162200,
+    "cant" : 1,
     "img":"../obras/Abstract/obra6.webp" 
 },
 
@@ -77,6 +83,7 @@
     "category":"Abstract" ,
     "size":"70x90cm" ,
     "price": 4033200,
+    "cant" : 1,
     "img":"../obras/Abstract/obra7.webp"
 },
 
@@ -89,6 +96,7 @@
     "category":"Abstract" ,
     "size":"80x100cm" ,
     "price": 3410400,
+    "cant" : 1,
     "img":"../obras/Abstract/obra8.jpeg" 
 },
 
@@ -101,6 +109,7 @@
     "category":"Abstract" ,
     "size":"100x60cm" ,
     "price": 2317000,
+    "cant" : 1,
     "img":"../obras/Abstract/obra9.jpeg" 
 },
 
@@ -113,6 +122,7 @@
     "category":"Abstract" ,
     "size":"80x141cm" ,
     "price": 3486500,
+    "cant" : 1,
     "img":"../obras/Abstract/obra10.jpeg" 
 },
 
@@ -125,6 +135,7 @@
     "category":"Abstract" ,
     "size":"120x85cm" ,
     "price": 5041200,
+    "cant" : 1,
     "img":"../obras/Abstract/obra11.jpeg" 
 },
 
@@ -137,6 +148,7 @@
     "category":"Abstract" ,
     "size":"69x166cm" ,
     "price": 4879400,
+    "cant" : 1,
     "img":"../obras/Abstract/obra12.jpeg" 
 },
 
@@ -149,6 +161,7 @@
     "category":"Abstract" ,
     "size":"120x84cm" ,
     "price": 11195684,
+    "cant" : 1,
     "img":"../obras/Abstract/obra13.jpeg" 
 },
 
@@ -161,6 +174,7 @@
     "category":"Abstract" ,
     "size":"100x200cm" ,
     "price":5190400 ,
+    "cant" : 1,
     "img":"../obras/Abstract/obra14.jpeg" 
 },
 
@@ -173,6 +187,7 @@
     "category":"Abstract" ,
     "size":"90x150cm" ,
     "price":2112400 ,
+    "cant" : 1,
     "img":"../obras/Abstract/obra15.jpeg" 
 },
 
@@ -185,6 +200,7 @@
     "category":"Abstract" ,
     "size":"30x80cm" ,
     "price":8808000 ,
+    "cant" : 1,
     "img":"../obras/Abstract/obra1.jpeg" 
 },
 
@@ -197,6 +213,7 @@
     "category":"Pop-Art" ,
     "size":"117x117cm" ,
     "price":3380600 ,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra16.jpeg" 
 },
 
@@ -209,6 +226,7 @@
     "category":"Pop-Art" ,
     "size":"105x60cm" ,
     "price":9762800 ,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra18.jpeg" 
 },
 
@@ -221,6 +239,7 @@
     "category":"Pop-Art" ,
     "size":"105x60cm" ,
     "price": 5433500,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra19.jpeg" 
 },
 
@@ -233,6 +252,7 @@
     "category":"Pop-Art" ,
     "size":"80x60cm" ,
     "price": 7566400,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra20.jpeg" 
 },
 
@@ -245,6 +265,7 @@
     "category":"Pop-Art" ,
     "size":"150x100cm" ,
     "price":2399600 ,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra21.jpeg" 
 },
 
@@ -257,6 +278,7 @@
     "category":"Pop-Art" ,
     "size":"80x120cm" ,
     "price": 1933600,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra22.jpeg" 
 },
 
@@ -269,6 +291,7 @@
     "category":"Pop-Art" ,
     "size":"122x92cm" ,
     "price": 3733200,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra23.jpeg" 
 },
 
@@ -281,6 +304,7 @@
     "category":"Pop-Art" ,
     "size":"102x152cm" ,
     "price": 2383600,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra24.jpeg" 
 },
 
@@ -293,6 +317,7 @@
     "category":"Pop-Art" ,
     "size":"87x130cm" ,
     "price":5190400 ,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra25.jpeg" 
 },
 
@@ -305,6 +330,7 @@
     "category":"Pop-Art" ,
     "size":"50x70cm" ,
     "price": 10399400,
+    "cant" : 1,
     "img":"../obras/ArtePop/obra17.jpeg" 
 },
 
@@ -329,6 +355,7 @@
     "category":"Digital" ,
     "size":"20x25cm" ,
     "price":1209000 ,
+    "cant" : 1,
     "img":"../obras/Digital/digital2.jpeg" 
 },
 
@@ -341,6 +368,7 @@
     "category":"Digital" ,
     "size":"80x60cm" ,
     "price":1655400 ,
+    "cant" : 1,
     "img":"../obras/Digital/digital3.jpeg" 
 },
 
@@ -353,6 +381,7 @@
     "category":"Digital" ,
     "size":"80x66cm" ,
     "price":1793600 ,
+    "cant" : 1,
     "img":"../obras/Digital/digital4.jpeg" 
 },
 
@@ -365,6 +394,7 @@
     "category":"Digital" ,
     "size":"70x50cm" ,
     "price": 1177400,
+    "cant" : 1,
     "img":"../obras/Digital/digital5.jpeg" 
 },
 
@@ -377,6 +407,7 @@
     "category":"Digital" ,
     "size":"80x100cm" ,
     "price":3733200 ,
+    "cant" : 1,
     "img":"../obras/Digital/digital6.jpeg" 
 },
 
@@ -389,6 +420,7 @@
     "category":"Digital" ,
     "size":"40x60cm" ,
     "price": 1802400,
+    "cant" : 1,
     "img":"../obras/Digital/digital4.jpeg" 
 },
 
@@ -401,6 +433,7 @@
     "category":"Digital" ,
     "size":"100x60cm" ,
     "price":2387100,
+    "cant" : 1,
     "img":"../obras/Digital/digital1.jpeg" 
 },
 
@@ -413,6 +446,7 @@
     "category":"Digital" ,
     "size":"60x90cm" ,
     "price": 2310400,
+    "cant" : 1,
     "img":"../obras/Digital/digital9.jpeg" 
 },
 
@@ -425,6 +459,7 @@
     "category":"Digital" ,
     "size":"140x105cm" ,
     "price":2387000 ,
+    "cant" : 1,
     "img":"../obras/Digital/digital10.jpeg" 
 },
 
@@ -437,6 +472,7 @@
     "category":"Digital" ,
     "size":"90x100cm" ,
     "price": 1520600,
+    "cant" : 1,
     "img":"../obras/Digital/digital11.jpeg" 
 },
 
@@ -449,6 +485,7 @@
     "category":"Digital" ,
     "size":"50x75cm" ,
     "price":1256400 ,
+    "cant" : 1,
     "img":"../obras/Digital/digital12.jpeg" 
 },
 
@@ -461,6 +498,7 @@
     "category":"Digital" ,
     "size":"80x80cm" ,
     "price": 1258800,
+    "cant" : 1,
     "img":"../obras/Digital/digital13.jpeg" 
 },
 
@@ -473,6 +511,7 @@
     "category":"Digital" ,
     "size":"50x41cm" ,
     "price": 875200,
+    "cant" : 1,
     "img":"../obras/Digital/digital14.jpeg" 
 },
 
@@ -485,6 +524,7 @@
     "category":"Digital" ,
     "size":"120x190cm" ,
     "price": 3178200,
+    "cant" : 1,
     "img":"../obras/Digital/digital15.jpeg" 
 },
 
@@ -497,6 +537,7 @@
     "category":"Esculturas" ,
     "size":"15x35x10cm" ,
     "price":2815200 ,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura1.jpeg" 
 },
 
@@ -509,6 +550,7 @@
     "category":"Esculturas" ,
     "size":"18x25x20cm" ,
     "price": 1054800,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura2.jpeg" 
 },
 
@@ -521,6 +563,7 @@
     "category":"Esculturas" ,
     "size":"30x20x15cm" ,
     "price": 1601000,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura3.jpeg" 
 },
 
@@ -533,6 +576,7 @@
     "category":"Esculturas" ,
     "size":"67x82x17cm" ,
     "price": 873200,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura4.jpeg" 
 },
 
@@ -545,6 +589,7 @@
     "category":"Esculturas" ,
     "size":"20x19x10cm" ,
     "price": 1601000,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura5.webp" 
 },
 
@@ -557,6 +602,7 @@
     "category":"Esculturas" ,
     "size":"15x35x10cm" ,
     "price": 1535200,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura6.jpeg" 
 },
 
@@ -569,6 +615,7 @@
     "category":"Esculturas" ,
     "size":"18x25x20cm" ,
     "price":2165400 ,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura7.jpeg" 
 },
 
@@ -581,6 +628,7 @@
     "category":"Esculturas" ,
     "size":"20x19x10cm" ,
     "price": 1236800,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura9.jpeg" 
 },
 
@@ -593,6 +641,7 @@
     "category":"Esculturas" ,
     "size":"30x40x22cm" ,
     "price": 2357200,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura3.jpeg" 
 },
 
@@ -605,6 +654,7 @@
     "category":"Esculturas" ,
     "size":"51x26x15cm" ,
     "price": 2115600,
+    "cant" : 1,
     "img":"../obras/Esculturas/escultura10.jpeg" 
 },
 
@@ -617,6 +667,7 @@
     "category":"Photography" ,
     "size":"140x105cm" ,
     "price": 2096500,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo1.jpeg" 
 },
 
@@ -629,6 +680,7 @@
     "category":"Photography" ,
     "size":"30x45cm" ,
     "price": 2041800,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo2.jpeg" 
 },
 
@@ -641,6 +693,7 @@
     "category":"Photography" ,
     "size":"80x65cm" ,
     "price": 112600,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo3.jpeg" 
 },
 
@@ -652,6 +705,7 @@
     "category":"Photography" ,
     "size":"70x105cm" ,
     "price": 874200,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo4.jpeg" 
 },
 
@@ -664,6 +718,7 @@
     "category":"Photography" ,
     "size":"80x60cm" ,
     "price":4231200 ,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo5.jpeg" 
 },
 
@@ -676,6 +731,7 @@
     "category":"Photography" ,
     "size":"50x75cm" ,
     "price": 1687600,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo6.jpeg" 
 },
 
@@ -688,6 +744,7 @@
     "category":"Photography" ,
     "size":"70x105cm" ,
     "price": 1308200,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo7.jpeg" 
 },
 
@@ -700,6 +757,7 @@
     "category":"Photography" ,
     "size":"50x70cm" ,
     "price": 1877299,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo8.jpeg" 
 },
 
@@ -712,6 +770,7 @@
     "category":"Photography" ,
     "size":"50x70cm" ,
     "price": 546600,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo9.jpeg" 
 },
 
@@ -724,6 +783,7 @@
     "category":"Photography" ,
     "size":"60x90cm" ,
     "price": 35000 ,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo11.jpeg" 
 },
 
@@ -735,6 +795,7 @@
     "category":"Photography" ,
     "size":"60x90cm" ,
     "price": 35000 ,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo12.jpeg" 
 },
 
@@ -746,6 +807,7 @@
     "category":"Photography" ,
     "size":"60x90cm" ,
     "price": 35000 ,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo13.jpeg" 
 },
 
@@ -757,6 +819,7 @@
     "category":"Photography" ,
     "size":"60x90cm" ,
     "price": 35000 ,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo14.jpeg" 
 },
 
@@ -768,6 +831,7 @@
     "category":"Photography" ,
     "size":"60x90cm" ,
     "price": 35000 ,
+    "cant" : 1,
     "img":"../obras/Fotografia/photo15.jpeg" 
 }
 

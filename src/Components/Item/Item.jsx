@@ -1,15 +1,9 @@
 import React from "react";
 import "./Item.scss";
-import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 
 const Item = ({ producto }) => {
-  const formatter = new Intl.NumberFormat("es-AR", {
-    style: "currency",
-    currency: "ARS",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  });
+
 
   return (
     <div className="Item-contenedor">
@@ -17,18 +11,13 @@ const Item = ({ producto }) => {
         <img className="imgObras" src={producto.img} alt={producto.id} />
       </div>
       <div className="ItemDatosContainer">
-        <p className="nameObras">{producto.name}</p>
-        <p className="artistObras">{producto.artist}</p>
-        <p className="originObras">{producto.origin}</p>
-        <p className="sizeObras">{producto.size}</p>
-        <span className="priceObras">{formatter.format(producto.price)}</span>
-        <Link to={`/detail/${producto.id}`} className="btn btn-outline-primary">
+        <p className="nameObras">{producto.artist}</p>
+        <p className="catObras"> {producto.category}</p>
+        <div className="viewContainer"> 
+        <Link to={`/detail/${producto.id}`} className="btn btn-outline-primary btn-viewMore">
           Ver más
         </Link>
-        <small>Categoría: {producto.categoria}</small>
-      </div>
-      <div className="ItemCountContainer">
-        <ItemCount />
+        </div>
       </div>
     </div>
   );

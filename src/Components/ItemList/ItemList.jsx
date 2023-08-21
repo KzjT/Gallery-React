@@ -5,7 +5,7 @@ import Item from '../Item/Item';
 
 export const ItemList = ({ productos }) => {
     return (
-        <div className='itemList-sty'>
+        <div className='itemList-sty container-fluid my-4'>
             {productos.length === 0 ? (
                 <div>Loading...</div>
             ) : (
@@ -13,7 +13,6 @@ export const ItemList = ({ productos }) => {
                     <Item key={producto.id} producto={producto} />
                 ))
             )}
-            
         </div>
     );
 }

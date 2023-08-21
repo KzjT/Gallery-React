@@ -1,15 +1,28 @@
-.divCarrito{
-    margin-right: 3rem;
+.divCarrito {
+    margin-right: 1rem;
     display: flex;
-    
-    
-    .cart{
+    align-items: center; /* Align vertically centered */
+
+    @media (max-width: 768px) {
+        margin: 1rem 0;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .cart {
         height: 3rem;
 
+        @media (max-width: 768px) {
+            height: 2.5rem;
+        }
     }
-        .spanCart{
-            color: white;
-            padding-top: 0.7rem;
-            
+
+    .spanCart {
+        color: white;
+        padding-left: 0.5rem; /* Adjust padding */
+
+        @media (max-width: 768px) {
+            padding-left: 0.3rem; /* Adjust padding */
+        }
     }
 }

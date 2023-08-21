@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./ItemDetailContainer.scss"
 import { useParams } from "react-router-dom";
 
 import ItemDetail from "../ItemDetail/ItemDetail";
@@ -29,8 +30,9 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return (
-        <div className="container my-5">
-            {item ? <ItemDetail producto={item} /> : <p>Loading...</p>}
+        <div className="container-fluid my-5 itemDetailContainer">
+            {item ? <ItemDetail producto={item}  />  : <p>Loading...</p>}
+            
         </div>
     );
 };
