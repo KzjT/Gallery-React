@@ -5,10 +5,10 @@
     "name":"Beholden" ,
     "artist":"Shungo oe" ,
     "origin":"Japan" ,
-    "category": "Abstracto",
+    "category": "Abstract",
     "size":"90x100cm" ,
     "price": 3687000 ,
-    "img": "../obras/Abstracto/obra1.jpeg"
+    "img": "../obras/Abstract/obra1.jpeg"
 },
 
 {
@@ -16,10 +16,10 @@
     "name": "Liquid emotions",
     "artist":"Pin Vega" ,
     "origin":"Spain" ,
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"90x120cm" ,
     "price": 8566000,
-    "img": "../obras/Abstracto/obra2.webp"
+    "img": "../obras/Abstract/obra2.webp"
 },
 
 {
@@ -27,10 +27,10 @@
     "name": "Deep blue sea in Amorgos",
     "artist":"Ford Smith" ,
     "origin": "USA",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"70x90cm" ,
     "price": 550425000,
-    "img":"../obras/Abstracto/obra3.jpeg" 
+    "img":"../obras/Abstract/obra3.jpeg" 
 },
 
 {
@@ -38,10 +38,10 @@
     "name": "Autumn in Kyoto",
     "artist":"Simone Monney" ,
     "origin": "Swiss",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"100x81cm" ,
     "price": 1496400 ,
-    "img":"../obras/Abstracto/obra4.jpeg" 
+    "img":"../obras/Abstract/obra4.jpeg" 
 },
 
 
@@ -50,10 +50,10 @@
     "name": "",
     "artist":"Maria Moretti" ,
     "origin": "Argentina",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"81x130cm" ,
     "price": 2882000,
-    "img":"../obras/Abstracto/obra5.jpeg" 
+    "img":"../obras/Abstract/obra5.jpeg" 
 },
 
 
@@ -62,10 +62,10 @@
     "name": "",
     "artist":"Artur Kulikov" ,
     "origin": "Russia",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"110x150cm" ,
     "price": 2162200,
-    "img":"../obras/Abstracto/obra6.webp" 
+    "img":"../obras/Abstract/obra6.webp" 
 },
 
 
@@ -74,10 +74,10 @@
     "name": "",
     "artist":"Piet Mondrian" ,
     "origin": "Holland",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"70x90cm" ,
     "price": 4033200,
-    "img":"../obras/Abstracto/obra7.webp"
+    "img":"../obras/Abstract/obra7.webp"
 },
 
 
@@ -86,10 +86,10 @@
     "name": "",
     "artist":"Hélène Jacqz" ,
     "origin": "France",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"80x100cm" ,
     "price": 3410400,
-    "img":"../obras/Abstracto/obra8.jpeg" 
+    "img":"../obras/Abstract/obra8.jpeg" 
 },
 
 
@@ -98,10 +98,10 @@
     "name": "",
     "artist":"Jackson Pollock" ,
     "origin": "USA",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"100x60cm" ,
     "price": 2317000,
-    "img":"../obras/Abstracto/obra9.jpeg" 
+    "img":"../obras/Abstract/obra9.jpeg" 
 },
 
 
@@ -110,10 +110,10 @@
     "name": "",
     "artist":"Peter Nottrott" ,
     "origin": "Hungary",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"80x141cm" ,
     "price": 3486500,
-    "img":"../obras/Abstracto/obra10.jpeg" 
+    "img":"../obras/Abstract/obra10.jpeg" 
 },
 
 
@@ -122,10 +122,10 @@
     "name": "",
     "artist":"Nikolaos Schizas" ,
     "origin": "Spain",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"120x85cm" ,
     "price": 5041200,
-    "img":"../obras/Abstracto/obra11.jpeg" 
+    "img":"../obras/Abstract/obra11.jpeg" 
 },
 
 
@@ -134,10 +134,10 @@
     "name": "",
     "artist":"Wayne Roth" ,
     "origin": "USA",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"69x166cm" ,
     "price": 4879400,
-    "img":"../obras/Abstracto/obra12.jpeg" 
+    "img":"../obras/Abstract/obra12.jpeg" 
 },
 
 
@@ -146,10 +146,10 @@
     "name": "",
     "artist":"Christoph Schrein" ,
     "origin": "Germany",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"120x84cm" ,
     "price": 11195684,
-    "img":"../obras/Abstracto/obra13.jpeg" 
+    "img":"../obras/Abstract/obra13.jpeg" 
 },
 
 
@@ -158,10 +158,10 @@
     "name": "",
     "artist":"Paul Klee" ,
     "origin": "United Kingdom",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"100x200cm" ,
     "price":5190400 ,
-    "img":"../obras/Abstracto/obra14.jpeg" 
+    "img":"../obras/Abstract/obra14.jpeg" 
 },
 
 
@@ -170,10 +170,10 @@
     "name": "",
     "artist":"Mathias Wunderlich" ,
     "origin": "Germany",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"90x150cm" ,
     "price":2112400 ,
-    "img":"../obras/Abstracto/obra15.jpeg" 
+    "img":"../obras/Abstract/obra15.jpeg" 
 },
 
 
@@ -182,10 +182,10 @@
     "name": "",
     "artist":"Nikolaos Schizas" ,
     "origin": "Spain",
-    "category":"Abstracto" ,
+    "category":"Abstract" ,
     "size":"30x80cm" ,
     "price":8808000 ,
-    "img":"../obras/Abstracto/obra1.jpeg" 
+    "img":"../obras/Abstract/obra1.jpeg" 
 },
 
 
@@ -194,7 +194,7 @@
     "name": "",
     "artist":"Marta Zawadzka" ,
     "origin": "Poland",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"117x117cm" ,
     "price":3380600 ,
     "img":"../obras/ArtePop/obra16.jpeg" 
@@ -206,7 +206,7 @@
     "name": "",
     "artist":"Marta Zawadzka" ,
     "origin": "Poland",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"105x60cm" ,
     "price":9762800 ,
     "img":"../obras/ArtePop/obra18.jpeg" 
@@ -218,7 +218,7 @@
     "name": "",
     "artist":"Andy Warhol" ,
     "origin": "USA",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"105x60cm" ,
     "price": 5433500,
     "img":"../obras/ArtePop/obra19.jpeg" 
@@ -230,7 +230,7 @@
     "name": "",
     "artist":"Richard Hamilton" ,
     "origin": "United Kingdom",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"80x60cm" ,
     "price": 7566400,
     "img":"../obras/ArtePop/obra20.jpeg" 
@@ -242,7 +242,7 @@
     "name": "",
     "artist":"Yayoi Kusama" ,
     "origin": "Japan",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"150x100cm" ,
     "price":2399600 ,
     "img":"../obras/ArtePop/obra21.jpeg" 
@@ -254,7 +254,7 @@
     "name": "",
     "artist":"Mimmo Rotella" ,
     "origin": "Italy",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"80x120cm" ,
     "price": 1933600,
     "img":"../obras/ArtePop/obra22.jpeg" 
@@ -266,7 +266,7 @@
     "name": "",
     "artist":"Niki de Saint Phalle" ,
     "origin": "France",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"122x92cm" ,
     "price": 3733200,
     "img":"../obras/ArtePop/obra23.jpeg" 
@@ -278,7 +278,7 @@
     "name": "",
     "artist":"Erró" ,
     "origin": "Island",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"102x152cm" ,
     "price": 2383600,
     "img":"../obras/ArtePop/obra24.jpeg" 
@@ -290,7 +290,7 @@
     "name": "",
     "artist":"Sigmar Polke" ,
     "origin": "Germany",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"87x130cm" ,
     "price":5190400 ,
     "img":"../obras/ArtePop/obra25.jpeg" 
@@ -302,7 +302,7 @@
     "name": "",
     "artist":"Roy Lichtenstein" ,
     "origin": "USA",
-    "category":"Pop Art" ,
+    "category":"Pop-Art" ,
     "size":"50x70cm" ,
     "price": 10399400,
     "img":"../obras/ArtePop/obra17.jpeg" 
