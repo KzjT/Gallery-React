@@ -8,7 +8,7 @@ export const Carrousel = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100 img-carrousel"
-                    src="https://paintingsonline.com.au/cdn/shop/files/Artboard_1_1_2048x.jpg?v=1676828808"
+                    src="https://www.artgalleryofhamilton.com/wp-content/uploads/2021/07/currentexh1-1.jpg"
                     alt="First slide"
                 />
                 <Carousel.Caption>
@@ -19,7 +19,7 @@ export const Carrousel = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100 img-carrousel"
-                    src="https://paintingsonline.com.au/cdn/shop/files/Artboard_3.jpg?v=1676828906"
+                    src="https://clyffordstillmuseum.org/wp-content/uploads/2020/06/Banner_PlanYourVisit_Accessblity_JF.jpg"
                     alt="Second slide"
                 />
                 <Carousel.Caption>
@@ -30,7 +30,7 @@ export const Carrousel = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100 img-carrousel"
-                    src="https://paintingsonline.com.au/cdn/shop/files/Artboard_2_1_2048x.jpg?v=1676828982"
+                    src="https://artlogic-res.cloudinary.com/w_1200,h_630,c_fill,f_auto,fl_lossy/ws-glennbrown/usr/images/exhibitions/home_page_image/174/first-floor-1-med.jpg"
                     alt="Third slide"
                 />
                 <Carousel.Caption>
