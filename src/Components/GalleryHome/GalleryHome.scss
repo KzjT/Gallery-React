@@ -1,7 +1,3 @@
-
-
-
-
 .sectionGalleryHome {
     display: flex;
     width: 100%;
@@ -18,7 +14,7 @@
 }
 
 .sectionGalleryHome .galleryCard img {
-    width: 300px; /* Ajusta el ancho de las imágenes */
+    width: 300px; 
     height: 400px;
     flex-grow: 1;
     object-fit: cover;
@@ -28,7 +24,7 @@
 
 .sectionGalleryHome .galleryCard:hover img {
     cursor: crosshair;
-    width: 600px; /* Mantén el mismo ancho que en estado normal */
+    width: 600px; 
     opacity: 1;
     filter: contrast(120%);
 }
