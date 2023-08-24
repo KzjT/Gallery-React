@@ -1,4 +1,14 @@
 .img-carrousel{
-    height: 400px;
+    height: 500px;
     width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carrousel{
+        height: 200px;
+    }
+    .img-carrousel{
+        height: 200px;
+    }
 }

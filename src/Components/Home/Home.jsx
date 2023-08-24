@@ -8,7 +8,7 @@ export const Home = () => {
 
     return (
 
-        <div>
+        <div className='homeContainer container-fluid col-12 col-'>
         
             <Carrousel/>
 
