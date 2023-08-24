@@ -1,29 +1,40 @@
 .Item-contenedor{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+
     
 }
-.containerObras{
-    display: flex;
-    flex-direction: column;
-    width: 300px; /* Add max-width to prevent items from becoming too wide */
+.containerObras {
+    display: inline-block;
+    width: 300px; 
     height: 250px;
     margin-right: 2rem;
-    margin-bottom: 2rem; /* Add margin to create spacing between items */
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.imgObras{
-
-    width: 100%; /* Make the image take full width */
-    height: 250px; /* Let the height adjust automatically */
+    padding: 4rem;
     border: 4px black solid;
-    padding: 0.6rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
 
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .imgObras {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+        transition: transform 0.3s, border-radius 0.3s;
+    }
+
+    &:hover .imgObras {
+        transform: scale(1.2);
+    }
 }
+
+
+
 .ItemDatosContainer{
-    flex: 1; /* Allow this container to take remaining vertical space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +54,6 @@
 .sizeObras,
 .priceObras {
     text-align: center;
-    margin-top: 0.2rem;
 }
 
 
@@ -57,7 +67,32 @@
 
 .btn-viewMore{
     width: 90px;
-    margin-top: 1rem;
+    
 
 }
 
+@media (max-width: 768px) {
+    .Item-contenedor{
+        margin-bottom: 4rem;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .containerObras {
+        height: auto;
+        margin-right: 0;
+        padding: 1rem;
+        max-width: 768px;
+    }
+
+    .ItemDatosContainer {
+        padding: 1rem;
+    }
+
+    .viewContainer {
+        padding: 1rem;
+    }
+}

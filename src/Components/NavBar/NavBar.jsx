@@ -41,9 +41,13 @@ export const NavBar = () => {
                     Gallery
                 </Nav.Link>
                 <NavDropdown.Item as={NavLink} to="/category/Abstract">Abstract</NavDropdown.Item>
+
                 <NavDropdown.Item as={NavLink} to="/category/Pop-Art">Pop Art</NavDropdown.Item>
+
                 <NavDropdown.Item as={NavLink} to="/category/Digital">Digital</NavDropdown.Item>
+
                 <NavDropdown.Item as={NavLink} to="/category/Esculturas">Esculturas</NavDropdown.Item>
+                
                 <NavDropdown.Item as={NavLink} to="/category/Photography">Photography</NavDropdown.Item>
             </NavDropdown>
         </Nav>

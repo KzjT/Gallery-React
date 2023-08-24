@@ -18,9 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Gallery" element={<Gallery />} />
-        {/* Corrige la ruta para ItemDetailContainer con los parámetros */}
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
-        <Route path="/detail/:id" element={<ItemDetailContainer />} /> {/* Corrige el formato del comentario */}
+        <Route path="/detail/:id" element={<ItemDetailContainer />} /> 
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer2 />

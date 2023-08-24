@@ -25,7 +25,7 @@ export const ItemListContainer = () => {
                     setProductos(data);
                 }
                 
-                // Imprime las categorías de los productos
+
                 console.log(data.map(producto => producto.category));
             })
             .catch(error => console.log(error));
