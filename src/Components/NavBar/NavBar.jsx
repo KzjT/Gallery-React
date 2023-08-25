@@ -24,7 +24,6 @@ export const NavBar = () => {
 
 
 
-
     return (
         <Navbar className="Navbar container-fluid navv" bg="dark" data-bs-theme="dark">
             <Container fluid className="navbar-container">
@@ -38,7 +37,7 @@ export const NavBar = () => {
                     <Nav.Link as={NavLink} to="/aboutUs" className="navbar-link">
                         About Us
                     </Nav.Link>
-
+    
                     <NavDropdown
                         title="Gallery"
                         id=""
@@ -47,10 +46,10 @@ export const NavBar = () => {
                         onMouseEnter={handleGalleryHover}
                         onMouseLeave={handleGalleryLeave}
                     >
-                        <Nav.Link as={NavLink} to="/Gallery" className="navbar-link">
-                            Gallery
-                        </Nav.Link>
-
+                        <NavDropdown.Item as={NavLink} to="/Gallery" className="navbar-link">
+                            All Categories
+                        </NavDropdown.Item>
+    
                         {[...uniqueCategories].map(category => (
                             <NavDropdown.Item key={category} as={NavLink} to={`/category/${category}`}>
                                 {category}
@@ -63,8 +62,7 @@ export const NavBar = () => {
                 <CartWidget />
             </div>
         </Navbar>
-
     );
-};
+ }
 
 export default NavBar;

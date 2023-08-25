@@ -8,8 +8,9 @@ export const Footer2 = () => {
     return (
 
         <footer class=" footer2">
+        
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-
+           
                 <li class="nav-item footer-item"><Link to="/" class="nav-link px-2 text-body-secondary ">Home</Link></li>
 
                 <li class="nav-item footer-item"><Link to="/AboutUs" class="nav-link px-2 text-body-secondary ">About Us</Link></li>

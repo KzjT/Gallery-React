@@ -9,6 +9,7 @@ import Error404 from './Components/Error404/Error404';
 import Footer2 from './Components/Footer2/Footer2';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import Footer from './Components/Footer1/Footer';
 
 function App() {
   return (
@@ -22,7 +23,10 @@ function App() {
         <Route path="/detail/:id" element={<ItemDetailContainer />} /> 
         <Route path="*" element={<Error404 />} />
       </Routes>
-      <Footer2 />
+     
+        <Footer />
+        <Footer2 />
+
     </BrowserRouter>
   );
 }

@@ -1,11 +1,49 @@
 .navv {
     background-image: url(../../img/background.svg);
     border: 20px #297ea6 solid;
+    box-sizing: border-box;
+    position: sticky !important;
+    width: 100%; 
+    top: 0; 
+    z-index: 10;
 
     @media (max-width: 768px) {
         border: none;
     }
 }
+
+
+.navbar-center {
+    @media (max-width: 768px) {
+        display: none; // Ocultar la parte central de la barra en dispositivos pequeños
+    }
+}
+
+.cartWidgetContainer{
+    @media (max-width: 768px) {
+margin: 0;
+padding: 0;
+
+    }
+}
+
+.cartWidgetContainer img{
+    @media (min-width: 368px) {
+        width: 51px;
+        height: 51px;
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+.logo {
+    @media (max-width: 768px) {
+        width: 50px;
+        height: 40px;
+    }
+}
+
 
 .navbar-link .navLink.dropdown-toggle .navbar-link {
     color: white;
@@ -54,3 +92,4 @@
     background-color: wheat;
     color: black;
 }
+
