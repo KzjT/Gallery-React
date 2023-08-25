@@ -14,7 +14,9 @@ import Footer from './Components/Footer1/Footer';
 function App() {
   return (
     <BrowserRouter>
+    
       <NavBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
@@ -23,7 +25,7 @@ function App() {
         <Route path="/detail/:id" element={<ItemDetailContainer />} /> 
         <Route path="*" element={<Error404 />} />
       </Routes>
-     
+
         <Footer />
         <Footer2 />
 

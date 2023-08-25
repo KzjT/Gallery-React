@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav, Image, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Footer.scss'
 import data from "../../data/data.json"
@@ -68,4 +68,4 @@ export const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer;
