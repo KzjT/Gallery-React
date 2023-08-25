@@ -1,21 +1,33 @@
 import React, { useEffect, useState } from "react";
 import "./ItemDetailContainer.scss";
 import { useParams } from "react-router-dom";
-import datA from '../../data/data.json';
+import dataJson from '../../data/data.json';
 
 import ItemDetail from "../ItemDetail/ItemDetail";
+
+const fetchData = () => {
+    return new Promise((resolve) => {
+        
+        setTimeout(() => {
+            const data = dataJson; 
+            resolve(data);
+        }, 1000); 
+    });
+};
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null);
     const { id } = useParams();
 
     useEffect(() => {
-        const itemData = datA.find(prod => prod.id === id);
-        if (itemData) {
-            setItem(itemData);
-        } else {
-            console.log("No se encontró ese producto");
-        }
+        fetchData().then((data) => {
+            const itemData = data.find(prod => prod.id === id);
+            if (itemData) {
+                setItem(itemData);
+            } else {
+                console.log("No se encontró ese producto");
+            }
+        });
     }, [id]);
 
     return (
