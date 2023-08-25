@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./ItemDetailContainer.scss"
+import "./ItemDetailContainer.scss";
 import { useParams } from "react-router-dom";
+import datA from '../../data/data.json';
 
 import ItemDetail from "../ItemDetail/ItemDetail";
 
@@ -9,30 +10,17 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = '../data/data.json';
-
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Error en la respuesta");
-                }
-                return response.json();
-            })
-            .then(data => {
-                const itemData = data.find(prod => prod.id === id);
-                if (itemData) {
-                    setItem(itemData);
-                } else {
-                    throw new Error("No se encontró ese producto");
-                }
-            })
-            .catch(error => console.log(error));
+        const itemData = datA.find(prod => prod.id === id);
+        if (itemData) {
+            setItem(itemData);
+        } else {
+            console.log("No se encontró ese producto");
+        }
     }, [id]);
 
     return (
         <div className="container-fluid my-5 itemDetailContainer">
-            {item ? <ItemDetail producto={item}  />  : <p>Loading...</p>}
-            
+            {item ? <ItemDetail producto={item} /> : <p>Loading...</p>}
         </div>
     );
 };

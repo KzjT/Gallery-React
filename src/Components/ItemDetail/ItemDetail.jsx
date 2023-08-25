@@ -31,8 +31,8 @@ export const ItemDetail = ({ producto }) => {
                     <hr />
                     <p className="detail-info" data-label="Categoría">{producto.category}</p>
                     <p className="detail-info" data-label="Artist">{producto.artist}</p>
-                    <p className="detail-info" data-label="Origin">Origin: {producto.origin}</p>
-                    <p className="detail-info" data-label="Size">Size: {producto.size}</p>
+                    <p className="detail-info" data-label="Origin"> {producto.origin}</p>
+                    <p className="detail-info" data-label="Size"> {producto.size}</p>
                     <hr />
                     <span className="priceObras">{formatter2.format(producto.price)}</span>
                     <hr />

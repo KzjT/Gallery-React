@@ -4,9 +4,9 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
 export const Gallery = ({ productos }) => {
     return (
-        <div className='galleryContainer'>
+        <div >
             <h1>Gallery</h1>
-            <hr />
+            <hr/>
 
 
             <ItemListContainer productos={productos} />
