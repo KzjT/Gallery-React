@@ -1,5 +1,5 @@
-import  { Carrousel } from '../Carousel/Carousel';
-import GalleryHome from '../GalleryHome/GalleryHome';
+import  { Carrousel } from '../../Carousel/Carousel';
+import GalleryHome from '../../GalleryHome/GalleryHome';
 import './Home.scss'
 
 

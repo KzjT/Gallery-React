@@ -1,0 +1,84 @@
+/* AboutUs.scss */
+
+.about-us {
+    padding: 4rem 0;
+  }
+  
+  .owners {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .owner {
+    text-align: center;
+  }
+  
+  .owner-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+  }
+  
+  .owner-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .owner-role {
+    font-size: 0.875rem;
+    color: #777;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-content {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+  }
+  
+  @media (max-width: 768px) {
+    .owners {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .owner {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .h2-contact, .h2-contact-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .h2-contact-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .contact-container{
+    background-color: gray;
+    opacity: 80%;
+    padding: 4rem;
+  }
+
+  .title-color{
+    color: burlywood;
+  }
+
+  .container-img-aboutUs{
+    display: inline-block;
+    width: 700px;
+    height: 400px;
+    margin-right: 2rem;
+    padding: 1.5rem;
+    border: 4px black solid;
+  }
