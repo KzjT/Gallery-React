@@ -1,0 +1,13 @@
+.loading_Container {
+    display: flex;
+    height: 80vh; 
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.giff {
+    object-fit: cover;
+    margin: 0 auto;
+    max-width: 100%; 
+}

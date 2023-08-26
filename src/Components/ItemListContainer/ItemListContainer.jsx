@@ -14,7 +14,7 @@ export const ItemListContainer = () => {
             setTimeout(() => {
                 const data = dataJson; 
                 resolve(data);
-            }, 1000); 
+            }, 3000); 
         });
     };
 

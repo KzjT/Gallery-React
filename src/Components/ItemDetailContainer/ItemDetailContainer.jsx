@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import dataJson from '../../data/data.json';
 
 import ItemDetail from "../ItemDetail/ItemDetail";
+import Loading from "../Loading/Loading";
 
 const fetchData = () => {
     return new Promise((resolve) => {
@@ -11,7 +12,7 @@ const fetchData = () => {
         setTimeout(() => {
             const data = dataJson; 
             resolve(data);
-        }, 1000); 
+        }, 3000); 
     });
 };
 
@@ -32,7 +33,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="container-fluid my-5 itemDetailContainer">
-            {item ? <ItemDetail producto={item} /> : <p>Loading...</p>}
+            {item ? <ItemDetail producto={item} /> :<Loading/>}
         </div>
     );
 };
