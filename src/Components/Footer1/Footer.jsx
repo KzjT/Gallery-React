@@ -36,7 +36,7 @@ export const Footer = () => {
                 </a>
             </div>
 
-            <div className="col mb-3">
+            <div className="col mb-3 section-footer1">
                 <h5 className="footer-item h5Footer">Sections</h5>
                 <ul className="nav flex-column">
                     <Nav.Link as={NavLink} to="/" className="navbar-link nav-item footer-item">

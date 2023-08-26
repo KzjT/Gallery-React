@@ -12,8 +12,12 @@
 
     @media (max-width: 768px) {
         padding: 2rem 0;
+        display: flex;
+        font-size: x-small;
+        justify-content: center;
+        align-items: center;
+      }
     }
-}
 
 .footer-item {
     color: white !important;
@@ -24,15 +28,20 @@
     align-items: center;
     text-align: center;
     justify-content: space-around;
+    
 }
 
 .nav-link.footer-item {
     color: white !important;
     transition: color 0.2s ease-in-out;
-
+    @media (max-width: 768px) {
+        size: 5px;
+    }
     &:hover {
         color: #f00;
     }
+
+
 }
 
 
@@ -44,7 +53,12 @@
     align-content: center;
     text-align: center; 
     color: white !important;
-}
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
 
 .logoFooter span{
 color: burlywood !important;
@@ -52,4 +66,13 @@ color: burlywood !important;
 
 .h5Footer{
     color: burlywood !important;
+}
+
+.section-footer1{
+    @media (max-width: 768px) {
+        .col.mb-3 {
+          margin-top: 1rem; 
+        display: inline;
+        }
+      }
 }

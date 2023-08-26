@@ -32,9 +32,12 @@ const Contact = () => {
                                     </label>
                                     <textarea className="form-control" id="message" rows="4"></textarea>
                                 </div>
-                                <button type="submit" className="btn btn-primary">
+                                <div className='btn-Contact-Container'>
+
+                                <button type="submit" className="btn btn-primary btn-contact">
                                     Send
                                 </button>
+                                </div>
                             </form>
                         </div>
                         <div className="col-md-6 contact-info">

@@ -51,7 +51,7 @@
 
 {
     "id" : "005",
-    "name": "",
+    "name": "Celestial Reverie",
     "artist":"Maria Moretti" ,
     "origin": "Argentina",
     "category":"Abstract" ,
@@ -64,7 +64,7 @@
 
 {
     "id" : "006",
-    "name": "",
+    "name": "Chromatic Symphony",
     "artist":"Artur Kulikov" ,
     "origin": "Russia",
     "category":"Abstract" ,
@@ -77,7 +77,7 @@
 
 {
     "id" : "007",
-    "name": "",
+    "name": "Ethereal Whispers",
     "artist":"Piet Mondrian" ,
     "origin": "Holland",
     "category":"Abstract" ,
@@ -90,7 +90,7 @@
 
 {
     "id" : "008",
-    "name": "",
+    "name": "Quantum Mirage",
     "artist":"Hélène Jacqz" ,
     "origin": "France",
     "category":"Abstract" ,
@@ -103,7 +103,7 @@
 
 {
     "id" : "009",
-    "name": "",
+    "name": "Kaleidoscope Dreams",
     "artist":"Jackson Pollock" ,
     "origin": "USA",
     "category":"Abstract" ,
@@ -116,7 +116,7 @@
 
 {
     "id" : "010",
-    "name": "",
+    "name": "Cosmic Fusion",
     "artist":"Peter Nottrott" ,
     "origin": "Hungary",
     "category":"Abstract" ,
@@ -129,7 +129,7 @@
 
 {
     "id" : "011",
-    "name": "",
+    "name": "Serene Chaos",
     "artist":"Nikolaos Schizas" ,
     "origin": "Spain",
     "category":"Abstract" ,
@@ -142,7 +142,7 @@
 
 {
     "id" : "012",
-    "name": "",
+    "name": "Luminous Flux",
     "artist":"Wayne Roth" ,
     "origin": "USA",
     "category":"Abstract" ,
@@ -155,7 +155,7 @@
 
 {
     "id" : "013",
-    "name": "",
+    "name": "Vibrant Echoes",
     "artist":"Christoph Schrein" ,
     "origin": "Germany",
     "category":"Abstract" ,
@@ -168,7 +168,7 @@
 
 {
     "id" : "014",
-    "name": "",
+    "name": "Enigmatic Nexus",
     "artist":"Paul Klee" ,
     "origin": "United Kingdom",
     "category":"Abstract" ,
@@ -181,7 +181,7 @@
 
 {
     "id" : "015",
-    "name": "",
+    "name": "Astral Infusion",
     "artist":"Mathias Wunderlich" ,
     "origin": "Germany",
     "category":"Abstract" ,
@@ -194,7 +194,7 @@
 
 {
     "id" : "016",
-    "name": "",
+    "name": "Elemental Enigma",
     "artist":"Nikolaos Schizas" ,
     "origin": "Spain",
     "category":"Abstract" ,
@@ -207,7 +207,7 @@
 
 {
     "id" : "017",
-    "name": "",
+    "name": "Pop Culture Collage",
     "artist":"Marta Zawadzka" ,
     "origin": "Poland",
     "category":"Pop-Art" ,
@@ -220,7 +220,7 @@
 
 {
     "id" : "018",
-    "name": "",
+    "name": "Retro Reverberations",
     "artist":"Marta Zawadzka" ,
     "origin": "Poland",
     "category":"Pop-Art" ,
@@ -233,7 +233,7 @@
 
 {
     "id" : "019",
-    "name": "",
+    "name": "Vibrant Voxels",
     "artist":"Andy Warhol" ,
     "origin": "USA",
     "category":"Pop-Art" ,
@@ -246,7 +246,7 @@
 
 {
     "id" : "020",
-    "name": "",
+    "name": "Pixelated Melodies",
     "artist":"Richard Hamilton" ,
     "origin": "United Kingdom",
     "category":"Pop-Art" ,
@@ -259,7 +259,7 @@
 
 {
     "id" : "021",
-    "name": "",
+    "name": "Neon Nostalgia",
     "artist":"Yayoi Kusama" ,
     "origin": "Japan",
     "category":"Pop-Art" ,
@@ -272,7 +272,7 @@
 
 {
     "id" : "022",
-    "name": "",
+    "name": "Playful Portraits",
     "artist":"Mimmo Rotella" ,
     "origin": "Italy",
     "category":"Pop-Art" ,
@@ -285,7 +285,7 @@
 
 {
     "id" : "023",
-    "name": "",
+    "name": "Comic Book Cosmos",
     "artist":"Niki de Saint Phalle" ,
     "origin": "France",
     "category":"Pop-Art" ,
@@ -298,7 +298,7 @@
 
 {
     "id" : "024",
-    "name": "",
+    "name": "Colorful Contrasts",
     "artist":"Erró" ,
     "origin": "Island",
     "category":"Pop-Art" ,
@@ -311,7 +311,7 @@
 
 {
     "id" : "025",
-    "name": "",
+    "name": "Retro Remix",
     "artist":"Sigmar Polke" ,
     "origin": "Germany",
     "category":"Pop-Art" ,
@@ -324,7 +324,7 @@
 
 {
     "id" : "026",
-    "name": "",
+    "name": "Pixel Pop Paradise",
     "artist":"Roy Lichtenstein" ,
     "origin": "USA",
     "category":"Pop-Art" ,
@@ -349,7 +349,7 @@
 
 {
     "id" : "028",
-    "name": "",
+    "name": "Digital Dreamscape",
     "artist":"Murat Sayginer" ,
     "origin": "Turkey",
     "category":"Digital" ,
@@ -362,7 +362,7 @@
 
 {
     "id" : "029",
-    "name": "",
+    "name": "Cyber Chromatics",
     "artist":"Carla Gannis" ,
     "origin": "USA",
     "category":"Digital" ,
@@ -375,7 +375,7 @@
 
 {
     "id" : "030",
-    "name": "",
+    "name": "Pixel Perceptions",
     "artist":"Refik Anadol" ,
     "origin": "Turkey",
     "category":"Digital" ,
@@ -388,7 +388,7 @@
 
 {
     "id" : "031",
-    "name": "",
+    "name": "Virtual Visions",
     "artist":"Miguel Chevalier" ,
     "origin": "France",
     "category":"Digital" ,
@@ -401,7 +401,7 @@
 
 {
     "id" : "032",
-    "name": "",
+    "name": "Neon Navigations",
     "artist":"Akuart" ,
     "origin": "Spain",
     "category":"Digital" ,
@@ -414,7 +414,7 @@
 
 {
     "id" : "033",
-    "name": "",
+    "name": "Data Delirium",
     "artist":"Raphael Lacoste" ,
     "origin": "Canada",
     "category":"Digital" ,
@@ -427,7 +427,7 @@
 
 {
     "id" : "034",
-    "name": "",
+    "name": "Electric Emotions",
     "artist":"Mario Klingemann" ,
     "origin": "Germany",
     "category":"Digital" ,
@@ -453,7 +453,7 @@
 
 {
     "id" : "036",
-    "name": "",
+    "name": "Glitch Galaxy",
     "artist":"Sarah Zucker" ,
     "origin": "USA",
     "category":"Digital" ,
@@ -466,7 +466,7 @@
 
 {
     "id" : "037",
-    "name": "",
+    "name": "Digital Mirage",
     "artist":"Kit Webster" ,
     "origin": "Austria",
     "category":"Digital" ,
@@ -479,7 +479,7 @@
 
 {
     "id" : "038",
-    "name": "",
+    "name": "Cyberspace Splendor",
     "artist":"Sougwen Chung" ,
     "origin": "Canada",
     "category":"Digital" ,
@@ -492,7 +492,7 @@
 
 {
     "id" : "039",
-    "name": "",
+    "name": "Matrix Marvels",
     "artist":"Matt Pyke " ,
     "origin": "United Kingdom",
     "category":"Digital" ,
@@ -505,7 +505,7 @@
 
 {
     "id" : "040",
-    "name": "",
+    "name": "Technicolor Transformations",
     "artist":"Cao Fei " ,
     "origin": "China",
     "category":"Digital" ,
@@ -518,7 +518,7 @@
 
 {
     "id" : "041",
-    "name": "",
+    "name": "Bitstream Beauty",
     "artist":"Quayola " ,
     "origin": "Italy",
     "category":"Digital" ,
@@ -531,7 +531,7 @@
 
 {
     "id" : "042",
-    "name": "",
+    "name": "Elemental Elegance",
     "artist":"Anish Kapoor" ,
     "origin": "India",
     "category":"Esculturas" ,
@@ -544,7 +544,7 @@
 
 {
     "id" : "043",
-    "name": "",
+    "name": "Organic Resonance",
     "artist":"Ai Weiwei" ,
     "origin": "China",
     "category":"Esculturas" ,
@@ -557,7 +557,7 @@
 
 {
     "id" : "044",
-    "name": "",
+    "name": "Sculpted Harmony",
     "artist":"Jeff Koons" ,
     "origin": "USA",
     "category":"Esculturas" ,
@@ -570,7 +570,7 @@
 
 {
     "id" : "045",
-    "name": "",
+    "name": "Timeless Textures",
     "artist":"Antony Gormley " ,
     "origin": "United Kingdom",
     "category":"Esculturas" ,
@@ -583,7 +583,7 @@
 
 {
     "id" : "046",
-    "name": "",
+    "name": "Fluid Sculptures",
     "artist":"Jaume Plensa" ,
     "origin": "Spain",
     "category":"Esculturas" ,
@@ -596,7 +596,7 @@
 
 {
     "id" : "047",
-    "name": "",
+    "name": "Fused Elements",
     "artist":"Olafur Eliasson" ,
     "origin": "Island",
     "category":"Esculturas" ,
@@ -609,7 +609,7 @@
 
 {
     "id" : "048",
-    "name": "",
+    "name": "Transcendent Transmutations",
     "artist":"Louise Bourgeois" ,
     "origin": "France",
     "category":"Esculturas" ,
@@ -622,7 +622,7 @@
 
 {
     "id" : "049",
-    "name": "",
+    "name": "Geometric Gestures",
     "artist":"Yayoi Kusama" ,
     "origin": "Japan",
     "category":"Esculturas" ,
@@ -635,7 +635,7 @@
 
 {
     "id" : "050",
-    "name": "",
+    "name": "Intrinsic Connections",
     "artist":"Richard Serra" ,
     "origin": "USA",
     "category":"Esculturas" ,
@@ -648,7 +648,7 @@
 
 {
     "id" : "051",
-    "name": "",
+    "name": "Kinetic Imprints",
     "artist":"Doris Salcedo" ,
     "origin": "Colombia",
     "category":"Esculturas" ,
@@ -661,7 +661,7 @@
 
 {
     "id" : "052",
-    "name": "",
+    "name": "Visual Verse",
     "artist":"Kris Gebhardt" ,
     "origin": "USA",
     "category":"Photography" ,
@@ -674,7 +674,7 @@
 
 {
     "id" : "053",
-    "name": "",
+    "name": "Lightscapes",
     "artist":"Kris Gebhardt" ,
     "origin": "USA",
     "category":"Photography" ,
@@ -687,7 +687,7 @@
 
 {
     "id" : "054",
-    "name": "",
+    "name": "Shutter Serenity",
     "artist":"Ina Otzko" ,
     "origin": "Norway",
     "category":"Photography" ,
@@ -699,7 +699,7 @@
 
 {
     "id" : "055",
-    "name": "",
+    "name": "Lens Lullaby",
     "artist":"Ina Otzko" ,
     "origin": "Norway",
     "category":"Photography" ,
@@ -712,7 +712,7 @@
 
 {
     "id" : "056",
-    "name": "",
+    "name": "Timeless Frames",
     "artist":"Ina Otzko" ,
     "origin": "Norway",
     "category":"Photography" ,
@@ -725,7 +725,7 @@
 
 {
     "id" : "057",
-    "name": "",
+    "name": "Lens of Life",
     "artist":"Kris Gebhardt" ,
     "origin": "USA",
     "category":"Photography" ,
@@ -738,7 +738,7 @@
 
 {
     "id" : "058",
-    "name": "",
+    "name": "Snapshot Symphonies",
     "artist":"Martin Ecker" ,
     "origin": "Germany",
     "category":"Photography" ,
@@ -751,7 +751,7 @@
 
 {
     "id" : "059",
-    "name": "",
+    "name": "Pixel Poetry",
     "artist":"Julien Nonnon" ,
     "origin": "France",
     "category":"Photography" ,
@@ -764,7 +764,7 @@
 
 {
     "id" : "061",
-    "name": "",
+    "name": "Reflections Refracted",
     "artist":"Grégory Herpe" ,
     "origin": "France",
     "category":"Photography" ,
@@ -789,7 +789,7 @@
 
 {
     "id" : "063",
-    "name": "Another dimension",
+    "name": "Ethereal Exposures",
     "artist":"Victor Tsebruk" ,
     "origin": "Rusia",
     "category":"Photography" ,
@@ -801,7 +801,7 @@
 
 {
     "id" : "064",
-    "name": "Another dimension",
+    "name": "Portraits of Perception",
     "artist":"Victor Tsebruk" ,
     "origin": "Rusia",
     "category":"Photography" ,
@@ -813,7 +813,7 @@
 
 {
     "id" : "065",
-    "name": "Another dimension",
+    "name": "Candid Canvas",
     "artist":"Victor Tsebruk" ,
     "origin": "Rusia",
     "category":"Photography" ,
