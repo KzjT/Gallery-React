@@ -56,11 +56,17 @@ export const NavBar = () => {
                             </NavDropdown.Item>
                         ))}
                     </NavDropdown>
+                    <Nav.Link as={NavLink} to="/Contact" className="navbar-link">
+                        Contact
+                    </Nav.Link>
                 </Nav>
             </Container>
+            
             <div className='cartWidgetContainer'>
                 <CartWidget />
             </div>
+
+            
         </Navbar>
     );
  }

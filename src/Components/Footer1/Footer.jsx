@@ -48,6 +48,9 @@ export const Footer = () => {
                     <Nav.Link as={NavLink} to="/Gallery" className="navbar-link footer-item">
                         Gallery
                     </Nav.Link>
+                    <Nav.Link as={NavLink} to="/Contact" className="navbar-link footer-item">
+                        Contact
+                    </Nav.Link>
                 </ul>
             </div>
         </footer>
