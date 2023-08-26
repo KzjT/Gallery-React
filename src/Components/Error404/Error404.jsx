@@ -16,7 +16,7 @@ export const Error404 = () => {
 
     return(
 
-        <div className='Error404Container container-fluid'>
+        <div className='Error404Container container'>
 
         <img className='error404img' src={error} alt='error404' />
 

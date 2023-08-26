@@ -4,7 +4,7 @@ import "./CartWidget.scss"
 export const CartWidget = () => {
 
     return(
-        <div className="divCarrito">
+        <div className="divCarrito container col-2">
         
         <img className="cart" src={cartt} alt="cart" />
 
