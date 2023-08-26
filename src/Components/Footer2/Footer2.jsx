@@ -18,7 +18,7 @@ export const Footer2 = () => {
                 <li class="nav-item footer-item"><Link to="/Gallery" class="nav-link px-2 text-body-secondary ">Gallery</Link></li>
 
             </ul>
-            <p class="text-center text-body-secondary footerText">&copy; 2023 Gallery Art</p>
+            <p class="copyright">&copy; 2023 Gallery Art</p>
         </footer>
 
     )

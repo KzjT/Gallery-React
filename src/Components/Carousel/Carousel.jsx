@@ -12,8 +12,9 @@ export const Carrousel = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Art Gallery</h3>
+                    <p>
+                        The largest art gallery in the world.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -23,8 +24,9 @@ export const Carrousel = () => {
                     alt="Second slide"
                 />
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>
+                        artistic excellence</h3>
+                    <p>The most prestigious artists in the world are found here.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -34,9 +36,9 @@ export const Carrousel = () => {
                     alt="Third slide"
                 />
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
+                    <h3>exclusive events</h3>
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        International events at the hands of industry leaders.
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>

@@ -10,11 +10,11 @@ export const ItemListContainer = () => {
 
     const fetchData = () => {
         return new Promise((resolve) => {
-            
+
             setTimeout(() => {
-                const data = dataJson; 
+                const data = dataJson;
                 resolve(data);
-            }, 3000); 
+            }, 3000);
         });
     };
 
@@ -31,7 +31,7 @@ export const ItemListContainer = () => {
     }, [categoryId]);
 
     return (
-        <div className='itemListContainer-sty container-fluid my-4 col-12 '>
+        <div className='itemListContainer-sty my-4 col-12'>
             <ItemList productos={productos} />
         </div>
     );

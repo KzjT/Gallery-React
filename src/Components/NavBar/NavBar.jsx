@@ -27,7 +27,7 @@ export const NavBar = () => {
     return (
         <Navbar className="Navbar container-fluid navv" bg="dark" data-bs-theme="dark">
             <Container fluid className="navbar-container">
-                <Navbar.Brand as={NavLink} to="/" className="mr-auto full-left">
+                <Navbar.Brand as={NavLink} to="/" className="mr-auto full-left logo-asd">
                     <Image src={logo} alt="ArtAtack Logo" className="logo" /> Art Gallery
                 </Navbar.Brand>
                 <Nav className="navbar-center">
