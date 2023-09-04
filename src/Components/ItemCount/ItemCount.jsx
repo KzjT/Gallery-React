@@ -1,41 +1,45 @@
 import { useState } from "react";
-import "./ItemCount.scss"
+import "./ItemCount.scss";
+import { Button } from "react-bootstrap";
 
+export const ItemCount = ({ onAdd, stock }) => {
+    const [count, setCount] = useState(1);
 
+    const countSuma = () => {
+        if (count < stock) {
+            setCount(count + 1);
+        }
+    };
 
-export const ItemCount = () => {
+    const countResta = () => {
+        if (count > 1) {
+            setCount(count - 1);
+        }
+    };
 
-const [count, setCount] = useState(0)
-
-
-
-
-const countSuma = () =>{
-
-    setCount (count + 1)
-
-}
-
-const countResta = () =>{
-    setCount (count - 1 )
-
-
-}
-
-    return(
-        <>
-
-        <button className="btn btn-dark btnCount" onClick={countResta}>-</button>
-
-        <span className="countSpan">{count}</span>
-
-
-        <button className="btn btn-success btnCount" onClick={countSuma}>+</button>
-        
-        
-        </>
-    )
-}
+    return (
+        <div>
+            <button
+                className="btn btn-dark btnCount"
+                onClick={countResta}
+                disabled={count <= 1}
+            >
+                -
+            </button>
+            <span className="countSpan">{count}</span>
+            <button
+                className="btn btn-dark btnCount"
+                onClick={countSuma}
+                disabled={count >= stock}
+            >
+                +
+            </button>
+            <Button onClick={() => onAdd(count)} className="btn btn-success addItemButton">
+                Add Cart
+            </Button>
+        </div>
+    );
+};
 
 
 export default ItemCount;

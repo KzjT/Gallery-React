@@ -11,9 +11,14 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Footer from './Components/Footer1/Footer';
 import Contact from './Components/views/Contact/Contact';
+import { CartProvider } from './contexts/CartContext';
+
 
 function App() {
   return (
+
+    <CartProvider>
+      
     <BrowserRouter>
     
       <NavBar />
@@ -32,6 +37,8 @@ function App() {
         <Footer2 />
 
     </BrowserRouter>
+
+   </CartProvider>
   );
 }
 

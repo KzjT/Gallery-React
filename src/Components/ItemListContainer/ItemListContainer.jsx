@@ -26,7 +26,7 @@ export const ItemListContainer = () => {
             } else {
                 setProductos(data);
             }
-            console.log(data.map(producto => producto.category));
+            console.log(data.map((producto) => ({ id: producto.id, name: producto.name, stock: producto.cant })));
         });
     }, [categoryId]);
 

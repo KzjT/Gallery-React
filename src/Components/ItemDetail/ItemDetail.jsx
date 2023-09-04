@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./ItemDetail.scss"
-import AddItemButton from "../AddItemButton/AddItemButton";
 import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../contexts/CartContext";
+import { useContext } from "react";
+
 
 export const ItemDetail = ({ producto }) => {
 
+    const {addItem} = useContext(CartContext)
 
     const navigate = useNavigate()
 
@@ -18,6 +21,9 @@ export const ItemDetail = ({ producto }) => {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,
     });
+
+
+    const onAdd = (count) => addItem({ product: producto, quantity: count });
 
     return (
         <div className="container-detail">
@@ -38,11 +44,8 @@ export const ItemDetail = ({ producto }) => {
                     <hr />
                     <div className="ItemCountContainer">
                         <p className="cantObras">Cant: {producto.cant}</p>
-                        <ItemCount />
+                        <ItemCount onAdd={onAdd} />
                     </div>
-
-                    <AddItemButton className="addItemButton" />
-                    <div className="btn-containers">
 
                         <Link className="btn btn-primary btn-volver" onClick={handleVolver}>Volver</Link>
 
@@ -51,7 +54,6 @@ export const ItemDetail = ({ producto }) => {
                 </div>
 
             </div>
-        </div>
     );
 
 }
