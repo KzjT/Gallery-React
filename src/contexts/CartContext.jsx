@@ -7,7 +7,9 @@ export const CartProvider = ({ children }) => {
 
     const [items, setItems] = useState([])
 
-    console.log(items)
+    const totalWidget = items.reduce ((acc, val)=> acc + val.quantity, 0)
+
+    
 
     const addItem = ({product, quantity}) => setItems(prev => [...prev, {...product,quantity}])
 
@@ -21,7 +23,7 @@ export const CartProvider = ({ children }) => {
 
     return (
 
-        <CartContext.Provider value={{ addItem, removeItem, clear }}>
+        <CartContext.Provider value={{ addItem, removeItem, clear, totalWidget, }}>
             {children}
         </CartContext.Provider>
     )

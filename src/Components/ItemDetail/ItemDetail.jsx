@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./ItemDetail.scss"
 import ItemCount from "../ItemCount/ItemCount";
-import { CartContext } from "../../contexts/CartContext";
 import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 
 export const ItemDetail = ({ producto }) => {

@@ -1,13 +1,35 @@
-import React from 'react';
-import {  Nav, Image } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Nav, Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Footer.scss';
-import data from '../../data/data.json';
 import logo from '../../img/art_logo.svg';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 export const Footer = () => {
-    const categoriesNav = data.map(item => item.category);
-    const uniqueCategories = new Set(categoriesNav);
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const productosRef = collection(db, "productos");
+                const snapshot = await getDocs(productosRef);
+                const uniqueCategories = new Set();
+
+                snapshot.forEach((doc) => {
+                    const data = doc.data();
+                    uniqueCategories.add(data.category);
+                });
+
+                const categoriesArray = Array.from(uniqueCategories);
+                setCategories(categoriesArray);
+            } catch (error) {
+                console.error("Error al obtener categorías desde Firebase:", error);
+            }
+        };
+
+        fetchCategories();
+    }, []);
 
     return (
         <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 footer1">
@@ -16,7 +38,7 @@ export const Footer = () => {
             <div className="col mb-3">
                 <h5 className="footer-item h5Footer">Categories</h5>
                 <ul className="nav flex-column">
-                    {[...uniqueCategories].map(category => (
+                    {categories.map((category) => (
                         <Nav.Link
                             className="nav-link footer-item"
                             key={category}

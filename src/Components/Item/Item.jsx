@@ -2,8 +2,12 @@ import React from "react";
 import "./Item.scss";
 import { Link } from "react-router-dom";
 
+
+
 const Item = ({ producto }) => {
 
+
+  
 
   return (
     <div className="Item-contenedor">
@@ -15,8 +19,8 @@ const Item = ({ producto }) => {
         <p className="catObras"> {producto.category}</p>
         <div className="viewContainer"> 
         <Link to={`/detail/${producto.id}`} className="btn btn-outline-primary btn-viewMore">
-          Ver más
-        </Link>
+  Ver más
+</Link>
         </div>
       </div>
     </div>

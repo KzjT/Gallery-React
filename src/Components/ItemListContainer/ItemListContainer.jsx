@@ -2,32 +2,31 @@ import React, { useState, useEffect } from 'react';
 import './ItemListContainer.scss';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import dataJson from '../../data/data.json';
+import { collection, getDocs, where, query } from "firebase/firestore"
+import { db } from '../../firebase/config';
 
 export const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
     const { categoryId } = useParams();
 
-    const fetchData = () => {
-        return new Promise((resolve) => {
-
-            setTimeout(() => {
-                const data = dataJson;
-                resolve(data);
-            }, 3000);
-        });
-    };
-
     useEffect(() => {
-        fetchData().then((data) => {
-            if (categoryId) {
-                const productosFiltrados = data.filter(prod => prod.category === categoryId);
-                setProductos(productosFiltrados);
-            } else {
-                setProductos(data);
-            }
-            console.log(data.map((producto) => ({ id: producto.id, name: producto.name, stock: producto.cant })));
-        });
+        const refProductos = collection(db, "productos");
+        const q = categoryId ? query(refProductos, where("category", "==", categoryId)) : refProductos;
+
+        getDocs(q)
+            .then(snapshot => {
+                if (snapshot.size === 0) {
+                    console.log(categoryId ? `No results for category: ${categoryId}` : "No results for all products");
+                } else {
+                    setProductos(snapshot.docs.map(doc => ({
+                        id: doc.id,
+                        ...doc.data()
+                    })));
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching data:", error);
+            });
     }, [categoryId]);
 
     return (

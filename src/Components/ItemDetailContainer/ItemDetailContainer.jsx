@@ -1,39 +1,37 @@
 import React, { useEffect, useState } from "react";
 import "./ItemDetailContainer.scss";
 import { useParams } from "react-router-dom";
-import dataJson from '../../data/data.json';
-
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loading from "../Loading/Loading";
-
-const fetchData = () => {
-    return new Promise((resolve) => {
-        
-        setTimeout(() => {
-            const data = dataJson; 
-            resolve(data);
-        }, 3000); 
-    });
-};
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null);
     const { id } = useParams();
 
     useEffect(() => {
-        fetchData().then((data) => {
-            const itemData = data.find(prod => prod.id === id);
-            if (itemData) {
-                setItem(itemData);
-            } else {
-                console.log("No se encontró ese producto");
+        const fetchItem = async () => {
+            try {
+                const refDoc = doc(db, "productos", id);
+                const snapshot = await getDoc(refDoc);
+
+                if (snapshot.exists()) {
+                    setItem({ id: snapshot.id, ...snapshot.data() });
+                } else {
+                    console.log("El documento no existe");
+                }
+            } catch (error) {
+                console.error("Error al obtener el documento:", error);
             }
-        });
+        };
+
+        fetchItem();
     }, [id]);
 
     return (
         <div className="container-fluid my-5 itemDetailContainer">
-            {item ? <ItemDetail producto={item} /> :<Loading/>}
+            {item ? <ItemDetail producto={item} /> : <Loading />}
         </div>
     );
 };

@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Nav, Image, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
 import CartWidget from '../CartWidget/CartWidget';
 import logo from '../../img/art_logo.svg';
-import data from "../../data/data.json";
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase/config'; // Asegúrate de importar la configuración de Firebase adecuada
 
-
-export const NavBar = () => {
+const NavBar = () => {
     const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+    const [categories, setCategories] = useState([]);
 
     const handleGalleryHover = () => {
         setIsGalleryOpen(true);
@@ -18,11 +19,27 @@ export const NavBar = () => {
         setIsGalleryOpen(false);
     };
 
-    const categoriesNav = data.map(item => item.category)
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const productosRef = collection(db, "productos");
+                const snapshot = await getDocs(productosRef);
+                const uniqueCategories = new Set();
 
-    const uniqueCategories = new Set(categoriesNav);
+                snapshot.forEach((doc) => {
+                    const data = doc.data();
+                    uniqueCategories.add(data.category);
+                });
 
+                const categoriesArray = Array.from(uniqueCategories);
+                setCategories(categoriesArray);
+            } catch (error) {
+                console.error("Error al obtener categorías desde Firebase:", error);
+            }
+        };
 
+        fetchCategories();
+    }, []);
 
     return (
         <Navbar className="Navbar container-fluid navv" bg="dark" data-bs-theme="dark">
@@ -37,7 +54,7 @@ export const NavBar = () => {
                     <Nav.Link as={NavLink} to="/aboutUs" className="navbar-link">
                         About Us
                     </Nav.Link>
-    
+
                     <NavDropdown
                         title="Gallery"
                         id=""
@@ -49,8 +66,8 @@ export const NavBar = () => {
                         <NavDropdown.Item as={NavLink} to="/Gallery" className="navbar-link">
                             All Categories
                         </NavDropdown.Item>
-    
-                        {[...uniqueCategories].map(category => (
+
+                        {categories.map((category) => (
                             <NavDropdown.Item key={category} as={NavLink} to={`/category/${category}`}>
                                 {category}
                             </NavDropdown.Item>
@@ -61,14 +78,12 @@ export const NavBar = () => {
                     </Nav.Link>
                 </Nav>
             </Container>
-            
-            <div className='cartWidgetContainer'>
+
+            <div className="cartWidgetContainer">
                 <CartWidget />
             </div>
-
-            
         </Navbar>
     );
- }
+};
 
 export default NavBar;
