@@ -5,7 +5,8 @@ import './NavBar.scss';
 import CartWidget from '../CartWidget/CartWidget';
 import logo from '../../img/art_logo.svg';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../firebase/config'; // Asegúrate de importar la configuración de Firebase adecuada
+import { db } from '../../firebase/config'; 
+
 
 const NavBar = () => {
     const [isGalleryOpen, setIsGalleryOpen] = useState(false);

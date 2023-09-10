@@ -1,0 +1,38 @@
+.img-carrousel{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    background-color: #333;
+
+}
+
+@media (max-width: 768px) {
+    .carrousel{
+        height: 200px;
+    }
+    .img-carrousel{
+        height: 200px;
+    }
+}
+
+.h3Carousel{
+    position: relative;
+    color:burlywood;
+    font-size: 44px; 
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    top: -10%;
+    left: 50%;
+    z-index: 1; 
+}
+
+.pCarousel{
+    position: relative;
+    font-size: 20px; 
+    color: white;
+    line-height: 1.5; 
+    font-weight: 500;
+    top: -10%;
+    left: 50%;
+    z-index: 1; 
+}

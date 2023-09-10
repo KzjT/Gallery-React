@@ -1,7 +1,9 @@
 .itemList-sty{
     display: flex;
+    justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    
+    gap: 2rem;
     margin: 2rem;
 }

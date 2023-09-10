@@ -1,0 +1,146 @@
+.hero {
+    text-align: center;
+    padding: 0px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    height: auto; 
+}
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 85vh; 
+    overflow: hidden; 
+    background-color: black; 
+}
+
+
+.hero-video {
+    top: 50%; 
+    left: 0;
+    width: 100%;
+    transform: translateY(-30%); 
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.4);
+    filter: opacity(0.5);
+}
+
+.hero-text {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    color: burlywood;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+.btn-video {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .hero-video-container {
+        height: 70vh; 
+    }
+    
+    .hero h1 {
+        font-size: 28px; 
+    }
+
+    .hero p {
+        font-size: 16px; 
+    }
+
+    .btn-video {
+        padding: 8px 16px; 
+    }
+}
+
+
+@media (orientation: portrait) {
+
+.homeContainer {
+    background-color: #f8f8f8;
+    padding: 0px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.hero {
+    text-align: center;
+    padding: 0px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+
+
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    background-color: black;
+}
+
+.hero-video {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.4);
+    filter: opacity(0.5);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: burlywood;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-video {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+}

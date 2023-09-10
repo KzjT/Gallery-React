@@ -1,22 +1,28 @@
-import  { Carrousel } from '../../Carousel/Carousel';
+import { Carrousel } from './Carousel/Carousel';
 import GalleryHome from '../../GalleryHome/GalleryHome';
-import './Home.scss'
-
+import './Home.scss';
+import { Hero } from './Hero/Hero';
 
 
 export const Home = () => {
-
     return (
+        <div className="homeContainer container-fluid col-12">
+            <div className="homeContainer container-fluid">
 
-        <div className='homeContainer container-fluid col-12 col-'>
-        
-            <Carrousel/>
+                <Hero />
 
-            <GalleryHome/>
-            
+                <Carrousel />
+
+                <GalleryHome />
+
+
+            </div>
         </div>
-    )
-}
-
+    );
+};
 
 export default Home;
+
+
+
+

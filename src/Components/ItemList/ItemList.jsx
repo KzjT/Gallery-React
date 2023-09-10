@@ -7,7 +7,7 @@ import Loading from '../Loading/Loading';
 
 export const ItemList = ({ productos }) => {
     return (
-        <div className='itemList-sty container-fluid  '>
+        <div className='itemList-sty container-fluid '>
             {productos.length === 0 ? (
                 <Loading/>
             ) : (
