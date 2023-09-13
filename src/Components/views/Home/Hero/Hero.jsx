@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Hero.scss"
 
 
@@ -14,7 +15,7 @@ export const Hero = () =>{
     <div className="hero-text">
         <h1>Welcome to our Art Gallery</h1>
         <p>Explore the world of creativity and discover amazing artworks.</p>
-        <a href="/gallery" className="btn btn-success btn-video">View Gallery</a>
+        <Link to="/gallery" className="btn btn-success btn-video">View Gallery</Link>
     </div>
 </div>
 </header>
