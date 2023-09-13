@@ -41,12 +41,12 @@ const NavBar = () => {
 
         fetchCategories();
     }, []);
-
+    
     return (
         <Navbar className="Navbar container-fluid navv" bg="dark" data-bs-theme="dark">
             <Container fluid className="navbar-container">
                 <Navbar.Brand as={NavLink} to="/" className="mr-auto full-left logo-asd">
-                    <Image src={logo} alt="ArtAtack Logo" className="logo" /> Art Gallery
+                    <Image src={logo} alt="ArtAtack Logo" className="logo" /><span className="spanLogo">Art Gallery</span> 
                 </Navbar.Brand>
                 <Nav className="navbar-center">
                     <Nav.Link as={NavLink} to="/" className="navbar-link">
@@ -78,11 +78,10 @@ const NavBar = () => {
                         Contact
                     </Nav.Link>
                 </Nav>
+            <CartWidget />
             </Container>
 
-            <div className="cartWidgetContainer">
-                <CartWidget />
-            </div>
+            
         </Navbar>
     );
 };

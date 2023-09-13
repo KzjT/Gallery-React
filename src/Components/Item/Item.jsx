@@ -18,7 +18,7 @@ const Item = ({ producto }) => {
         <p className="nameObras">{producto.artist}</p>
         <p className="catObras"> {producto.category}</p>
         <div className="viewContainer"> 
-        <Link to={`/detail/${producto.id}`} className="btn btn-outline-primary btn-viewMore">
+        <Link to={`/detail/${producto.id}`} className="btn btn-primary btn-viewMore">
   Ver más
 </Link>
         </div>

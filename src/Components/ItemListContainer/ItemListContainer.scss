@@ -2,3 +2,15 @@
     width: 100%; 
     overflow-x: hidden; 
 }
+
+
+@media (max-width: 768px) {
+    .itemListContainer-sty {
+        padding: 2% 5%; /* Ajusta el relleno */
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+}

@@ -18,11 +18,10 @@ export const Hero = () =>{
     </div>
 </div>
 </header>
-
-
-    )
+)
 }
 
+export default Hero;
 
 
 

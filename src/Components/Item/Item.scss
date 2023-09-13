@@ -1,19 +1,24 @@
 .Item-contenedor {
-    margin-bottom: 2rem; /* Reducir el margen en dispositivos móviles */
-
-    @media (max-width: 768px) {
-        width: 100%; /* Ajustar el ancho al 100% en dispositivos móviles */
-        display: block; /* Cambiar a un diseño de bloque en dispositivos móviles */
-        margin: 0 auto; /* Centrar en dispositivos móviles */
-    }
+    width: 300px; 
+    height: 400px; 
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 0.5rem;
 }
 
+.Item-contenedor:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
 .containerObras {
-    display: inline-block;
-    width: 500px;
-    height: 300px;
-    margin-right: 2rem;
-    padding: 1.5rem;
+    width: 100%;
+    height: 60%; 
     border: 4px solid #333;
     overflow: hidden;
     position: relative;
@@ -22,33 +27,28 @@
 
 .containerObras .imgObras {
     width: 100%;
-    height: 100%;
+    height: 100%; 
     object-fit: cover;
-    object-position: center top; /* Alinea la imagen al centro y parte superior */
+    object-position: center top;
     transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
 
-.containerObras:hover {
-    transform: scale(0.95);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.containerObras:hover .imgObras {
-    transform: scale(1.1); /* Agregamos un aumento de escala al hacer hover */
-}
 
 .ItemDatosContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1rem;
 }
 
 .nameObras,
 .catObras {
     text-align: center;
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
+
 
 .viewContainer {
     display: flex;
@@ -57,14 +57,15 @@
 }
 
 .btn-viewMore {
-    width: 90px;
-    padding: 8px 16px;
-    background-color: #36a82a;
+    width: 120px;
+    padding: 10px 20px;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    text-align: center;
+    font-weight: bold;
 }
 
 .btn-viewMore:hover {
@@ -72,9 +73,23 @@
 }
 
 
-
 @media (max-width: 768px) {
+    .Item-contenedor {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 1rem;
+    }
+
     .containerObras {
-        max-width: none; /* Eliminar el ancho máximo en dispositivos móviles */
+        height: 40%; 
+    }
+
+    .nameObras,
+    .catObras {
+        font-size: 1rem;
+    }
+
+    .btn-viewMore {
+        width: 100%;
     }
 }

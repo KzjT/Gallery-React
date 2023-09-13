@@ -18,9 +18,9 @@ export const ItemCount = ({ onAdd, stock }) => {
     };
 
     return (
-        <div>
+        <div className="ItemCountContainer">
             <button
-                className="btn btn-dark btnCount"
+                className="btn btn-primary btnCount"
                 onClick={countResta}
                 disabled={count <= 1}
             >
@@ -28,7 +28,7 @@ export const ItemCount = ({ onAdd, stock }) => {
             </button>
             <span className="countSpan">{count}</span>
             <button
-                className="btn btn-dark btnCount"
+                className="btn btn-primary btnCount"
                 onClick={countSuma}
                 disabled={count >= stock}
             >

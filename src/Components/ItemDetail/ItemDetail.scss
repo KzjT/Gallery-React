@@ -52,6 +52,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                color: burlywood;
             }
 
         
@@ -75,6 +76,10 @@
 margin-right: 15%;
 }
 
+.btn-volver:hover{
+    background-color:black;
+    color:white;
+}
 
 
 .btn-containers {

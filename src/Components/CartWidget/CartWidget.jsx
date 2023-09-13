@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import "./CartWidget.scss"
 import  cartt  from "../../img/cartt.svg"
 import { CartContext } from "../../contexts/CartContext";
 import CartModal from "../CartModal/CartModal";
@@ -16,14 +17,12 @@ export const CartWidget = () => {
     };
 
     return (
-        <div className="divCarrito container col-2" onClick={handleShowModal}>
-            <img className="cart" src={cartt} alt="cart" />
-            <span className="spanCart">{totalWidget}</span>
-
-            {/* Renderizar el modal */}
-            <CartModal show={showModal} onHide={handleCloseModal} />
+        <div className="divCarrito" onClick={handleShowModal}>
+          <img className="cart" src={cartt} alt="cart" />
+          <span className="spanCart">{totalWidget}</span>
+          <CartModal show={showModal} onHide={handleCloseModal} />
         </div>
-    );
-};
-
-export default CartWidget;
+      );
+    };
+    
+    export default CartWidget;

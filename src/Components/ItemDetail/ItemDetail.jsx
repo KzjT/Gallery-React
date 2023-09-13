@@ -35,7 +35,7 @@ export const ItemDetail = ({ producto }) => {
                 <div className="info-detail">
                     <h2 className="name-detail">{producto.name}</h2>
                     <hr />
-                    <p className="detail-info" data-label="Categoría">{producto.category}</p>
+                    <p className="detail-info" data-label="Category">{producto.category}</p>
                     <p className="detail-info" data-label="Artist">{producto.artist}</p>
                     <p className="detail-info" data-label="Origin"> {producto.origin}</p>
                     <p className="detail-info" data-label="Size"> {producto.size}</p>
@@ -44,10 +44,12 @@ export const ItemDetail = ({ producto }) => {
                     <hr />
                     <div className="ItemCountContainer">
                         <p className="cantObras">Cant: {producto.cant}</p>
-                        <ItemCount onAdd={onAdd} />
                     </div>
 
-                        <Link className="btn btn-primary btn-volver" onClick={handleVolver}>Volver</Link>
+                        <ItemCount onAdd={onAdd} />
+
+                        <Link className="btn btn-primary btn-volver" onClick={handleVolver}>Back</Link>
+
 
                     </div>
 
