@@ -28,7 +28,7 @@ const AboutUs = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="about-content">
-                                <h2 className="section-title title-color">About Us</h2>
+                                <h1 className="section-title title-color">About Us</h1>
                                 <p className="lead">
                                     Welcome to our art studio, where creativity and passion come together to create amazing works. With years of experience in the world of art, we are proud to present our unique and expressive creations.
                                 </p>

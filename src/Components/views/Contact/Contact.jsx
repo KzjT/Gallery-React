@@ -10,7 +10,7 @@ const Contact = () => {
         <div className="contact-page">
             <section className="contact-section">
                 <div className="container">
-                    <h2 className="section-title">Contact Us</h2>
+                    <h1 className="section-title">Contact Us</h1>
                     <div className="row">
                         <div className="col-md-6">
                             <form>
