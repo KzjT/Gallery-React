@@ -42,19 +42,21 @@ export const ItemDetail = ({ producto }) => {
                     <hr />
                     <span className="priceObras">{formatter2.format(producto.price)}</span>
                     <hr />
+                        <p className="detail-info cantObras" data-label="Stock">{producto.cant}</p>
                     <div className="ItemCountContainer">
-                        <p className="cantObras">Cant: {producto.cant}</p>
+                        <ItemCount onAdd={onAdd} />
                     </div>
 
-                        <ItemCount onAdd={onAdd} />
 
-                        <Link className="btn btn-primary btn-volver" onClick={handleVolver}>Back</Link>
 
 
                     </div>
 
                 </div>
+                    <hr/>
+                    <p className="detail-description" >{producto.description}</p>
 
+                        <Link className="btn btn-primary btn-volver" onClick={handleVolver}>Back</Link>
             </div>
     );
 

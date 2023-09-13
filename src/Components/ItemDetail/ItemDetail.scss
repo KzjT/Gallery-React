@@ -1,99 +1,69 @@
 .container-detail {
     display: flex;
     flex-direction: column;
-    padding: 2% 5%; 
-    box-sizing: border-box; 
+    padding: 0% 5%;
+    box-sizing: border-box;
     width: 100%;
+}
 
-    .detail-content {
-        display: flex;
-        flex-wrap: wrap; 
+.detail-content {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-        .img-container {
-            width: 100%;
-            max-width: 1200px; 
-            height: 600px;
-            border: 4px black solid;
-            display: flex;
-            justify-content: center;
-            background-color: white;
+.img-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    border: 4px black solid;
+    display: flex;
+    justify-content: center;
+    background-color: white;
 
-
-            .img-detail {
-                width: 100%;
-                max-height: 600px; 
-                padding: 2%;
-                object-fit:cover;
-
-            }
-
-
-        }
-
-
-
-        .info-detail {
-            width: 300px;
-            flex: 1;
-            padding: 2%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            width: 300px;
-            flex: 1;
-            padding: 2%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-
-            .name-detail {
-                font-size: 24px;
-                margin-bottom: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: burlywood;
-            }
-
-        
-
-            
-            .addItemButton,.btn-volver {
-                display: flex;
-                justify-content: center;
-                font-size: 12px;
-                padding: 10px 20px;
-                border-radius: 5px;
-                text-decoration: none;
-                margin-bottom: 1rem;
-                margin: 0.5rem;
-            }
-        }
+    .img-detail {
+        width: 100%;
+        max-height: 600px;
+        padding: 2%;
+        object-fit: cover;
     }
 }
 
-.cantObras{
-margin-right: 15%;
-}
-
-.btn-volver:hover{
-    background-color:black;
-    color:white;
-}
-
-
-.btn-containers {
+.info-detail {
+    width: 300px;
+    flex: 1;
+    padding: 2%;
     display: flex;
-    flex-direction: column; 
-    align-items: center; /* Center buttons horizontally */
-    margin-top: 1rem; 
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .name-detail {
+        font-size: 40px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: burlywood;
+    }
+
+    .priceObras{
+        font-weight: 600;
+    }
+
+    .btn-containers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .ItemCountContainer {
+        display: flex;
+        margin-top: 0.7rem;
+    }
 }
 
-.ItemCountContainer {
+.cantObras {
     display: flex;
-    margin-bottom: 0.5rem;
-
-
 }
 
 .detail-info {
@@ -104,5 +74,58 @@ margin-right: 15%;
     &::before {
         content: attr(data-label) ": ";
         font-weight: bold;
+    }
+}
+
+.btn-volver:hover {
+    background-color: black;
+    color: white;
+}
+
+.detail-description {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    margin-bottom: 30vh;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .container-detail {
+        padding: 2% 2%;
+    }
+
+
+    .btnCount {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        margin: 54px;
+    }
+
+    .countSpan {
+        font-size: 24px;
+
+    }
+
+    .addItemButton {
+        font-size: 18px;
+        margin-top: 10px;
+        
+
+    }
+
+    .ItemCountContainer{
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-around !important;
+        flex-wrap: wrap ;
+        align-content: center !important;
     }
 }
