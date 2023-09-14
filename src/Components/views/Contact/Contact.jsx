@@ -22,21 +22,21 @@ const Contact = () => {
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="email" className="form-label">
-                                    Email
+                                        Email
                                     </label>
                                     <input type="email" className="form-control" id="email" />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="message" className="form-label">
-                                    Message
+                                        Message
                                     </label>
                                     <textarea className="form-control" id="message" rows="4"></textarea>
                                 </div>
                                 <div className='btn-Contact-Container'>
 
-                                <button type="submit" className="btn btn-primary btn-contact">
-                                    Send
-                                </button>
+                                    <button type="submit" className="btn btn-primary btn-contact">
+                                        Send
+                                    </button>
                                 </div>
                             </form>
                         </div>

@@ -27,7 +27,6 @@ export const Footer = () => {
                 console.error("Error al obtener categorías desde Firebase:", error);
             }
         };
-
         fetchCategories();
     }, []);
 

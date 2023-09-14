@@ -7,11 +7,8 @@ export const Gallery = ({ productos }) => {
     return (
         <div className='container-fluid '>
             <h1>Gallery</h1>
-            <hr/>
-
-
+            <hr />
             <ItemListContainer productos={productos} />
-
         </div>
 
     )

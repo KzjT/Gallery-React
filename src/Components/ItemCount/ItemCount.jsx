@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./ItemCount.scss";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Button } from "react-bootstrap";
 
 export const ItemCount = ({ onAdd, stock }) => {
@@ -16,6 +18,18 @@ export const ItemCount = ({ onAdd, stock }) => {
             setCount(count - 1);
         }
     };
+
+
+    const notify = () => toast.success("item added to cart", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
 
     return (
         <div className="ItemCountContainer">
@@ -34,9 +48,12 @@ export const ItemCount = ({ onAdd, stock }) => {
             >
                 +
             </button>
-            <Button onClick={() => onAdd(count)} className="btn btn-success addItemButton">
-                Add Cart
+
+            <Button onClick={() => { onAdd(count); notify(); }} className="btn btn-success addItemButton">
+                Add to Cart
             </Button>
+            <ToastContainer />
+
         </div>
     );
 };

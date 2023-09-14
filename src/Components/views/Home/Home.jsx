@@ -8,14 +8,9 @@ export const Home = () => {
     return (
         <div className="homeContainer container-fluid col-12">
             <div className="homeContainer container-fluid">
-
                 <Hero />
-
                 <Carrousel />
-
                 <GalleryHome />
-
-
             </div>
         </div>
     );

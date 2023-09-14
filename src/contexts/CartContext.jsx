@@ -9,16 +9,10 @@ export const CartProvider = ({ children }) => {
     const [items, setItems] = useState([])
 
 
-
-
-
     //funcion que acumula los items
-    const totalWidget = items.reduce ((acc, val)=> acc + val.quantity, 0)
+    const totalWidget = items.reduce((acc, val) => acc + val.quantity, 0)
 
-    
-
-    const addItem = ({product, quantity}) => setItems(prev => [...prev, {...product,quantity}])
-
+    const addItem = ({ product, quantity }) => setItems(prev => [...prev, { ...product, quantity }])
 
     //funcion removedora por "id"
     const removeItem = (id) => {
@@ -28,8 +22,6 @@ export const CartProvider = ({ children }) => {
 
     //funcion limpiadora, devuelve un array vacio
     const clear = () => setItems([])
-
-
 
 
     return (

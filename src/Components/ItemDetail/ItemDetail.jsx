@@ -8,7 +8,7 @@ import { CartContext } from "../../contexts/CartContext";
 
 export const ItemDetail = ({ producto }) => {
 
-    const {addItem} = useContext(CartContext)
+    const { addItem } = useContext(CartContext)
 
     const navigate = useNavigate()
 
@@ -24,6 +24,8 @@ export const ItemDetail = ({ producto }) => {
 
 
     const onAdd = (count) => addItem({ product: producto, quantity: count });
+
+
 
     return (
         <div className="container-detail">
@@ -42,22 +44,18 @@ export const ItemDetail = ({ producto }) => {
                     <hr />
                     <span className="priceObras">{formatter2.format(producto.price)}</span>
                     <hr />
-                        <p className="detail-info cantObras" data-label="Stock">{producto.cant}</p>
+                    <p className="detail-info cantObras" data-label="Stock">{producto.cant}</p>
                     <div className="ItemCountContainer">
-                        <ItemCount onAdd={onAdd} />
+                        <ItemCount onAdd={onAdd} stock={producto.cant}/>
                     </div>
-
-
-
-
-                    </div>
-
                 </div>
-                    <hr/>
-                    <p className="detail-description" >{producto.description}</p>
 
-                        <Link className="btn btn-primary btn-volver" onClick={handleVolver}>Back</Link>
             </div>
+            <hr />
+            <p className="detail-description" >{producto.description}</p>
+
+            <Link className="btn btn-primary btn-volver" onClick={handleVolver}>Back</Link>
+        </div>
     );
 
 }
