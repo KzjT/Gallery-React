@@ -2,15 +2,17 @@ import React, { useContext, useState } from "react";
 import "./CartWidget.scss";
 import cartt from "../../img/cartt.svg";
 import { CartContext } from "../../contexts/CartContext";
-import { Modal, Box, Button } from "@mui/material";
+import { Modal, Box } from "@mui/material";
 
 export const CartWidget = () => {
-  const { totalWidget, items } = useContext(CartContext);
+  const { removeItem, clear, totalWidget, items } = useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
 
   const handleToggleModal = () => {
     setShowModal(!showModal);
   };
+
+  const total = () => items.reduce((acumulador, valorActual) => acumulador + valorActual.quantity * valorActual.price, 0);
 
   return (
     <div className="divCarrito" onClick={handleToggleModal}>
@@ -29,29 +31,64 @@ export const CartWidget = () => {
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: 400,
-            bgcolor: "background.paper",
-            border: "2px solid #000",
-            boxShadow: 24,
-            pt: 2,
-            px: 4,
-            pb: 3,
+            height: "auto",
+            bgcolor: "#fff",
+            borderRadius: "8px",
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+            padding: "20px",
           }}
         >
-          <h2 id="cart-modal-title">Carrito de Compras</h2>
+          <h2 id="cart-modal-title">Cart</h2>
           <div id="cart-modal-description">
-            {items && items.length > 0 ? (
-              <ul>
-                {items.map((item) => (
-                  <li key={item.id}>
-                    {item.name} - Cantidad: {item.quantity}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>El carrito de compras está vacío.</p>
-            )}
+            <ul>
+              {items.map((item) => (
+                <li key={item.id} className="cart-item">
+                  <img
+                    className="product-image"
+                    src={item.img}
+                    alt={item.name}
+                  />
+                  <div className="item-details">
+                    <span className="product-name">{item.name}</span>
+                    <span className="product-quantity">X{item.quantity}</span>
+                  </div>
+                  <button
+                    type="button"
+                    className="remove-button btn btn-danger"
+                    onClick={() => removeItem(item.id)}
+                  >
+                    -
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <div className="total">Total: {total()}</div>
+            <div className="actions">
+              <button
+                className="pay-button btn btn-success"
+                type="button"
+                onClick={() => console.log("Go Pay")}
+              >
+                Go Pay
+              </button>
+              <div className="bottom-actions">
+                <button
+                  className="clear-button btn btn-dark"
+                  type="button"
+                  onClick={clear}
+                >
+                  Clear All
+                </button>
+                <button
+                  className="close-button btn btn-danger"
+                  type="button"
+                  onClick={handleToggleModal}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
           </div>
-          <Button onClick={handleToggleModal}>Cerrar Carrito</Button>
         </Box>
       </Modal>
     </div>
@@ -59,3 +96,7 @@ export const CartWidget = () => {
 };
 
 export default CartWidget;
+
+
+
+
