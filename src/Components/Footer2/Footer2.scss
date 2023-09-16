@@ -47,11 +47,11 @@
     }
 
     .github-icon {
-        color: black;
+        color: white;
     }
 
     .github-text {
-        color: black;
+        color: white;
         font-size: 15px;
         font-weight: 500;
     }
@@ -76,6 +76,8 @@
         padding: 0.5rem;
         font-size: larger;
         color: burlywood;
+        display: flex;
+        justify-content: center;
 
         @media (max-width: 768px) {
             

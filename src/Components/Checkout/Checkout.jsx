@@ -99,7 +99,7 @@ const Checkout = () => {
             </table>
 
             <div className="total-container">
-                <span>Total:</span>
+                <span >Total:</span>
                 <span className="total-amount">{formatter2.format(total())}</span>
             </div>
 

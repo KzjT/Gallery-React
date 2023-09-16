@@ -1,12 +1,12 @@
 .navv {
     background-image: url(../../assets/background.svg);
-    border: 20px #297ea6 solid;
+    border: 15px #297ea6 solid;
     box-sizing: border-box;
     position: sticky !important;
-    width: 100vh;
     top: 0;
     z-index: 10;
-    width: auto;
+    width: 100%; /* Cambiado a 100% para que ocupe todo el ancho */
+
 
     @media (max-width: 768px) {
         border: 0.5px  #297ea6 solid ;
@@ -74,8 +74,8 @@
 
 .navbar-link .navLink.dropdown-toggle .navbar-link {
     color: white;
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 35px !important;
+    font-weight: bold !important;;
     text-decoration: none;
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;

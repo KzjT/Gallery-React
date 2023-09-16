@@ -43,7 +43,7 @@ const NavBar = () => {
     }, []);
     
     return (
-        <Navbar className="Navbar container-fluid navv" bg="dark" data-bs-theme="dark">
+        <Navbar className="Navbar container-fluid navv" bg="dark" variant="dark">
             <Container fluid className="navbar-container">
                 <Navbar.Brand as={NavLink} to="/" className="mr-auto full-left logo-asd">
                     <Image src={logo} alt="ArtAtack Logo" className="logo" /><span className="spanLogo">Art Gallery</span> 
@@ -58,7 +58,7 @@ const NavBar = () => {
 
                     <NavDropdown
                         title="Gallery"
-                        id=""
+                        id="gallery-dropdown"
                         className="navbar-link"
                         show={isGalleryOpen}
                         onMouseEnter={handleGalleryHover}
@@ -69,7 +69,7 @@ const NavBar = () => {
                         </NavDropdown.Item>
 
                         {categories.map((category) => (
-                            <NavDropdown.Item key={category} as={NavLink} to={`/category/${category}`}>
+                            <NavDropdown.Item key={category} as={NavLink} to={`/category/${category}`} className="navbar-link">
                                 {category}
                             </NavDropdown.Item>
                         ))}
@@ -78,10 +78,8 @@ const NavBar = () => {
                         Contact
                     </Nav.Link>
                 </Nav>
-            <CartWidget />
+                <CartWidget />
             </Container>
-
-            
         </Navbar>
     );
 };
