@@ -1,95 +1,60 @@
-.Item-contenedor {
-    width: 300px; 
-    height: 400px; 
-    margin-bottom: 2rem;
+.card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 2px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    padding: 0.5rem;
+    padding: 1px;
 }
-
-.Item-contenedor:hover {
+.card:hover {
     transform: scale(1.03);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
-
-
 .containerObras {
-    width: 100%;
-    height: 60%; 
-    border: 4px solid #333;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px black solid;
+    padding: 0.3rem;
 }
-
-.containerObras .imgObras {
+.card-image {
     width: 100%;
-    height: 100%; 
+    height: 600px;
+    max-height: 300px;
     object-fit: cover;
     object-position: center top;
-    transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
-
-
-.ItemDatosContainer {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.card-content {
     padding: 1rem;
-}
-
-.nameObras,
-.catObras {
     text-align: center;
-    margin-bottom: 0.5rem;
+}
+.card-title {
     font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
 }
-
-
-.viewContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+.card-category {
+    font-size: 1rem;
+    color: #555;
 }
-
-.btn-viewMore {
-    width: 120px;
-    padding: 10px 20px;
+.card-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
     color: #fff;
+    text-align: center;
+    text-decoration: none;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    text-align: center;
-    font-weight: bold;
 }
-
-.btn-viewMore:hover {
-    background-color: #249b21;
+.card-button:hover {
+    background-color: #0056b3;
 }
-
-
 @media (max-width: 768px) {
-    .Item-contenedor {
-        width: 100%; 
-        height: auto; 
-        margin-bottom: 1rem;
-    }
-
-    .containerObras {
-        height: 40%; 
-    }
-
-    .nameObras,
-    .catObras {
-        font-size: 1rem;
-    }
-
-    .btn-viewMore {
-        width: 100%;
+    .card {
+        max-width: 100%;
     }
 }

@@ -15,12 +15,11 @@ export const Footer = () => {
                 const productosRef = collection(db, "productos");
                 const snapshot = await getDocs(productosRef);
                 const uniqueCategories = new Set();
-
                 snapshot.forEach((doc) => {
                     const data = doc.data();
                     uniqueCategories.add(data.category);
                 });
-
+                
                 const categoriesArray = Array.from(uniqueCategories);
                 setCategories(categoriesArray);
             } catch (error) {

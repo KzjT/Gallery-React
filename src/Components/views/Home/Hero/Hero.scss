@@ -17,7 +17,6 @@
     }
 }
 
-
 .hero-video {
     top: 50%; 
     left: 0;
@@ -28,7 +27,6 @@
     filter: brightness(0.4);
     filter: opacity(0.5);
 }
-
 
 .hero-text {
     position: absolute;
@@ -60,7 +58,6 @@
     text-decoration: none;
 }
 
-
 @media (max-width: 768px) {
     
 
@@ -89,7 +86,6 @@
     }
 }
 
-
 @media (orientation: portrait) {
 
 .homeContainer {
@@ -108,7 +104,6 @@
     overflow: hidden;
     height: auto;
 }
-
 
 .hero-video-container {
     position: relative;

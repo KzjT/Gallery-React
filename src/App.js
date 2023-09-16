@@ -16,9 +16,12 @@ import Checkout from './Components/Checkout/Checkout';
 
 
 function App() {
+
+
+
   return (
 
-    <CartProvider>
+    <CartProvider >
 
       <BrowserRouter>
 

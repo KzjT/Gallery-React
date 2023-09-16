@@ -10,6 +10,7 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState(null);
     const { id } = useParams();
 
+
     useEffect(() => {
         const fetchItem = async () => {
             try {

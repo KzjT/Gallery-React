@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import "./Checkout.scss";
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 const Checkout = () => {
-    const { items, clear, formatter2 } = useContext(CartContext);
+    const { items, clear, formatter2, removeItem, countSuma, countResta } = useContext(CartContext);
+    const [orderCounter, setOrderCounter] = useState(parseInt(localStorage.getItem("orderCounter")) || 2000);
+
     const [buyerData, setBuyerData] = useState({
         firstName: "",
         lastName: "",
@@ -41,6 +43,10 @@ const Checkout = () => {
             });
             return;
         }
+        
+
+        const orderId = orderCounter.toString();
+        setOrderCounter(orderCounter + 1); 
 
         const order = {
             buyer: buyerData,
@@ -60,7 +66,7 @@ const Checkout = () => {
                         email: "",
                     })
                     clear()
-                    toast.success(`Your order: ${id} was successful.You will be redirected to home. Thanks for shopping with us.`);
+                    toast.success(`Your order: #${orderId} was successful.You will be redirected to home. Thanks for shopping with us.`);
                     setTimeout(() => {
                         navigate('/');
                     }, 6000);
@@ -74,6 +80,10 @@ const Checkout = () => {
         clear();
     };
 
+    useEffect(() => {
+        localStorage.setItem("orderCounter", orderCounter.toString());
+    }, [orderCounter]);
+
     return (
         <div className="checkout-container">
             <h2>Checkout</h2>
@@ -84,6 +94,7 @@ const Checkout = () => {
                         <th>Unit price</th>
                         <th>Quantity</th>
                         <th>Amount</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -91,8 +102,34 @@ const Checkout = () => {
                         <tr key={item.id}>
                             <td>{item.name}</td>
                             <td>{formatter2.format(item.price)}</td>
-                            <td>{item.quantity}</td>
+                            <td>
+                                <button className="btn btn-primary mx-2" onClick={countResta}>-</button>
+                                {item.quantity}
+                                <button className="btn btn-primary mx-2" onClick={countSuma}>+</button>
+
+                            </td>
                             <td>{formatter2.format(item.quantity * item.price)}</td>
+                            <td>{<button
+                                type="button"
+                                className="remove-button btn btn-danger"
+                                onClick={() => {
+                                    removeItem(item.id);
+                                    toast.info("removed product", {
+                                        position: "top-right",
+                                        autoClose: 3000,
+                                        hideProgressBar: true,
+                                        closeOnClick: true,
+                                        pauseOnHover: true,
+                                        draggable: true,
+                                        progress: undefined,
+                                        theme: "light",
+                                    });
+                                }}
+                            >
+                                🗑
+                                <ToastContainer />
+                            </button>}</td>
+
                         </tr>
                     ))}
                 </tbody>

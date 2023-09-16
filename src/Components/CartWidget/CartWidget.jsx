@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./CartWidget.scss";
 import cartt from "../../assets/cartt.svg";
+import emptyCart from "../../assets/carrito_vacio.webp";
 import { toast, ToastContainer } from 'react-toastify';
 import { CartContext } from "../../contexts/CartContext";
 import { Modal, Box } from "@mui/material";
@@ -8,9 +9,7 @@ import { Link } from "react-router-dom";
 
 export const CartWidget = () => {
   const { items, removeItem, clear, totalWidget, formatter2 } = useContext(CartContext);
-
   const [showModal, setShowModal] = useState(false);
-
 
   const handleToggleModal = () => {
     setShowModal(!showModal);
@@ -49,7 +48,7 @@ export const CartWidget = () => {
             <div className="cart-empty-message">
               <p>You don't have anything added, add your first article!</p>
               <div className="cart-empty-imgCont"> 
-              <img src="https://www.distritomoda.com.ar/sites/all/themes/omega_btob/images/carrito_vacio_nuevo.png" alt="asd" className="cart-empty-img" />
+              <img src={emptyCart} alt="Empty Cart" className="cart-empty-img" />
               </div>
               <div className="button-container">
                 <div className="cart-buttons">
@@ -104,7 +103,7 @@ export const CartWidget = () => {
                         });
                       }}
                     >
-                      -
+                      🗑
                       <ToastContainer />
                     </button>
                   </li>

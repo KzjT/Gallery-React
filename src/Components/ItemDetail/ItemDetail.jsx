@@ -5,23 +5,17 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
-
 export const ItemDetail = ({ producto }) => {
-
   const { addItem, formatter2 } = useContext(CartContext)
-
   const navigate = useNavigate()
 
   const handleVolver = () => {
     navigate(-1)
   }
 
-
   const stockNotNull = producto.cant !== null;
 
   const onAdd = (count) => addItem({ product: producto, quantity: count });
-
-
 
   return (
     <div className="container-detail">

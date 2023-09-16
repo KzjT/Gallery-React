@@ -10,12 +10,14 @@ export const ItemCount = ({ onAdd, stock }) => {
     const countSuma = () => {
         if (count < stock) {
             setCount(count + 1);
+            onAdd(count + 1);
         }
     };
 
     const countResta = () => {
         if (count > 1) {
             setCount(count - 1);
+            onAdd(count - 1);
         }
     };
 
@@ -55,6 +57,5 @@ export const ItemCount = ({ onAdd, stock }) => {
         </div>
     );
 };
-
 
 export default ItemCount;

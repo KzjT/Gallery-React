@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Hero.scss"
 
-
-
 export const Hero = () => {
 
     return (
