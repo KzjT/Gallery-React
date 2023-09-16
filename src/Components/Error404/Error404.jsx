@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap'
 import './Error404.scss'
-import error from '../../img/error404.svg'
+import error from '../../assets/error404.svg'
 import { useNavigate } from 'react-router-dom'
 
 

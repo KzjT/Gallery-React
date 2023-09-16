@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Nav, Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Footer.scss';
-import logo from '../../img/art_logo.svg';
+import logo from '../../assets/art_logo.svg';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 

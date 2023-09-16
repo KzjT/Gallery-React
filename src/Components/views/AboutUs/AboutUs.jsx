@@ -1,10 +1,10 @@
 import React from 'react';
 import './AboutUs.scss';
-import direct1 from "../../../img/direct1.jpg";
-import direct2 from "../../../img/direct2.jpg";
-import expo1 from "../../../img/expo1.jpeg";
-import expo2 from "../../../img/expo2.jpg";
-import expo3 from "../../../img/expo3.jpg";
+import direct1 from "../../../assets/direct1.jpg";
+import direct2 from "../../../assets/direct2.jpg";
+import expo1 from "../../../assets/expo1.jpeg";
+import expo2 from "../../../assets/expo2.jpg";
+import expo3 from "../../../assets/expo3.jpg";
 
 const AboutUs = () => {
     return (

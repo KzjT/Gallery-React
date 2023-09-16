@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./CartWidget.scss";
-import cartt from "../../img/cartt.svg";
+import cartt from "../../assets/cartt.svg";
 import { CartContext } from "../../contexts/CartContext";
 import { Modal, Box } from "@mui/material";
 

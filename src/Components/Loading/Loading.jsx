@@ -1,5 +1,5 @@
 import "./Loading.scss"
-import Loading_gif from "../../img/Rolling-1s-200px.gif"
+import Loading_gif from "../../assets/Rolling-1s-200px.gif"
 
 
 
