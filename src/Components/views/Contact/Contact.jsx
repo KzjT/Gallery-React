@@ -8,9 +8,9 @@ import { faMapMarkerAlt, faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-
 const Contact = () => {
     return (
         <div className="contact-page">
+                    <h1 className="h1-tittle">Contact Us</h1>
             <section className="contact-section">
                 <div className="container">
-                    <h1 className="section-title">Contact Us</h1>
                     <div className="row">
                         <div className="col-md-6">
                             <form>
@@ -54,7 +54,7 @@ const Contact = () => {
 
             <section className="map-section">
                 <div className="container">
-                    <h3>Location</h3>
+                    <h3 className="h1-tittle">Location</h3>
                     <Map />
                 </div>
             </section>

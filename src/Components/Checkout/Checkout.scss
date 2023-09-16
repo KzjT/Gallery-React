@@ -6,15 +6,16 @@
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
     @media (max-width: 768px) {
-    height: 70vh;
-}
+        height: 70vh;
+    }
 }
 
 h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: burlywood;
     display: flex;
     justify-content: center;
 }
@@ -23,11 +24,12 @@ h2 {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    text-align: center;
 
     th,
     td {
         padding: 10px;
-        text-align: left;
+        text-align: center;
         border-bottom: 1px solid #ddd;
     }
 
@@ -41,6 +43,12 @@ h2 {
     }
 }
 
+@media (max-width: 768px) {
+    .product-table {
+        font-size: 14px;
+    }
+}
+
 .total-container {
     display: flex;
     justify-content: flex-end;
@@ -48,15 +56,41 @@ h2 {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
 
 .total-amount {
     color: #ff6b6b;
     margin-left: 7px;
     letter-spacing: -1px;
+
 }
 
+.btn-checkout button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
 
+@media (max-width: 768px) {
+    .btn-checkout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .btn-checkout button {
+        margin: 0 5px;
+    }
+}
 
 .buyer-form {
     display: flex;
@@ -90,5 +124,20 @@ h2 {
         font-weight: bold;
         font-size: 16px;
         margin-top: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .product-table th,
+    .product-table tbody,
+    .product-table td {
+        width: 100%;
+    }
+
+    .product-table th::before,
+    .product-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        width: 50%;
     }
 }

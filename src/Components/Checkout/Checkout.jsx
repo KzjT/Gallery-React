@@ -43,10 +43,10 @@ const Checkout = () => {
             });
             return;
         }
-        
+
 
         const orderId = orderCounter.toString();
-        setOrderCounter(orderCounter + 1); 
+        setOrderCounter(orderCounter + 1);
 
         const order = {
             buyer: buyerData,
@@ -103,10 +103,11 @@ const Checkout = () => {
                             <td>{item.name}</td>
                             <td>{formatter2.format(item.price)}</td>
                             <td>
-                                <button className="btn btn-primary mx-2" onClick={countResta}>-</button>
-                                {item.quantity}
-                                <button className="btn btn-primary mx-2" onClick={countSuma}>+</button>
-
+                                <div className="btn-checkout">
+                                    <button className="btn btn-primary mx-2" onClick={countResta}>-</button>
+                                    {item.quantity}
+                                    <button className="btn btn-primary mx-2" onClick={countSuma}>+</button>
+                                </div>
                             </td>
                             <td>{formatter2.format(item.quantity * item.price)}</td>
                             <td>{<button
