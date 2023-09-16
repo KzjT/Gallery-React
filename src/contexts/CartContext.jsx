@@ -1,5 +1,4 @@
 import { createContext, useState } from "react"
-import {  toast } from 'react-toastify';
 
 //se inicializa
 export const CartContext = createContext([]);
@@ -8,10 +7,6 @@ export const CartContext = createContext([]);
 export const CartProvider = ({ children }) => {
 
     const [items, setItems] = useState([])
-
-    const showNotification = (message) => {
-        toast(message);
-};
 
 const formatter2 = new Intl.NumberFormat("es-AR", {
     style: "currency",
@@ -54,7 +49,6 @@ const formatter2 = new Intl.NumberFormat("es-AR", {
         removeItem, 
         clear, 
         totalWidget, 
-        showNotification, 
         formatter2
     }
 

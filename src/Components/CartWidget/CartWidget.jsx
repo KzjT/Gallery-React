@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
 import "./CartWidget.scss";
 import cartt from "../../assets/cartt.svg";
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { CartContext } from "../../contexts/CartContext";
 import { Modal, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const CartWidget = () => {
-  const { items, removeItem, clear, totalWidget, showNotification, formatter2 } = useContext(CartContext);
+  const { items, removeItem, clear, totalWidget, formatter2 } = useContext(CartContext);
 
   const [showModal, setShowModal] = useState(false);
+  
 
   const handleToggleModal = () => {
     setShowModal(!showModal);
@@ -60,8 +61,17 @@ export const CartWidget = () => {
                     className="remove-button btn btn-danger"
                     onClick={() => {
                       removeItem(item.id);
-                      showNotification("Product removido satisfactoriamente")
-                    }}  
+                      toast.info("removed product", {
+                        position: "top-right",
+                        autoClose: 3000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                      });
+                    }}
                   >
                     -
                     <ToastContainer />
@@ -79,7 +89,16 @@ export const CartWidget = () => {
                   className="clear-button btn btn-dark"
                   type="button"
                   onClick={() => {
-                    showNotification("Cart clear");
+                    toast.info("Cart clear", {
+                      position: "top-right",
+                      autoClose: 3000,
+                      hideProgressBar: true,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                    });
                     clear();
                   }}
                 >
@@ -92,7 +111,6 @@ export const CartWidget = () => {
                 >
                   Close
                   <ToastContainer />
-                
                 </button>
               </div>
             </div>
@@ -104,7 +122,4 @@ export const CartWidget = () => {
 };
 
 export default CartWidget;
-
-
-
 
