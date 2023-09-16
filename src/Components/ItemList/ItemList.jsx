@@ -10,7 +10,7 @@ export const ItemList = ({ productos }) => {
                 <Loading/>
             ) : (
                 productos.map(producto => (
-                    <Item key={producto.id} producto={producto} />
+                    <Item key={producto.id} producto={producto} stock={producto.cant} />
                 ))
             )}
         </div>

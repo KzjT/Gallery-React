@@ -1,20 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./ItemCount.scss";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from "react-bootstrap";
 
-export const ItemCount = ({ onAdd, stock }) => {
+const ItemCount = ({ onAdd, stock, countSuma, countResta }) => {
     const [count, setCount] = useState(1);
 
-    const countSuma = () => {
+    const handleCountSuma = () => {
         if (count < stock) {
             setCount(count + 1);
             onAdd(count + 1);
         }
     };
 
-    const countResta = () => {
+    const handleCountResta = () => {
         if (count > 1) {
             setCount(count - 1);
             onAdd(count - 1);
@@ -36,7 +36,7 @@ export const ItemCount = ({ onAdd, stock }) => {
         <div className="ItemCountContainer">
             <Button
                 className="btn btn-primary btnCount"
-                onClick={countResta}
+                onClick={handleCountResta}
                 disabled={count <= 1}
             >
                 -
@@ -44,7 +44,7 @@ export const ItemCount = ({ onAdd, stock }) => {
             <span className="countSpan">{count}</span>
             <Button
                 className="btn btn-primary btnCount"
-                onClick={countSuma}
+                onClick={handleCountSuma}
                 disabled={count >= stock}
             >
                 +
@@ -53,7 +53,6 @@ export const ItemCount = ({ onAdd, stock }) => {
                 Add to Cart
             </Button>
             <ToastContainer />
-
         </div>
     );
 };

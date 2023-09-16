@@ -1,6 +1,7 @@
 .checkout-container {
     max-width: 800px;
     margin: 0 auto;
+    height: auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -8,7 +9,8 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
     @media (max-width: 768px) {
-        height: 70vh;
+        height: auto;
+
     }
 }
 
@@ -79,6 +81,10 @@ h2 {
     cursor: pointer;
 }
 
+.form-control::placeholder {
+    color: gray !important;
+    opacity: 0.3;
+}
 @media (max-width: 768px) {
     .btn-checkout {
         display: flex;
@@ -102,7 +108,7 @@ h2 {
         gap: 5px;
 
         label {
-            font-weight: bold;
+            font-weight:100;
         }
 
         input[type="text"],
@@ -125,6 +131,8 @@ h2 {
         margin-top: 10px;
     }
 }
+
+
 
 @media (max-width: 500px) {
     .product-table th,

@@ -15,8 +15,10 @@ import { CartProvider } from './contexts/CartContext';
 import Checkout from './Components/Checkout/Checkout';
 
 
-function App() {
 
+
+
+function App({onAdd, stock, countResta, countSuma, CartContext}) {
 
 
   return (
@@ -34,7 +36,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/detail/:id" element={<ItemDetailContainer />} />
-          <Route path="/checkout" element={<Checkout />}/>
+          <Route path="/checkout" element={<Checkout onAdd={onAdd} stock={stock} />}/>
           <Route path="*" element={<Error404 />} />
         </Routes>
 
