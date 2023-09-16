@@ -2,20 +2,26 @@ import React, { useContext, useState } from "react";
 import "./CartWidget.scss";
 import cartt from "../../assets/cartt.svg";
 import emptyCart from "../../assets/carrito_vacio.webp";
-import { toast, ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from "react-toastify";
 import { CartContext } from "../../contexts/CartContext";
 import { Modal, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const CartWidget = () => {
-  const { items, removeItem, clear, totalWidget, formatter2 } = useContext(CartContext);
+  const { items, removeItem, clear, totalWidget, formatter2 } =
+    useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
 
   const handleToggleModal = () => {
     setShowModal(!showModal);
   };
 
-  const total = () => items.reduce((acumulador, valorActual) => acumulador + valorActual.quantity * valorActual.price, 0);
+  const total = () =>
+    items.reduce(
+      (acumulador, valorActual) =>
+        acumulador + valorActual.quantity * valorActual.price,
+      0
+    );
 
   return (
     <div className="divCarrito" onClick={handleToggleModal}>
@@ -44,11 +50,14 @@ export const CartWidget = () => {
           <h2 id="cart-modal-title">Cart</h2>
 
           {items.length === 0 ? (
-
             <div className="cart-empty-message">
               <p>You don't have anything added, add your first article!</p>
-              <div className="cart-empty-imgCont"> 
-              <img src={emptyCart} alt="Empty Cart" className="cart-empty-img" />
+              <div className="cart-empty-imgCont">
+                <img
+                  src={emptyCart}
+                  alt="Empty Cart"
+                  className="cart-empty-img"
+                />
               </div>
               <div className="button-container">
                 <div className="cart-buttons">
@@ -71,7 +80,6 @@ export const CartWidget = () => {
                 </div>
               </div>
             </div>
-
           ) : (
             <div id="cart-modal-description">
               <ul>
@@ -109,40 +117,40 @@ export const CartWidget = () => {
                   </li>
                 ))}
               </ul>
-              <div className="total">Total: {formatter2.format(total())}</div>
-              <div className="actions">
-                <Link to="/checkout" className="pay-button btn btn-success">
+              <div className="total">
+                Total: {formatter2.format(total())}
+                <Link to="/checkout" className="go-pay-button btn btn-success">
                   Go Pay
                 </Link>
-                <div className="bottom-actions">
-                  <button
-                    className="clear-button btn btn-dark"
-                    type="button"
-                    onClick={() => {
-                      toast.info("Cart clear", {
-                        position: "top-right",
-                        autoClose: 3000,
-                        hideProgressBar: true,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                      });
-                      clear();
-                    }}
-                  >
-                    Clear All
-                  </button>
-                  <button
-                    className="close-button btn btn-danger"
-                    type="button"
-                    onClick={handleToggleModal}
-                  >
-                    Close
-                    <ToastContainer />
-                  </button>
-                </div>
+              </div>
+              <div className="actions">
+                <button
+                  className="clear-button btn btn-dark"
+                  type="button"
+                  onClick={() => {
+                    toast.info("Cart clear", {
+                      position: "top-right",
+                      autoClose: 3000,
+                      hideProgressBar: true,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                    });
+                    clear();
+                  }}
+                >
+                  Clear All
+                </button>
+                <button
+                  className="close-button btn btn-danger"
+                  type="button"
+                  onClick={handleToggleModal}
+                >
+                  Close
+                  <ToastContainer />
+                </button>
               </div>
             </div>
           )}
@@ -153,4 +161,3 @@ export const CartWidget = () => {
 };
 
 export default CartWidget;
-
