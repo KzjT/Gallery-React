@@ -19,7 +19,6 @@ export const ItemCount = ({ onAdd, stock }) => {
         }
     };
 
-
     const notify = () => toast.success("item added to cart", {
         position: "top-right",
         autoClose: 2000,
@@ -33,22 +32,21 @@ export const ItemCount = ({ onAdd, stock }) => {
 
     return (
         <div className="ItemCountContainer">
-            <button
+            <Button
                 className="btn btn-primary btnCount"
                 onClick={countResta}
                 disabled={count <= 1}
             >
                 -
-            </button>
+            </Button>
             <span className="countSpan">{count}</span>
-            <button
+            <Button
                 className="btn btn-primary btnCount"
                 onClick={countSuma}
                 disabled={count >= stock}
             >
                 +
-            </button>
-
+            </Button>
             <Button onClick={() => { onAdd(count); notify(); }} className="btn btn-success addItemButton">
                 Add to Cart
             </Button>

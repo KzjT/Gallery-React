@@ -1,4 +1,5 @@
 import { createContext, useState } from "react"
+import {  toast } from 'react-toastify';
 
 //se inicializa
 export const CartContext = createContext([]);
@@ -8,13 +9,18 @@ export const CartProvider = ({ children }) => {
 
     const [items, setItems] = useState([])
 
+    const showNotification = (message) => {
+        toast(message);
+};
 
-    //funcion que acumula los items
+const formatter2 = new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency: "ARS",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+});
+
     const totalWidget = items.reduce((acc, val) => acc + val.quantity, 0)
-
-
-
-
 
     const addItem = ({ product, quantity }) => {
 
@@ -35,23 +41,27 @@ export const CartProvider = ({ children }) => {
     }
     
 
-    //funcion removedora por "id"
     const removeItem = (id) => {
         const itemsFiltered = items.filter(item => item.id !== id)
         setItems(itemsFiltered)
     }
 
-    //funcion limpiadora, devuelve un array vacio
     const clear = () => setItems([])
 
+    const CartVars= {
+        items, 
+        addItem, 
+        removeItem, 
+        clear, 
+        totalWidget, 
+        showNotification, 
+        formatter2
+    }
 
     return (
-
-        <CartContext.Provider value={{ addItem, removeItem, clear, totalWidget, items}}>
+        <CartContext.Provider value={CartVars}>
             {children}
         </CartContext.Provider>
-
     )
-
 }
 

@@ -12,33 +12,35 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import Footer from './Components/Footer1/Footer';
 import Contact from './Components/views/Contact/Contact';
 import { CartProvider } from './contexts/CartContext';
+import Checkout from './Components/Checkout/Checkout';
 
 
 function App() {
   return (
 
     <CartProvider>
-      
-    <BrowserRouter>
-    
-      <NavBar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/Gallery" element={<Gallery />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/category/:categoryId" element={<ItemListContainer />} />
-        <Route path="/detail/:id" element={<ItemDetailContainer />} /> 
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+      <BrowserRouter>
+
+        <NavBar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Gallery" element={<Gallery />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/detail/:id" element={<ItemDetailContainer />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
 
         <Footer />
         <Footer2 />
 
-    </BrowserRouter>
+      </BrowserRouter>
 
-   </CartProvider>
+    </CartProvider>
   );
 }
 

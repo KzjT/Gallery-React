@@ -1,11 +1,14 @@
 import React, { useContext, useState } from "react";
 import "./CartWidget.scss";
 import cartt from "../../assets/cartt.svg";
+import { ToastContainer } from 'react-toastify';
 import { CartContext } from "../../contexts/CartContext";
 import { Modal, Box } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const CartWidget = () => {
-  const { removeItem, clear, totalWidget, items } = useContext(CartContext);
+  const { items, removeItem, clear, totalWidget, showNotification, formatter2 } = useContext(CartContext);
+
   const [showModal, setShowModal] = useState(false);
 
   const handleToggleModal = () => {
@@ -55,27 +58,30 @@ export const CartWidget = () => {
                   <button
                     type="button"
                     className="remove-button btn btn-danger"
-                    onClick={() => removeItem(item.id)}
+                    onClick={() => {
+                      removeItem(item.id);
+                      showNotification("Product removido satisfactoriamente")
+                    }}  
                   >
                     -
+                    <ToastContainer />
                   </button>
                 </li>
               ))}
             </ul>
-            <div className="total">Total: {total()}</div>
+            <div className="total">Total: {formatter2.format(total())}</div>
             <div className="actions">
-              <button
-                className="pay-button btn btn-success"
-                type="button"
-                onClick={() => console.log("Go Pay")}
-              >
+              <Link to="/checkout" className="pay-button btn btn-success">
                 Go Pay
-              </button>
+              </Link>
               <div className="bottom-actions">
                 <button
                   className="clear-button btn btn-dark"
                   type="button"
-                  onClick={clear}
+                  onClick={() => {
+                    showNotification("Cart clear");
+                    clear();
+                  }}
                 >
                   Clear All
                 </button>
@@ -85,6 +91,8 @@ export const CartWidget = () => {
                   onClick={handleToggleModal}
                 >
                   Close
+                  <ToastContainer />
+                
                 </button>
               </div>
             </div>
