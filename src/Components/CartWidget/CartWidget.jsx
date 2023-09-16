@@ -10,7 +10,7 @@ export const CartWidget = () => {
   const { items, removeItem, clear, totalWidget, formatter2 } = useContext(CartContext);
 
   const [showModal, setShowModal] = useState(false);
-  
+
 
   const handleToggleModal = () => {
     setShowModal(!showModal);
@@ -43,25 +43,84 @@ export const CartWidget = () => {
           }}
         >
           <h2 id="cart-modal-title">Cart</h2>
-          <div id="cart-modal-description">
-            <ul>
-              {items.map((item) => (
-                <li key={item.id} className="cart-item">
-                  <img
-                    className="product-image"
-                    src={item.img}
-                    alt={item.name}
-                  />
-                  <div className="item-details">
-                    <span className="product-name">{item.name}</span>
-                    <span className="product-quantity">{item.quantity}x</span>
-                  </div>
-                  <button
+
+          {items.length === 0 ? (
+
+            <div className="cart-empty-message">
+              <p>You don't have anything added, add your first article!</p>
+              <div className="cart-empty-imgCont"> 
+              <img src="https://www.distritomoda.com.ar/sites/all/themes/omega_btob/images/carrito_vacio_nuevo.png" alt="asd" className="cart-empty-img" />
+              </div>
+              <div className="button-container">
+                <div className="cart-buttons">
+                  <Link
+                    to="/Gallery"
+                    className="btn btn-primary"
                     type="button"
-                    className="remove-button btn btn-danger"
+                    onClick={handleToggleModal}
+                  >
+                    Explore
+                  </Link>
+
+                  <button
+                    className="btn btn-danger"
+                    type="button"
+                    onClick={handleToggleModal}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          ) : (
+            <div id="cart-modal-description">
+              <ul>
+                {items.map((item) => (
+                  <li key={item.id} className="cart-item">
+                    <img
+                      className="product-image"
+                      src={item.img}
+                      alt={item.name}
+                    />
+                    <div className="item-details">
+                      <span className="product-name">{item.name}</span>
+                      <span className="product-quantity">{item.quantity}x</span>
+                    </div>
+                    <button
+                      type="button"
+                      className="remove-button btn btn-danger"
+                      onClick={() => {
+                        removeItem(item.id);
+                        toast.info("removed product", {
+                          position: "top-right",
+                          autoClose: 3000,
+                          hideProgressBar: true,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                        });
+                      }}
+                    >
+                      -
+                      <ToastContainer />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              <div className="total">Total: {formatter2.format(total())}</div>
+              <div className="actions">
+                <Link to="/checkout" className="pay-button btn btn-success">
+                  Go Pay
+                </Link>
+                <div className="bottom-actions">
+                  <button
+                    className="clear-button btn btn-dark"
+                    type="button"
                     onClick={() => {
-                      removeItem(item.id);
-                      toast.info("removed product", {
+                      toast.info("Cart clear", {
                         position: "top-right",
                         autoClose: 3000,
                         hideProgressBar: true,
@@ -71,50 +130,23 @@ export const CartWidget = () => {
                         progress: undefined,
                         theme: "light",
                       });
+                      clear();
                     }}
                   >
-                    -
+                    Clear All
+                  </button>
+                  <button
+                    className="close-button btn btn-danger"
+                    type="button"
+                    onClick={handleToggleModal}
+                  >
+                    Close
                     <ToastContainer />
                   </button>
-                </li>
-              ))}
-            </ul>
-            <div className="total">Total: {formatter2.format(total())}</div>
-            <div className="actions">
-              <Link to="/checkout" className="pay-button btn btn-success">
-                Go Pay
-              </Link>
-              <div className="bottom-actions">
-                <button
-                  className="clear-button btn btn-dark"
-                  type="button"
-                  onClick={() => {
-                    toast.info("Cart clear", {
-                      position: "top-right",
-                      autoClose: 3000,
-                      hideProgressBar: true,
-                      closeOnClick: true,
-                      pauseOnHover: true,
-                      draggable: true,
-                      progress: undefined,
-                      theme: "light",
-                    });
-                    clear();
-                  }}
-                >
-                  Clear All
-                </button>
-                <button
-                  className="close-button btn btn-danger"
-                  type="button"
-                  onClick={handleToggleModal}
-                >
-                  Close
-                  <ToastContainer />
-                </button>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </Box>
       </Modal>
     </div>
