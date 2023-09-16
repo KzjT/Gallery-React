@@ -3,9 +3,14 @@
     border: 20px #297ea6 solid;
     border-top: 0px;
 
+    @media (max-width: 768px) {
+        border-top: 20px;
+        border: 10px #297ea6 solid;
+    }
+
     .footerText,
     .nav-link {
-        color: white !important;
+        color: burlywood !important;
         font-size: 15px;
         font-weight: bold;
         text-decoration: none;
@@ -17,31 +22,61 @@
             color: #f00;
         }
     }
-}
 
-.copyright {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    color: burlywood;
-    font-size: larger;
-    margin: 0.5rem;
-    padding: 0.5rem;
-}
+    .copyright {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: burlywood;
+        font-size: larger;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
 
-.github-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    justify-content: flex-end;
-    margin-right: 12px;
-}
+    .github-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        justify-content: flex-end;
+        margin-right: 12px;
+    }
 
-.github-icon {
-    color: black;
-}
+    .github-icon {
+        color: black;
+    }
 
-.github-text {
-    color: white;
-    font-size: 14px;
+    .github-text {
+        color: black;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+
+    .footer-content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .art-gallery-text {
+        position: relative;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: larger;
+        color: burlywood;
+
+        @media (max-width: 768px) {
+            
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+    }
 }

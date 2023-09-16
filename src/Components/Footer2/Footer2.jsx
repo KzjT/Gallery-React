@@ -13,8 +13,9 @@ export const Footer2 = () => {
                 <li className="nav-item footer-item"><Link to="/Gallery" className="nav-link px-2 text-body-secondary">Gallery</Link></li>
                 <li className="nav-item footer-item"><Link to="/Contact" className="nav-link px-2 text-body-secondary">Contact</Link></li>
             </ul>
+            <p className="art-gallery-text">Art Gallery 2023 ©</p>
             <div className="footer-content">
-                <p className="copyright">&copy; 2023 Gallery Art</p>
+
                 <div className="github-content">
                     <a
                         href="https://github.com/Lukjjz95"

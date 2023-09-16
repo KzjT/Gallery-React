@@ -54,7 +54,7 @@ export const CartWidget = () => {
                   />
                   <div className="item-details">
                     <span className="product-name">{item.name}</span>
-                    <span className="product-quantity">X{item.quantity}</span>
+                    <span className="product-quantity">{item.quantity}x</span>
                   </div>
                   <button
                     type="button"
