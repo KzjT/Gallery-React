@@ -60,7 +60,7 @@ const Checkout = () => {
                         email: "",
                     })
                     clear()
-                    toast.success(`Your order: ${id} was successful.You will be redirected to the beginning. Thanks for shopping with us.`);
+                    toast.success(`Your order: ${id} was successful.You will be redirected to home. Thanks for shopping with us.`);
                     setTimeout(() => {
                         navigate('/');
                     }, 6000);
