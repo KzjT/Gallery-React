@@ -44,7 +44,7 @@ export const Footer2 = () => {
                             className="github-icon"
                         />
                     </a>
-                    <p className="github-text">Proyecto realizado por Lucas Marchese</p>
+                    <p className="github-text">Proyecto realizado por Lukjjz</p>
                 </div>
             </div>
         </footer>

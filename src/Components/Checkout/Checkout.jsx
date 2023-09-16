@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import ItemCount from "../ItemCount/ItemCount";
 
 const Checkout = () => {
     const { items, clear, formatter2, removeItem, countSuma, countResta } = useContext(CartContext);
@@ -106,7 +107,7 @@ const Checkout = () => {
                                 <div className="btn-checkout">
                                     <button className="btn btn-primary mx-2" onClick={countResta}>-</button>
                                     {item.quantity}
-                                    <button className="btn btn-primary mx-2" onClick={countSuma}>+</button>
+                                    <button className="btn btn-primary mx-2" onClick={countSuma} itemCount={ItemCount}>+</button>
                                 </div>
                             </td>
                             <td>{formatter2.format(item.quantity * item.price)}</td>
