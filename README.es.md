@@ -10,7 +10,7 @@ Simulador de comercio electrónico construido con React.js y Firestore.
 
 ## Descripción
 
-Simulador e-commerce de una galería de arte. Dispone de filtrado por categorías lo que permite visualizar los productos de forma más organizada. El carrito almacena los productos previamente guardados, y si continúas con la compra envía un pedido con los datos de la compra.
+Simulador e-commerce de una galería de arte. Dispone de filtrado por categorías lo que permite visualizar los productos de forma más organizada. El carrito almacena los productos previamente guardados, y si continúas con la compra envía un pedido con los datos de la compra. La seccion contacto tambien toma el mensaje y lo almacena en una coleccion dentro de firebase.
 
 ## Librerías y Tecnologías Utilizadas
 
