@@ -7,7 +7,6 @@ import logo from '../../assets/art_logo.svg';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config'; 
 
-
 const NavBar = () => {
     const [isGalleryOpen, setIsGalleryOpen] = useState(false);
     const [categories, setCategories] = useState([]);
@@ -34,7 +33,6 @@ const NavBar = () => {
                 console.error("Error al obtener categorías desde Firebase:", error);
             }
         };
-
         fetchCategories();
     }, []);
     

@@ -1,14 +1,11 @@
 import { createContext, useState } from "react";
-
-// Se inicializa el contexto
 export const CartContext = createContext()
-
+//
 export const CartProvider = ({ children }) => {
     const [items, setItems] = useState([]);
     const [count, setCount] = useState(1);
     // eslint-disable-next-line no-unused-vars
     const [orderCounter, setOrderCounter] = useState(2000);
-
     const formatter2 = new Intl.NumberFormat("es-AR", {
         style: "currency",
         currency: "ARS",
@@ -38,7 +35,7 @@ export const CartProvider = ({ children }) => {
         }
     };
 
-    const countSuma = ({stock}) => {
+    const countSuma = ({ stock }) => {
         if (count < stock) {
             setCount(count + 1);
 

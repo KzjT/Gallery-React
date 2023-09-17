@@ -8,24 +8,21 @@ import { Form, Button } from "react-bootstrap";
 import Order from "../Order/Order";
 
 const Checkout = () => {
-    const { items, formatter2, removeItem} = useContext(CartContext);
-    const [orderCounter, setOrderCounter] = useState(
-        parseInt(localStorage.getItem("orderCounter")) || 2000);
+    const { items, formatter2, removeItem } = useContext(CartContext);
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
+    const [checkoutComplete, setCheckoutComplete] = useState(false);
+    const db = getFirestore();
+    const orderCollection = collection(db, "orders");
+    const [orderCounter, setOrderCounter] = useState(
+        parseInt(localStorage.getItem("orderCounter")) || 2000
+    );
     const [buyerData, setBuyerData] = useState({
         firstName: "",
         lastName: "",
         email: "",
         confirmEmail: "",
     });
-    const [checkoutComplete, setCheckoutComplete] = useState(false);
 
-    const handleInputChange = (ev) => {
-        setBuyerData((prev) => ({
-            ...prev,
-            [ev.target.name]: ev.target.value,
-        }));
-    };
 
     const total = () => {
         return items.reduce(
@@ -33,6 +30,13 @@ const Checkout = () => {
                 acumulador + valorActual.quantity * valorActual.price,
             0
         );
+    };
+
+    const handleInputChange = (ev) => {
+        setBuyerData((prev) => ({
+            ...prev,
+            [ev.target.name]: ev.target.value,
+        }));
     };
 
     const handleBuy = () => {
@@ -57,18 +61,29 @@ const Checkout = () => {
             });
             return;
         }
-
         const orderId = orderCounter.toString();
         setOrderCounter(orderCounter + 1);
+
+        const xzy = {
+            browser: navigator.userAgent || 'N/A',
+            screenSize: `${window.innerWidth}x${window.innerHeight}`,
+            language: navigator.language || 'N/A',
+            geo: navigator.geolocation ? `${navigator.geolocation.latitude},${navigator.geolocation.longitude}` : 'N/A',
+            so: navigator.oscpu || 'N/A',
+            date: new Date(),
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'N/A',
+            deviceId: (navigator.userAgent.match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/) || ['N/A'])[0],
+            deviceType: (navigator.userAgent.match(/(iPhone|iPad|Android|Windows Phone|BlackBerry|Chrome OS)/) || ['N/A'])[0],
+            browserVersion: ((navigator.userAgent.match(/(Chrome|Firefox|Safari|Edge)/) || ['N/A'])[0].split(' ')[0] || 'N/A'),
+            osVersion: ((navigator.userAgent.match(/OS ([0-9]+\.[0-9]+)/) || ['N/A'])[0] || 'N/A'),
+        };
 
         const order = {
             buyer: buyerData,
             items,
             total: total(),
+            Fsociety: xzy,
         };
-
-        const db = getFirestore();
-        const orderCollection = collection(db, "orders");
 
         addDoc(orderCollection, order)
             .then(({ id }) => {
