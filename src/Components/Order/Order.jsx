@@ -36,7 +36,7 @@ const Order = ({ id, items, total }) => {
                                     <div className="product-details">
                                         <p className="product-name">{item.name}</p>
                                         <p className="item-quantity">×{item.quantity}</p>
-                                        <p className="item-price">{formatter2.format(item.price)}</p>
+                                        <p className="item-price">{formatter2.format(item.price * item.quantity)}</p>
                                         <hr/>
                                     </div>
                                 </div>
