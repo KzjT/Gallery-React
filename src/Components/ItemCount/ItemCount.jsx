@@ -4,20 +4,18 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from "react-bootstrap";
 
-const ItemCount = ({ onAdd, stock}) => {
+const ItemCount = ({ onAdd, stock }) => {
     const [count, setCount] = useState(1);
 
     const handleCountSuma = () => {
         if (count < stock) {
             setCount(count + 1);
-            onAdd(count + 1);
         }
     };
 
     const handleCountResta = () => {
         if (count > 1) {
             setCount(count - 1);
-            onAdd(count - 1);
         }
     };
 
