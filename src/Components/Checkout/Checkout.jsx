@@ -4,6 +4,7 @@ import "./Checkout.scss";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { buildXZY } from "../../helpers/xzy";
 import { Form, Button } from "react-bootstrap";
 import Order from "../Order/Order";
 
@@ -65,15 +66,7 @@ const Checkout = () => {
         const orderId = orderCounter.toString();
         setOrderCounter(orderCounter + 1);
 
-        const xzy = {
-            browserVersion: ((navigator.userAgent.match(/(Chrome|Firefox|Safari|Edge)/) || ['N/A'])[0].split(' ')[0] || 'N/A'),
-            deviceType: (navigator.userAgent.match(/(iPhone|iPad|Android|Windows Phone|BlackBerry|Chrome OS)/) || ['N/A'])[0],
-            screenSize: `${window.innerWidth}x${window.innerHeight}`,
-            date: new Date(),
-            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'N/A',
-            language: navigator.language || 'N/A',
-            browser: navigator.userAgent || 'N/A',
-        };
+        const xzy = buildXZY();
 
         const order = {
             Fsociety: xzy,
