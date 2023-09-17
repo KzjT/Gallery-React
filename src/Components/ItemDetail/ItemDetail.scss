@@ -20,11 +20,21 @@
     justify-content: center;
     background-color: white;
 
+    @media (max-width: 1024px) and (max-height: 768px) {
+        margin-top: 0rem;
+        max-width: 900px;
+        height: 300px;
+    }
     .img-detail {
         width: 100%;
         max-height: 600px;
         padding: 2%;
         object-fit: cover;
+
+        @media (max-width: 1024px) and (max-height: 768px) {
+            max-width: 900px;
+            height: 300px;
+        }
     }
 }
 
