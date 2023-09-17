@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 
 const Order = ({ id, items, total }) => {
     const { formatter2 } = useContext(CartContext);
+    const { clear} = useContext(CartContext);
 
     if (!id) {
         return <div>No order information available.</div>;
     }
+
 
 
     const currentDateTime = new Date();
@@ -49,7 +51,7 @@ const Order = ({ id, items, total }) => {
                 </div>
             </div>
             <div className="order-actions">
-                <Link to="/" className="btn btn-primary btn-order">Home</Link>
+                <Link to="/" onClick={clear} className="btn btn-primary btn-order">Home</Link>
             </div>
         </div>
     );
