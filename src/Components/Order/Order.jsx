@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import "./Order.scss";
 import { CartContext } from '../../contexts/CartContext';
+import { Link } from 'react-router-dom';
 
 const Order = ({ id, items, total }) => {
     const { formatter2 } = useContext(CartContext);
@@ -48,7 +49,7 @@ const Order = ({ id, items, total }) => {
                 </div>
             </div>
             <div className="order-actions">
-                <button className="btn btn-primary btn-order">Home</button>
+                <Link to="/" className="btn btn-primary btn-order">Home</Link>
             </div>
         </div>
     );
