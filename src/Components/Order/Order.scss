@@ -1,38 +1,88 @@
 .order-details {
-    border: 1px solid #ccc;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-}
-
-.order-details h3 {
-    font-size: 24px;
-    margin-bottom: 12px;
-}
-
-.order-details p {
-    margin: 8px 0;
-}
-
-.order-details h4 {
-    font-size: 20px;
-    margin-top: 16px;
-}
-
-.order-details ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.order-details li {
-    margin: 8px 0;
-}
-
-.btn-Order{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
-    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    .order-content {
+        width: 80%;
+        text-align: center;
+        padding: 20px;
+
+        .order-header {
+            font-size: 24px;
+            color: burlywood;
+            margin-bottom: 10px;
+        }
+
+        .order-date, .order-id {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+
+            p {
+                font-size: 16px;
+                color: #333;
+                flex: 1;
+                text-align: center;
+
+                &:first-child {
+                    flex: 2;
+                    text-align: left;
+                }
+            }
+        }
+
+        .order-summary {
+            margin-top: 20px;
+            p {
+                font-size: 16px;
+                color: #333;
+                margin: 5px 0;
+
+                &:last-child {
+                    font-weight: bold;
+                    color: #ff6b6b;
+                }
+            }
+        }
+    }
+
+    .order-actions {
+        margin-top: 20px;
+
+        .btn-order {
+            font-size: 18px;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+    }
+}
+
+.total-order{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.item{
+    text-decoration: none;
+    list-style: none
 }

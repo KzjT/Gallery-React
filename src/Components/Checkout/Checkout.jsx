@@ -38,6 +38,7 @@ const Checkout = () => {
 
     const handleBuy = () => {
         if (
+            !items.length ||
             !buyerData.firstName ||
             !buyerData.lastName ||
             !buyerData.email ||
@@ -80,24 +81,23 @@ const Checkout = () => {
                         confirmEmail: "",
                     });
 
-                    // Establecer purchaseSuccess en true después de 1.2 segundos
                     setTimeout(() => {
                         setPurchaseSuccess(true);
                     }, 1200);
 
                     toast.success(
-                        `Your order: #${orderId} was successful. You will be redirected to home. Thanks for shopping with us.`, {
-                        position: "top-right",
-                        autoClose: 5000,
-                        hideProgressBar: true,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "colored",
-                    });
-
-                    // Establecer checkoutComplete en true después de la compra
+                        `Your order: #${orderId} was successful. You will be redirected to home. Thanks for shopping with us.`,
+                        {
+                            position: "top-right",
+                            autoClose: 5000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "colored",
+                        }
+                    );
                     setCheckoutComplete(true);
                 }
             })
@@ -121,6 +121,7 @@ const Checkout = () => {
                     <table className="product-table">
                         <thead>
                             <tr>
+                                <th></th>
                                 <th>Product</th>
                                 <th>Unit price</th>
                                 <th>Quantity</th>
@@ -131,6 +132,13 @@ const Checkout = () => {
                         <tbody>
                             {items.map((item) => (
                                 <tr key={item.id}>
+                                    <td className="product-image-cell">
+                                        <img
+                                            src={item.img}
+                                            alt={item.name}
+                                            className="product-image"
+                                        />
+                                    </td>
                                     <td>{item.name}</td>
                                     <td>{formatter2.format(item.price)}</td>
                                     <td>
@@ -147,20 +155,9 @@ const Checkout = () => {
                                             className="remove-button btn btn-danger"
                                             onClick={() => {
                                                 removeItem(item.id);
-                                                toast.info("removed product", {
-                                                    position: "top-right",
-                                                    autoClose: 3000,
-                                                    hideProgressBar: true,
-                                                    closeOnClick: true,
-                                                    pauseOnHover: true,
-                                                    draggable: true,
-                                                    progress: undefined,
-                                                    theme: "light",
-                                                });
                                             }}
                                         >
                                             🗑
-                                            <ToastContainer />
                                         </button>
                                     </td>
                                 </tr>
@@ -229,9 +226,7 @@ const Checkout = () => {
                     </Form>
                 </div>
             )}
-
             <ToastContainer />
-
             {purchaseSuccess && (
                 <Order
                     id={orderId}
