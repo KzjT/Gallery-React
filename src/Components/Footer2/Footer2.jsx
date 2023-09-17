@@ -7,7 +7,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export const Footer2 = () => {
     return (
         <footer className="footer2">
-            <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+            <ul className="nav justify-content-center border-bottom pb-3 mb-3 ul-footer2">
                 <li className="nav-item footer-item">
                     <Link to="/" className="nav-link px-2 text-body-secondary">
                         Home

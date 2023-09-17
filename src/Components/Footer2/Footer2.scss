@@ -1,7 +1,7 @@
 .footer2 {
     background-image: url(../../assets/background.svg);
-    border: 20px #297ea6 solid;
-    border-top: 0px;
+    border: 15px #297ea6 solid;
+
 
     @media (max-width: 768px) {
         border-top: 20px;
@@ -19,8 +19,9 @@
         font-size: 15px;
         font-weight: bold;
         text-decoration: none;
-        padding: 0.5rem 1rem;
-        margin: 0 0.5rem;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
         transition: color 0.2s ease-in-out;
 
         &:hover {
@@ -28,6 +29,18 @@
         }
     }
 
+    .ul-footer2 {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        list-style: none;
+        padding: 0;
+        margin: 0; 
+    
+    .footer-item {
+        margin: 0; 
+    }
+}
     .copyright {
         position: absolute;
         bottom: 0;

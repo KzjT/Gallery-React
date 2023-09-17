@@ -9,7 +9,7 @@ import Error404 from './Components/Error404/Error404';
 import Footer2 from './Components/Footer2/Footer2';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import Footer from './Components/Footer1/Footer';
+//import Footer from './Components/Footer1/Footer';
 import Contact from './Components/views/Contact/Contact';
 import { CartProvider } from './contexts/CartContext';
 import Checkout from './Components/Checkout/Checkout';
@@ -40,7 +40,7 @@ function App({onAdd, stock, countResta, countSuma, CartContext}) {
           <Route path="*" element={<Error404 />} />
         </Routes>
 
-        <Footer />
+        {/*<Footer />*/}
         <Footer2 />
 
       </BrowserRouter>
