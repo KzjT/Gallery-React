@@ -14,15 +14,9 @@ import Contact from './Components/views/Contact/Contact';
 import { CartProvider } from './contexts/CartContext';
 import Checkout from './Components/Checkout/Checkout';
 
-
-
-
-
-
 function App({onAdd, stock}) {
 
   return (
-
     <CartProvider >
 
       <BrowserRouter>
@@ -39,12 +33,9 @@ function App({onAdd, stock}) {
           <Route path="/checkout" element={<Checkout onAdd={onAdd} stock={stock} />}/>
           <Route path="*" element={<Error404 />} />
         </Routes>
-
         {/*<Footer />*/}
         <Footer2 />
-
       </BrowserRouter>
-
     </CartProvider>
   );
 }
