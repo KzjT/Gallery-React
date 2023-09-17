@@ -20,10 +20,11 @@
     justify-content: center;
     background-color: white;
 
-    @media (max-width: 1024px) and (max-height: 768px) {
-        margin-top: 0rem;
-        max-width: 900px;
-        height: 300px;
+
+    @media (max-width: 1366px) and (max-height: 768px) {
+        max-width: 600px;
+        height: 400px;
+        margin-top: 0;
     }
     .img-detail {
         width: 100%;
@@ -31,9 +32,9 @@
         padding: 2%;
         object-fit: cover;
 
-        @media (max-width: 1024px) and (max-height: 768px) {
-            max-width: 900px;
-            height: 300px;
+        @media (max-width: 1366px) and (max-height: 768px) {
+            max-width: 600px;
+            height: 400px;
         }
     }
 }
