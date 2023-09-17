@@ -8,10 +8,9 @@ import { Form, Button } from "react-bootstrap";
 import Order from "../Order/Order";
 
 const Checkout = () => {
-    const { items, formatter2, removeItem } = useContext(CartContext);
+    const { items, formatter2, removeItem} = useContext(CartContext);
     const [orderCounter, setOrderCounter] = useState(
-        parseInt(localStorage.getItem("orderCounter")) || 2000
-    );
+        parseInt(localStorage.getItem("orderCounter")) || 2000);
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
     const [buyerData, setBuyerData] = useState({
         firstName: "",
@@ -143,9 +142,7 @@ const Checkout = () => {
                                     <td>{formatter2.format(item.price)}</td>
                                     <td>
                                         <div className="btn-checkout">
-                                            <button className="btn btn-primary btnCount">-</button>
                                             {item.quantity}
-                                            <button className="btn btn-primary btnCount">+</button>
                                         </div>
                                     </td>
                                     <td>{formatter2.format(item.quantity * item.price)}</td>

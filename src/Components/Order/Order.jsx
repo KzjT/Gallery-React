@@ -4,8 +4,8 @@ import { CartContext } from '../../contexts/CartContext';
 import { Link } from 'react-router-dom';
 
 const Order = ({ id, items, total }) => {
-    const { formatter2 } = useContext(CartContext);
-    const { clear} = useContext(CartContext);
+    const { formatter2, clear } = useContext(CartContext);
+
 
     if (!id) {
         return <div>No order information available.</div>;
