@@ -82,7 +82,7 @@ export const CartWidget = () => {
             </div>
           ) : (
             <div id="cart-modal-description">
-              <ul>
+              <ul className="ul-modal-description">
                 {items.map((item) => (
                   <li key={item.id} className="cart-item">
                     <img
