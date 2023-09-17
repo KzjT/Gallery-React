@@ -16,6 +16,9 @@
 }
 
 .h3Carousel{
+    @media (max-width: 768px) {
+        font-size: 25px; 
+    }
     position: relative;
     color:burlywood;
     font-size: 44px; 
@@ -27,6 +30,9 @@
 }
 
 .pCarousel{
+    @media (max-width: 768px) {
+        font-size: 13px; 
+    }
     position: relative;
     font-size: 20px; 
     color: white;
