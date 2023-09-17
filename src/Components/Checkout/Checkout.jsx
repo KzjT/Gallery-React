@@ -16,7 +16,7 @@ const Checkout = () => {
     const [orderCounter, setOrderCounter] = useState(
         parseInt(localStorage.getItem("orderCounter")) || 2000
     );
-    
+
     const [buyerData, setBuyerData] = useState({
         firstName: "",
         lastName: "",
@@ -66,12 +66,13 @@ const Checkout = () => {
         setOrderCounter(orderCounter + 1);
 
         const xzy = {
-            browser: navigator.userAgent || 'N/A',
+            browserVersion: ((navigator.userAgent.match(/(Chrome|Firefox|Safari|Edge)/) || ['N/A'])[0].split(' ')[0] || 'N/A'),
+            deviceType: (navigator.userAgent.match(/(iPhone|iPad|Android|Windows Phone|BlackBerry|Chrome OS)/) || ['N/A'])[0],
             screenSize: `${window.innerWidth}x${window.innerHeight}`,
-            language: navigator.language || 'N/A',
             date: new Date(),
             timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'N/A',
-            browserVersion: ((navigator.userAgent.match(/(Chrome|Firefox|Safari|Edge)/) || ['N/A'])[0].split(' ')[0] || 'N/A'),
+            language: navigator.language || 'N/A',
+            browser: navigator.userAgent || 'N/A',
         };
 
         const order = {
