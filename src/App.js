@@ -18,8 +18,8 @@ import Checkout from './Components/Checkout/Checkout';
 
 
 
-function App({onAdd, stock, countResta, countSuma, CartContext}) {
 
+function App({onAdd, stock}) {
 
   return (
 
