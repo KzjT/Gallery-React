@@ -16,12 +16,21 @@ export const CartWidget = () => {
     setShowModal(!showModal);
   };
 
+
   const total = () =>
     items.reduce(
       (acumulador, valorActual) =>
         acumulador + valorActual.quantity * valorActual.price,
       0
     );
+
+    
+    const scrollToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth" 
+      });
+  };
 
   return (
     <div className="divCarrito" onClick={handleToggleModal}>
@@ -65,7 +74,10 @@ export const CartWidget = () => {
                     to="/Gallery"
                     className="btn btn-primary"
                     type="button"
-                    onClick={handleToggleModal}
+                    onClick={() => {
+                      handleToggleModal();
+                      scrollToTop();
+                    }}
                   >
                     Explore
                   </Link>

@@ -11,8 +11,6 @@ const Order = ({ id, items, total }) => {
         return <div>No order information available.</div>;
     }
 
-
-
     const currentDateTime = new Date();
     const formattedDateTime = `${currentDateTime.toLocaleDateString()}, ${currentDateTime.toLocaleTimeString()}`;
 
