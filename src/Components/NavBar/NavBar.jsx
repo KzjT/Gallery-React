@@ -12,13 +12,9 @@ const NavBar = () => {
     const [isGalleryOpen, setIsGalleryOpen] = useState(false);
     const [categories, setCategories] = useState([]);
 
-    const handleGalleryHover = () => {
-        setIsGalleryOpen(true);
-    };
-
-    const handleGalleryLeave = () => {
-        setIsGalleryOpen(false);
-    };
+    const handleGalleryClick = () => {
+        setIsGalleryOpen(!isGalleryOpen); 
+};
 
     useEffect(() => {
         const fetchCategories = async () => {
@@ -61,15 +57,14 @@ const NavBar = () => {
                         id="gallery-dropdown"
                         className="navbar-link"
                         show={isGalleryOpen}
-                        onMouseEnter={handleGalleryHover}
-                        onMouseLeave={handleGalleryLeave}
+                        onClick={handleGalleryClick}
                     >
                         <NavDropdown.Item as={NavLink} to="/Gallery" className="navbar-link">
                             All Categories
                         </NavDropdown.Item>
 
                         {categories.map((category) => (
-                            <NavDropdown.Item key={category} as={NavLink} to={`/category/${category}`} className="navbar-link">
+                            <NavDropdown.Item  key={category} as={NavLink} to={`/category/${category}`} className="navbar-link">
                                 {category}
                             </NavDropdown.Item>
                         ))}
