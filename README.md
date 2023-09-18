@@ -12,7 +12,7 @@ E-commerce simulator builded with React.js and Firestore.
 
 Simulator of an e-commerce of an art gallery. It has filtering by categories which allows you to view the products in a more organized way. The cart stores the saved products, and if you continue with the purchase, it sends an order with the purchase details. The contact section also takes the message and stores it in a collection within firebase.
 
-## Librerías y Tecnologías Utilizadas
+## Libraries
 
 Here are the key libraries and technologies used in this project:
 
