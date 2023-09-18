@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ItemCount.scss";
 import { ToastContainer} from 'react-toastify';
-import { notifyAddProduct } from "../../helpers/xzy";
+import { notifyAddProduct } from "../../helpers/noti-toasty";
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from "react-bootstrap";
 
@@ -19,7 +19,6 @@ const ItemCount = ({ onAdd, stock }) => {
             setCount(count - 1);
         }
     };
-
 
     return (
         <div className="ItemCountContainer">

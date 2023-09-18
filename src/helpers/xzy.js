@@ -1,6 +1,3 @@
-import { toast } from 'react-toastify';
-
-
 export const buildXZY = () => {
     return {
         browserVersion: ((navigator.userAgent.match(/(Chrome|Firefox|Safari|Edge)/) || ['N/A'])[0].split(' ')[0] || 'N/A'),
@@ -13,46 +10,7 @@ export const buildXZY = () => {
     };
 };
 
-export const notifyAddProduct = () => toast.success("item added to cart", {
-    position: "top-right",
-    autoClose: 2000,
-    hideProgressBar: true,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-});
-
-
-export const notifyErrorCheckout=()=> toast.error(`Please complete all fields correctly before purchasing`, {
-    position: "top-right",
-    autoClose: 3000,
-    hideProgressBar: true,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-});
-
-
-export const notifySuccessCheckout = (orderId) => {
-    toast.success(
-        `Your order: #${orderId} was successful. You will be redirected to home. Thanks for shopping with us.`,
-        {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-        }
-    );
-};
-
+//checkout
 export const clearBuyerData = (setBuyerData) => {
     setBuyerData((prevBuyerData) => ({
         ...prevBuyerData,
@@ -62,7 +20,7 @@ export const clearBuyerData = (setBuyerData) => {
         confirmEmail: "",
     }));
 };
-
+//checkout
 export const validateBuyerData = ( buyerData, items) => {
     return (
         items.length > 0 &&
@@ -73,4 +31,12 @@ export const validateBuyerData = ( buyerData, items) => {
         buyerData.email === buyerData.confirmEmail &&
         buyerData.email.includes("@")
     );
+};
+
+//footer
+export const scrollToTop = (window) => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" 
+    });
 };

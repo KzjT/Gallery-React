@@ -2,7 +2,8 @@ import React, { useContext, useState } from "react";
 import "./CartWidget.scss";
 import cartt from "../../assets/cartt.svg";
 import emptyCart from "../../assets/carrito_vacio.webp";
-import { toast, ToastContainer } from "react-toastify";
+import {notifyClearAllCartWidget, notifyRemoveItemCartWidget } from "../../helpers/noti-toasty"
+import {  ToastContainer } from "react-toastify";
 import { CartContext } from "../../contexts/CartContext";
 import { Modal, Box } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -95,16 +96,7 @@ export const CartWidget = () => {
                       className="remove-button btn btn-danger"
                       onClick={() => {
                         removeItem(item.id);
-                        toast.info("removed product", {
-                          position: "top-right",
-                          autoClose: 3000,
-                          hideProgressBar: true,
-                          closeOnClick: true,
-                          pauseOnHover: true,
-                          draggable: true,
-                          progress: undefined,
-                          theme: "light",
-                        });
+                        notifyRemoveItemCartWidget()
                       }}
                     >
                       🗑
@@ -124,16 +116,7 @@ export const CartWidget = () => {
                   className="clear-button btn btn-dark"
                   type="button"
                   onClick={() => {
-                    toast.info("Cart clear", {
-                      position: "top-right",
-                      autoClose: 3000,
-                      hideProgressBar: true,
-                      closeOnClick: true,
-                      pauseOnHover: true,
-                      draggable: true,
-                      progress: undefined,
-                      theme: "light",
-                    });
+                    notifyClearAllCartWidget(); 
                     clear();
                   }}
                 >

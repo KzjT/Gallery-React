@@ -3,16 +3,10 @@ import { Link } from "react-router-dom";
 import "./Footer2.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
+import  {scrollToTop } from "../../helpers/xzy"
 export const Footer2 = () => {
 
-        const scrollToTop = () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth" 
-            });
-        };
-
+        scrollToTop(window);
     return (
         <footer className="footer2">
             <ul className="nav justify-content-center border-bottom pb-3 mb-3 ul-footer2">
