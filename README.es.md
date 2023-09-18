@@ -2,13 +2,14 @@
 
 [![](https://img.shields.io/badge/README-Español-red)](./README.es.md)
 
-Simulador de comercio electrónico construido con React.js y Firestore.
+Simulador de e-commerce construido con React.js y Firestore. 
 
 ## Desplegar
 
-[![Estado de Netlify](https://api.netlify.com/api/v1/badges/99d4e21e-4b9c-4997-9381-2eadabce2270/deploy-status)](https://app.netlify.com/sites /galería-de-arte-2023/implementaciones)
+[![Estado de Netlify](https://api.netlify.com/api/v1/badges/99d4e21e-4b9c-4997-9381-2eadabce2270/deploy-status)](
+https://art-gallery-2023.netlify.app) 
 
-## Descripción
+## Descripción 
 
 Simulador e-commerce de una galería de arte. Dispone de filtrado por categorías lo que permite visualizar los productos de forma más organizada. El carrito almacena los productos previamente guardados, y si continúas con la compra envía un pedido con los datos de la compra. La seccion contacto tambien toma el mensaje y lo almacena en una coleccion dentro de firebase.
 
@@ -34,23 +35,22 @@ Esta lista de librerías y tecnologías utilizadas brinda una visión general de
 
 ## Guiones
 
-- `inicio npm`
+- `npm start` 
   Iniciar el proyecto en el entorno de desarrollo.
-- `construcción npm`
+- `npm build`
   Construya el proyecto para producción.
-- `prueba npm`
+- `npm test`
   Inicie el proyecto y ejecute pruebas.
 
   ## Requisitos previos
 
-- [Código de Visual Studio](https://code.visualstudio.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Estructura de carpetas
 
 - `src`: Contiene todo el código fuente.
   - `componentes`: componentes generales utilizados en la aplicación.
-  - `vistas`: Componentes específicos organizados por vista.
+  - `views`: Componentes específicos organizados por vista.
   - `context`: proveedores de contexto de React.
-  - `GlobalStyle`: Proporciona los estilos globales, variables CSS y colores del tema.
   - `assets`: Contiene imágenes y fuentes personalizadas. (Las imágenes del producto se almacenan en Firebase Storage)
 - `App.js`: Componente principal.
