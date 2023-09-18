@@ -12,9 +12,13 @@ export const Error404 = () => {
     }
 
     return(
+        <div className='footer-container-bug'>
+
+     
         <div className='Error404Container container'>
         <img className='error404img' src={error} alt='error404' />
-        <Button className='btn btn-danger btn-error404' onClick={handleVolver}>Home</Button>
+        <Button className='btn btn-danger btn-error404 btn-err0r' onClick={handleVolver}>Home</Button>
+        </div>
         </div>
     )
 }
