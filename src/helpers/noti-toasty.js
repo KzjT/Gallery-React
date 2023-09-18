@@ -13,7 +13,7 @@ export const notifyAddProduct = () => toast.success("item added to cart", {
 });
 
 //cartWidget
-export const notifyRemoveItemCartWidget=()=> toast.info("removed product", {
+export const notifyRemoveItemCartWidget = () => toast.info("removed product", {
     position: "top-right",
     autoClose: 3000,
     hideProgressBar: true,
@@ -40,7 +40,7 @@ export const notifyClearAllCartWidget = () => toast.info("empty cart", {
 
 
 //checkout
-export const notifyErrorCheckout=()=> toast.error(`Please complete all fields correctly before purchasing`, {
+export const notifyErrorCheckout = () => toast.error(`Please complete all fields correctly before purchasing`, {
     position: "top-right",
     autoClose: 3000,
     hideProgressBar: true,
@@ -67,3 +67,4 @@ export const notifySuccessCheckout = (orderId) => {
         }
     );
 };
+

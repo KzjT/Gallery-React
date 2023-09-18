@@ -2,33 +2,31 @@ import React, { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import "./Checkout.scss";
 import { ToastContainer } from "react-toastify";
+import emptyCart from "../../assets/carrito_vacio.webp";
 import "react-toastify/dist/ReactToastify.css";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import {
-    buildXZY,
-    clearBuyerData,
-    validateBuyerData,
-} from "../../helpers/xzy";
-import {notifyErrorCheckout,notifySuccessCheckout,} from "../../helpers/noti-toasty";
+import { buildXZY, clearBuyerData, validateBuyerData, } from "../../helpers/xzy";
+import { notifyErrorCheckout, notifySuccessCheckout, } from "../../helpers/noti-toasty";
 import { Form, Button } from "react-bootstrap";
 import Order from "../Order/Order";
+import { Link } from "react-router-dom";
+
 
 const Checkout = () => {
-    const { items, formatter2, removeItem, total } = useContext(CartContext);
+    const { items, formatter2, removeItem, total,clear } = useContext(CartContext);
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
     const [checkoutComplete, setCheckoutComplete] = useState(false);
-    const db = getFirestore();
-    const orderCollection = collection(db, "orders");
     const [orderCounter, setOrderCounter] = useState(
         parseInt(localStorage.getItem("orderCounter")) || 2000
     );
-
     const [buyerData, setBuyerData] = useState({
         firstName: "",
         lastName: "",
         email: "",
         confirmEmail: "",
     });
+    const db = getFirestore();
+    const orderCollection = collection(db, "orders");
 
     const handleInputChange = (ev) => {
         setBuyerData((prev) => ({
@@ -71,6 +69,18 @@ const Checkout = () => {
         localStorage.setItem("orderCounter", orderCounter.toString());
     }, [orderCounter]);
     const orderId = orderCounter.toString();
+
+
+    if (!items || items.length === 0) {
+        return (
+            <div className="checkout-container">
+                <img src={emptyCart} alt="Empty Cart" />
+                <div className="order-actions">
+                    <Link to="/" onClick={clear} className="btn btn-primary btn-order">Home</Link>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="checkout-container">
@@ -192,7 +202,9 @@ const Checkout = () => {
                     items={items}
                     total={total()}
                 />
+                
             )}
+            
         </div>
     );
 };

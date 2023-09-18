@@ -2,13 +2,17 @@ import React, { useContext } from 'react';
 import "./Order.scss";
 import { CartContext } from '../../contexts/CartContext';
 import { Link } from 'react-router-dom';
-
+import Error404 from "../Error404/Error404"
 const Order = ({ id, items, total }) => {
     const { formatter2, clear } = useContext(CartContext);
     const currentDateTime = new Date();
     const formattedDateTime = `${currentDateTime.toLocaleDateString()}, ${currentDateTime.toLocaleTimeString()}`;
 
-    if (!id) { return <div>No order information available.</div>; }
+if (!items || items.length === 0) {
+    return <div>
+        <Error404/>
+    </div>;
+}
 
     return (
         <div className="order-details">
