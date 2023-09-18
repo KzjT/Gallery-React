@@ -1,7 +1,10 @@
 .footer2 {
     background-image: url(../../assets/background.svg);
     border: 15px #297ea6 solid;
-
+    bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 
     @media (max-width: 768px) {
         border-top: 20px;
