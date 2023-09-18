@@ -1,12 +1,12 @@
 import React from 'react';
-import NavBar from './Components/NavBar/NavBar';
+import NavBar from './layout/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Components/views/Home/Home';
 import AboutUs from './Components/views/AboutUs/AboutUs';
 import Gallery from './Components/views/Gallery/Gallery';
 import Error404 from './Components/Error404/Error404';
-import Footer2 from './Components/Footer2/Footer2';
+import Footer2 from './layout/Footer2/Footer2';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 //import Footer from './Components/Footer1/Footer';
