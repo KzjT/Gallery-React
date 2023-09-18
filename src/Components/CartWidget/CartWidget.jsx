@@ -64,7 +64,7 @@ export const CartWidget = () => {
                       scrollToTop();
                     }}
                   >
-                    Explore
+                    Explorer
                   </Link>
 
                   <button
