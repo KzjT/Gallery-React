@@ -6,11 +6,9 @@ import { Link } from 'react-router-dom';
 const Order = ({ id, items, total }) => {
     const { formatter2, clear } = useContext(CartContext);
 
-
     if (!id) {
         return <div>No order information available.</div>;
     }
-
     const currentDateTime = new Date();
     const formattedDateTime = `${currentDateTime.toLocaleDateString()}, ${currentDateTime.toLocaleTimeString()}`;
 

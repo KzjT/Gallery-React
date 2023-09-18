@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 export const buildXZY = () => {
     return {
         browserVersion: ((navigator.userAgent.match(/(Chrome|Firefox|Safari|Edge)/) || ['N/A'])[0].split(' ')[0] || 'N/A'),
@@ -9,3 +11,14 @@ export const buildXZY = () => {
         browser: navigator.userAgent || 'N/A',
     };
 };
+
+export const notifyAddProduct = () => toast.success("item added to cart", {
+    position: "top-right",
+    autoClose: 2000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+});

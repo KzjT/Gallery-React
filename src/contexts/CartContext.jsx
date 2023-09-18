@@ -35,6 +35,21 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    const total = () =>
+        items.reduce(
+            (acumulador, valorActual) =>
+                acumulador + valorActual.quantity * valorActual.price,
+            0
+        );
+
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
     const countSuma = ({ stock }) => {
         if (count < stock) {
             setCount(count + 1);
@@ -61,6 +76,8 @@ export const CartProvider = ({ children }) => {
         removeItem,
         clear,
         totalWidget,
+        total,
+        scrollToTop,
         formatter2,
         countSuma,
         countResta,

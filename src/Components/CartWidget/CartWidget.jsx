@@ -8,28 +8,12 @@ import { Modal, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const CartWidget = () => {
-  const { items, removeItem, clear, totalWidget, formatter2 } =
+  const { items, removeItem, clear, totalWidget, formatter2, total, scrollToTop } =
     useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
 
   const handleToggleModal = () => {
     setShowModal(!showModal);
-  };
-
-
-  const total = () =>
-    items.reduce(
-      (acumulador, valorActual) =>
-        acumulador + valorActual.quantity * valorActual.price,
-      0
-    );
-
-    
-    const scrollToTop = () => {
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth" 
-      });
   };
 
   return (

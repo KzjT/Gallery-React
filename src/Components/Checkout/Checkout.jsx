@@ -9,7 +9,7 @@ import { Form, Button } from "react-bootstrap";
 import Order from "../Order/Order";
 
 const Checkout = () => {
-    const { items, formatter2, removeItem } = useContext(CartContext);
+    const { items, formatter2, removeItem, total } = useContext(CartContext);
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
     const [checkoutComplete, setCheckoutComplete] = useState(false);
     const db = getFirestore();
@@ -25,14 +25,6 @@ const Checkout = () => {
         confirmEmail: "",
     });
 
-
-    const total = () => {
-        return items.reduce(
-            (acumulador, valorActual) =>
-                acumulador + valorActual.quantity * valorActual.price,
-            0
-        );
-    };
 
     const handleInputChange = (ev) => {
         setBuyerData((prev) => ({

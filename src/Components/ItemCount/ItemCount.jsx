@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./ItemCount.scss";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
+import { notifyAddProduct } from "../../helpers/xzy";
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from "react-bootstrap";
 
 const ItemCount = ({ onAdd, stock }) => {
     const [count, setCount] = useState(1);
-
+    const notify = notifyAddProduct;
     const handleCountSuma = () => {
         if (count < stock) {
             setCount(count + 1);
@@ -19,16 +20,6 @@ const ItemCount = ({ onAdd, stock }) => {
         }
     };
 
-    const notify = () => toast.success("item added to cart", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-    });
 
     return (
         <div className="ItemCountContainer">

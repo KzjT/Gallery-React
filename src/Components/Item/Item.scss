@@ -1,42 +1,55 @@
 .card {
     width: 100%;
-    max-width: 300px;
+    max-width: 380px;
+    max-height: 320px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 2px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
     padding: 1px;
 }
+
 .card:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
+
 .containerObras {
+    padding: 1.5rem;
     border: 2px black solid;
-    padding: 0.3rem;
 }
+
 .card-image {
     width: 100%;
-    height: 600px;
-    max-height: 300px;
+    height: 120px;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
 }
+
+.card-image:hover {
+    transform: scale(1.14);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 .card-content {
     padding: 1rem;
     text-align: center;
+    background-color: rgba(244, 243, 240, 0.538);
 }
+
 .card-title {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 0;
 }
+
 .card-category {
     font-size: 1rem;
     color: #555;
 }
+
 .card-button {
     display: block;
     width: 100%;
@@ -50,11 +63,18 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
+
 .card-button:hover {
     background-color: #0056b3;
 }
+
 @media (max-width: 768px) {
     .card {
-        max-width: 100%;
+        max-width: 100%; 
+        max-height: none; 
+    }
+
+    .card-image {
+        height: auto; 
     }
 }

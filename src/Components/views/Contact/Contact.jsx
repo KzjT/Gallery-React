@@ -8,8 +8,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 export const Contact = () => {
+    const db = getFirestore();
+    const contactCollection = collection(db, "contacts");
     const handleSubmit = (event) => {
-        event.preventDefault(); 
+        event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const message = event.target.message.value;
@@ -33,9 +35,6 @@ export const Contact = () => {
             email,
             message,
         };
-
-        const db = getFirestore();
-        const contactCollection = collection(db, "contacts");
 
         addDoc(contactCollection, contactData)
             .then(() => {
@@ -108,7 +107,7 @@ export const Contact = () => {
                     <Map />
                 </div>
             </section>
-            <ToastContainer /> 
+            <ToastContainer />
         </div>
     );
 }
