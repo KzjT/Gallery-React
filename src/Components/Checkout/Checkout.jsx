@@ -1,10 +1,16 @@
 import React, { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import "./Checkout.scss";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { buildXZY } from "../../helpers/xzy";
+import {
+    buildXZY,
+    notifyErrorCheckout,
+    notifySuccessCheckout,
+    clearBuyerData,
+    validateBuyerData,
+} from "../../helpers/xzy";
 import { Form, Button } from "react-bootstrap";
 import Order from "../Order/Order";
 
@@ -25,7 +31,6 @@ const Checkout = () => {
         confirmEmail: "",
     });
 
-
     const handleInputChange = (ev) => {
         setBuyerData((prev) => ({
             ...prev,
@@ -34,32 +39,14 @@ const Checkout = () => {
     };
 
     const handleBuy = () => {
-        if (
-            !items.length ||
-            !buyerData.firstName ||
-            !buyerData.lastName ||
-            !buyerData.email ||
-            !buyerData.confirmEmail ||
-            buyerData.email !== buyerData.confirmEmail ||
-            !buyerData.email.includes("@")
-        ) {
-            toast.error(`Please complete all fields correctly before purchasing`, {
-                position: "top-right",
-                autoClose: 3000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+        if (!validateBuyerData(buyerData, items)) {
+            notifyErrorCheckout();
             return;
         }
+
         const orderId = orderCounter.toString();
         setOrderCounter(orderCounter + 1);
-
         const xzy = buildXZY();
-
         const order = {
             Fsociety: xzy,
             buyer: buyerData,
@@ -70,31 +57,10 @@ const Checkout = () => {
         addDoc(orderCollection, order)
             .then(({ id }) => {
                 if (id) {
-                    setBuyerData({
-                        firstName: "",
-                        lastName: "",
-                        email: "",
-                        confirmEmail: "",
-                    });
-
-                    setTimeout(() => {
-                        setPurchaseSuccess(true);
-                    }, 1200);
-
-                    toast.success(
-                        `Your order: #${orderId} was successful. You will be redirected to home. Thanks for shopping with us.`,
-                        {
-                            position: "top-right",
-                            autoClose: 5000,
-                            hideProgressBar: true,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "colored",
-                        }
-                    );
+                    clearBuyerData(setBuyerData);
+                    notifySuccessCheckout(orderId);
                     setCheckoutComplete(true);
+                    setPurchaseSuccess(true);
                 }
             })
             .catch((error) => {
@@ -105,7 +71,6 @@ const Checkout = () => {
     useEffect(() => {
         localStorage.setItem("orderCounter", orderCounter.toString());
     }, [orderCounter]);
-
     const orderId = orderCounter.toString();
 
     return (
@@ -158,12 +123,10 @@ const Checkout = () => {
                             ))}
                         </tbody>
                     </table>
-
                     <div className="total-container">
                         <span>Total:</span>
                         <span className="total-amount">{formatter2.format(total())}</span>
                     </div>
-
                     <Form className="buyer-form">
                         <Form.Group controlId="firstName">
                             <Form.Label className="label">First Name</Form.Label>
