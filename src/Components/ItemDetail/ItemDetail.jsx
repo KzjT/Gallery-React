@@ -1,26 +1,26 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "./ItemDetail.scss"
+import "./ItemDetail.scss";
 import ItemCount from "../ItemCount/ItemCount";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
 export const ItemDetail = ({ producto }) => {
+  const [addedToCart, setAddedToCart] = useState(false);
+  const [availableStock, setAvailableStock] = useState(producto.cant); 
   const { addItem, formatter2 } = useContext(CartContext);
   const navigate = useNavigate();
+  const stockNotNull = producto.cant !== null;
 
   const handleVolver = () => {
     navigate(-1);
   };
 
-  const [addedToCart, setAddedToCart] = useState(false); 
-
-  const stockNotNull = producto.cant !== null;
-
   const onAdd = (count) => {
-    if (!addedToCart) { 
+    if (!addedToCart) {
       addItem({ product: producto, quantity: count });
-      setAddedToCart(true); 
+      setAddedToCart(true);
+      setAvailableStock(availableStock - count);
     }
   };
 
@@ -30,7 +30,6 @@ export const ItemDetail = ({ producto }) => {
 
   return (
     <div className="container-detail">
-
       <div className="detail-content">
         <div className="img-container">
           <img className="img-detail" src={producto.img} alt={producto.name} />
@@ -47,16 +46,14 @@ export const ItemDetail = ({ producto }) => {
           <hr />
           {stockNotNull && (
             <div className="ItemCountContainer">
-              <ItemCount onAdd={onAdd} stock={producto.cant} />
+              <ItemCount onAdd={onAdd} stock={availableStock} /> 
             </div>
           )}
-          <p className="detail-info cantObras" data-label="Stock">{producto.cant}</p>
+          <p className="detail-info cantObras" data-label="Stock">{availableStock}</p> 
         </div>
-
       </div>
       <hr />
       <p className="detail-description" >{producto.description}</p>
-
       <Link className="btn btn-primary btn-volver" onClick={handleVolver}>Back</Link>
     </div>
   );
