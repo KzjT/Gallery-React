@@ -2,20 +2,31 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./ItemDetail.scss"
 import ItemCount from "../ItemCount/ItemCount";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
 export const ItemDetail = ({ producto }) => {
-  const { addItem, formatter2 } = useContext(CartContext)
-  const navigate = useNavigate()
+  const { addItem, formatter2 } = useContext(CartContext);
+  const navigate = useNavigate();
 
   const handleVolver = () => {
-    navigate(-1)
-  }
+    navigate(-1);
+  };
+
+  const [addedToCart, setAddedToCart] = useState(false); 
 
   const stockNotNull = producto.cant !== null;
 
-  const onAdd = (count) => addItem({ product: producto, quantity: count });
+  const onAdd = (count) => {
+    if (!addedToCart) { 
+      addItem({ product: producto, quantity: count });
+      setAddedToCart(true); 
+    }
+  };
+
+  useEffect(() => {
+    setAddedToCart(false);
+  }, [producto]);
 
   return (
     <div className="container-detail">
