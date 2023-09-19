@@ -51,6 +51,7 @@ Esta lista de librerías y tecnologías utilizadas brinda una visión general de
 - `src`: Contiene todo el código fuente.
   - `componentes`: componentes generales utilizados en la aplicación.
   - `views`: Componentes específicos organizados por vista.
+  - `layout`: Contiene header y footer.
   - `context`: proveedores de contexto de React.
   - `assets`: Contiene imágenes y fuentes personalizadas. (Las imágenes del producto se almacenan en Firebase Storage)
 - `App.js`: Componente principal.

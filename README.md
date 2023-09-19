@@ -50,6 +50,7 @@ This list of libraries and technologies used provides an overview of the key too
 - `src`: Contains all the source code.
   - `components`: General components used across the app.
   - `views`: Specific components organized by view.
+  - `layout`: Contains the header and footer.
   - `context`: React context providers.
   - `firebase`: Firebase configuration.
   - `assets`: Contains images and custom fonts. (Product images are stored in Firebase Storage)
