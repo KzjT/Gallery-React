@@ -21,7 +21,7 @@ export const clearBuyerData = (setBuyerData) => {
     }));
 };
 //checkout
-export const validateBuyerData = ( buyerData, items) => {
+export const validateBuyerData = (buyerData, items) => {
     return (
         items.length > 0 &&
         buyerData.firstName &&
@@ -37,6 +37,21 @@ export const validateBuyerData = ( buyerData, items) => {
 export const scrollToTop = (window) => {
     window.scrollTo({
         top: 0,
-        behavior: "smooth" 
+        behavior: "smooth"
     });
 };
+
+
+//order
+export function getCurrentDateTimeObject() {
+    const currentDateTime = new Date();
+    const formattedDateTime = `${currentDateTime.toLocaleDateString()}, ${currentDateTime.toLocaleTimeString()}`;
+
+    const dateTimeObject = {
+        date: currentDateTime.toLocaleDateString(),
+        time: currentDateTime.toLocaleTimeString(),
+        formatted: formattedDateTime,
+    };
+
+    return dateTimeObject;
+}

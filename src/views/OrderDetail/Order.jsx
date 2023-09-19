@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import "./Order.scss";
 import { CartContext } from '../../contexts/CartContext';
+import { getCurrentDateTimeObject } from "../../helpers/xzy"
 import { Link } from 'react-router-dom';
 import Error404 from "../Error404/Error404"
 const Order = ({ id, items, total }) => {
     const { formatter2, clear } = useContext(CartContext);
-    const currentDateTime = new Date();
-    const formattedDateTime = `${currentDateTime.toLocaleDateString()}, ${currentDateTime.toLocaleTimeString()}`;
+    const dateTimeInfo = getCurrentDateTimeObject();
 
 if (!items || items.length === 0) {
     return <div>
@@ -20,12 +20,12 @@ if (!items || items.length === 0) {
                 <h3 className="order-header">Order Details</h3>
                 <div className="order-info">
                     <p className="order-id">Order #{id}</p>
-                    <p className="order-date">Fecha de compra: {formattedDateTime}</p>
+                    <p className="order-date">Fecha de compra: {dateTimeInfo.formatted}</p>
                 </div>
                 <div className="order-items">
                     <h4 className="items-header">Order Items:</h4>
                     <ul className="item-list">
-                        {items.map((item, index) => (
+                        {items.map((item) => (
                             <li key={item.id} className="item">
                                 <div className="product-info">
                                     <img src={item.img} alt={item.name} className="product-image" />
