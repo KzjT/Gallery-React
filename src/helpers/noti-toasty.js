@@ -11,7 +11,7 @@ export const notifyAddProduct = () => toast.success("item added to cart", {
     progress: undefined,
     theme: "light",
 });
-
+//itemcount
 export const notifyNoStockAvaliable =()=> toast.error(`No stock available`, {
     position: "top-right",
     autoClose: 3000,
@@ -23,7 +23,7 @@ export const notifyNoStockAvaliable =()=> toast.error(`No stock available`, {
     theme: "light",
 });
 
-
+//itemcount
 export const notifyNoProductsAvaliable =()=> toast.error(`No products available`, {
     position: "top-right",
     autoClose: 3000,
