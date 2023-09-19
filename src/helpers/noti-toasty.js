@@ -12,6 +12,30 @@ export const notifyAddProduct = () => toast.success("item added to cart", {
     theme: "light",
 });
 
+export const notifyNoStockAvaliable =()=> toast.error(`No stock available`, {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+});
+
+
+export const notifyNoProductsAvaliable =()=> toast.error(`No products available`, {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+});
+
+
 //cartWidget
 export const notifyRemoveItemCartWidget = () => toast.info("removed product", {
     position: "top-right",

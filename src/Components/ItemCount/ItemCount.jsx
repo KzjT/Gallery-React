@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ItemCount.scss";
-import { ToastContainer, toast } from 'react-toastify'; 
-import { notifyAddProduct } from "../../helpers/noti-toasty";
+import { ToastContainer } from 'react-toastify'; 
+import { notifyAddProduct, notifyNoStockAvaliable, notifyNoProductsAvaliable } from "../../helpers/noti-toasty";
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from "react-bootstrap";
 
@@ -13,16 +13,7 @@ const ItemCount = ({ onAdd, stock }) => {
             setCount(count + 1);
         } else {
 
-            toast.error(`No hay más producto disponible`, {
-                position: "top-right",
-                autoClose: 3000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+            notifyNoProductsAvaliable()
         }
     };
 
@@ -37,17 +28,7 @@ const ItemCount = ({ onAdd, stock }) => {
             onAdd(count);
             notifyAddProduct();
         } else {
-
-            toast.error(`No hay suficiente stock`, {
-                position: "top-right",
-                autoClose: 3000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+            notifyNoStockAvaliable()
         }
     };
 
@@ -70,7 +51,7 @@ const ItemCount = ({ onAdd, stock }) => {
             </Button>
             <Button onClick={handleAddToCart} className="btn btn-success addItemButton">
                 Add to Cart
-            </Button>
+            </Button >
             <ToastContainer />
         </div>
     );
