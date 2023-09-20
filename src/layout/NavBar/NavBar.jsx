@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Nav, Image, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
-import CartWidget from '../../views/CartWidget/CartWidget';
+import CartWidget from '../../Components/CartWidget/CartWidget';
 import logo from '../../assets/art_logo.svg';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config'; 

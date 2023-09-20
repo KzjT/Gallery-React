@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ItemDetailContainer.scss";
 import { useParams } from "react-router-dom";
-import ItemDetail from "../../views/ItemDetail/ItemDetail";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import Loading from "../Loading/Loading";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";

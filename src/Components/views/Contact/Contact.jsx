@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from "../../Components/Map/Map";
+import Map from "../../Map/Map";
 import "./Contact.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';

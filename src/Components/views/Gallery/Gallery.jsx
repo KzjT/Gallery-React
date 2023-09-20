@@ -1,7 +1,6 @@
 import React from 'react';
 import './Gallery.scss';
-import ItemListContainer from '../../Components/ItemListContainer/ItemListContainer';
-
+import ItemListContainer from '../../ItemListContainer/ItemListContainer';
 ;
 
 export const Gallery = ({ productos }) => {

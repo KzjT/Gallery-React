@@ -8,7 +8,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { buildXZY, clearBuyerData, validateBuyerData, } from "../../helpers/xzy";
 import { notifyErrorCheckout, notifySuccessCheckout, } from "../../helpers/noti-toasty";
 import { Form, Button } from "react-bootstrap";
-import Order from "../OrderDetail/Order";
+import Order from "../Order/Order";
 import { Link } from "react-router-dom";
 
 

@@ -1,5 +1,5 @@
 import { Carrousel } from './Carousel/Carousel';
-import GalleryHome from "../../Components/GalleryHome/GalleryHome"
+import GalleryHome from '../../GalleryHome/GalleryHome';
 import './Home.scss';
 import { Hero } from './Hero/Hero';
 
