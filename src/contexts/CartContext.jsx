@@ -1,11 +1,12 @@
-import { createContext, useState } from "react";
-export const CartContext = createContext()
-//
+import React, { createContext, useEffect, useState } from "react";
+
+export const CartContext = createContext();
+
 export const CartProvider = ({ children }) => {
     const [items, setItems] = useState([]);
     const [count, setCount] = useState(1);
-    // eslint-disable-next-line no-unused-vars
-    const [orderCounter, setOrderCounter] = useState(2000);
+    const [orderCounter] = useState(2000);
+
     const formatter2 = new Intl.NumberFormat("es-AR", {
         style: "currency",
         currency: "ARS",
@@ -16,23 +17,19 @@ export const CartProvider = ({ children }) => {
     const totalWidget = items.reduce((acc, val) => acc + val.quantity, 0);
 
     const addItem = ({ product, quantity }) => {
-        const alreadyExists = items.some((item) => item.id === product.id);
+        const updatedItems = [...items];
+        const existingItemIndex = updatedItems.findIndex((item) => item.id === product.id);
 
-        if (!alreadyExists) {
-            setItems((prev) => [...prev, { ...product, quantity }]);
+        if (existingItemIndex !== -1) {
+            updatedItems[existingItemIndex].quantity += quantity;
         } else {
-            const actualizarProductos = items.map((item) => {
-                if (item.id === product.id) {
-                    return {
-                        ...item,
-                        quantity: item.quantity + quantity,
-                    };
-                } else {
-                    return item;
-                }
-            });
-            setItems(actualizarProductos);
+            updatedItems.push({ ...product, quantity });
         }
+
+        setItems(updatedItems);
+        localStorage.setItem("cart", JSON.stringify(updatedItems));
+
+        console.log("Item added to cart:", product, "Quantity:", quantity);
     };
 
     const total = () =>
@@ -42,18 +39,16 @@ export const CartProvider = ({ children }) => {
             0
         );
 
-
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: "smooth"
+            behavior: "smooth",
         });
     };
 
     const countSuma = ({ stock }) => {
         if (count < stock) {
             setCount(count + 1);
-
         }
     };
 
@@ -64,11 +59,22 @@ export const CartProvider = ({ children }) => {
     };
 
     const removeItem = (id) => {
-        const itemsFiltered = items.filter((item) => item.id !== id);
-        setItems(itemsFiltered);
+        const updatedItems = items.filter((item) => item.id !== id);
+        setItems(updatedItems);
+        localStorage.setItem("cart", JSON.stringify(updatedItems));
     };
 
-    const clear = () => setItems([]);
+    const clear = () => {
+        setItems([]);
+        localStorage.removeItem("cart");
+    };
+
+    useEffect(() => {
+        const storedCart = localStorage.getItem("cart");
+        if (storedCart) {
+            setItems(JSON.parse(storedCart));
+        }
+    }, []);
 
     const CartVars = {
         items,
@@ -82,6 +88,7 @@ export const CartProvider = ({ children }) => {
         countSuma,
         countResta,
         orderCounter,
+        setItems: setItems,
     };
 
     return (

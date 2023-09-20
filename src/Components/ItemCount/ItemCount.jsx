@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "./ItemCount.scss";
-import { ToastContainer } from 'react-toastify'; 
-import { notifyAddProduct, notifyNoStockAvaliable, notifyNoProductsAvaliable } from "../../helpers/noti-toasty";
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import { notifyAddProduct, notifyNoStockAvaliable } from "../../helpers/noti-toasty";
+import "react-toastify/dist/ReactToastify.css";
 import { Button } from "react-bootstrap";
 
 const ItemCount = ({ onAdd, stock }) => {
@@ -12,8 +11,7 @@ const ItemCount = ({ onAdd, stock }) => {
         if (count < stock) {
             setCount(count + 1);
         } else {
-
-            notifyNoProductsAvaliable()
+            notifyNoStockAvaliable();
         }
     };
 
@@ -28,7 +26,7 @@ const ItemCount = ({ onAdd, stock }) => {
             onAdd(count);
             notifyAddProduct();
         } else {
-            notifyNoStockAvaliable()
+            notifyNoStockAvaliable();
         }
     };
 
@@ -51,7 +49,7 @@ const ItemCount = ({ onAdd, stock }) => {
             </Button>
             <Button onClick={handleAddToCart} className="btn btn-success addItemButton">
                 Add to Cart
-            </Button >
+            </Button>
             <ToastContainer />
         </div>
     );

@@ -1,17 +1,29 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./CartWidget.scss";
 import cartt from "../../assets/cartt.svg";
 import emptyCart from "../../assets/carrito_vacio.webp";
-import {notifyClearAllCartWidget, notifyRemoveItemCartWidget } from "../../helpers/noti-toasty"
-import {  ToastContainer } from "react-toastify";
+import { notifyClearAllCartWidget, notifyRemoveItemCartWidget } from "../../helpers/noti-toasty";
+import { ToastContainer } from "react-toastify";
 import { CartContext } from "../../contexts/CartContext";
 import { Modal, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
+
 export const CartWidget = () => {
-  const { items, removeItem, clear, totalWidget, formatter2, total, scrollToTop } =
-    useContext(CartContext);
+  const { items, removeItem, clear, totalWidget, formatter2, total, scrollToTop,setItems } = useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
+  const [cartLoaded, setCartLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!cartLoaded) {
+      const savedCart = localStorage.getItem("cart");
+      if (savedCart) {
+        const parsedCart = JSON.parse(savedCart);
+        setItems(parsedCart);
+        setCartLoaded(true);
+      }
+    }
+  }, [cartLoaded, setItems]);
 
   const handleToggleModal = () => {
     setShowModal(!showModal);
