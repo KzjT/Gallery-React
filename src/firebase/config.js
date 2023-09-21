@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Configuración de Firebase
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: "AIzaSyBASrWNULgOEW-2HaZvMICTwrUzVi6TC84",
+  authDomain: "gallery-art-e9d4b.firebaseapp.com",
+  projectId: "gallery-art-e9d4b",
+  storageBucket: "gallery-art-e9d4b.appspot.com",
+  messagingSenderId: "704757234453",
+  appId: "1:704757234453:web:412763083ba8be3633871c"
 };
 
 // Inicializar Firebase
