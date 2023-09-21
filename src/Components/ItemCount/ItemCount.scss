@@ -1,102 +1,106 @@
 @media (min-width: 769px) {
-  .ItemCountContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 0;
-  }
+    .ItemCountContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+    }
 
-  .btnCount {
-    width: 40px;
-    height: 40px;
-    font-size: 15px;
-    margin: 0;
-    background-color: black !important;
-    border: 2px black solid !important;
-  }
+    .btnCount {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+        margin: 0;
+        background-color: black !important;
+        border: 2px black solid !important;
+    }
 
-  .countSpan {
-    font-size: 22px;
-    margin: 0 10px;
-  }
+    .countSpan {
+        font-size: 22px;
+        margin: 0 10px;
+    }
 
-  .addItemButton {
-    font-size: 14px;
-    margin-top: 0;
-    margin-left: 10px;
-    width: auto;
-    height: auto;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-left: 1rem;
-    background-color: burlywood !important;    
-     border: 0.2px black solid !important;
-    
-  }
+    .addItemButton {
+        font-size: 14px;
+        margin-top: 0;
+        margin-left: 10px;
+        width: auto;
+        height: auto;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-left: 1rem;
+        background-color: burlywood !important;
+        border: 0.2px black solid !important;
+    }
+
+    .addItemButton:hover {
+        background-color: #5cb85c !important;
+    }
 }
+
 @media (max-width: 768px) {
-  .ItemCountContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    margin-top: 1rem;
-  }
+    .ItemCountContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        margin-top: 1rem;
+    }
 
-  .btnCount {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    margin: 5px;
-  }
+    .btnCount {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin: 5px;
+    }
 
-  .countSpan {
-    font-size: 24px;
-    margin: 5px;
-  }
+    .countSpan {
+        font-size: 24px;
+        margin: 5px;
+    }
 
-  .addItemButton {
-    font-size: 18px;
-    margin-top: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    margin-left: 2rem;
-  }
+    .addItemButton {
+        font-size: 18px;
+        margin-top: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 40px;
+        border-radius: 5px;
+        margin-left: 2rem;
+    }
 }
 
 @media (min-width: 769px) {
-  .ItemCountContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 0;
-  }
+    .ItemCountContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+    }
 
-  .btnCount {
-    width: 40px;
-    height: 40px;
-    font-size: 15px;
-    margin: 0;
-  }
+    .btnCount {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+        margin: 0;
+    }
 
-  .countSpan {
-    font-size: 22px;
-    margin: 0 10px;
-  }
+    .countSpan {
+        font-size: 22px;
+        margin: 0 10px;
+    }
 
-  .addItemButton {
-    font-size: 12px;
-    margin-top: 0;
-    margin-left: 10px;
-    width: auto;
-    height: auto;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-left: 3rem;
-  }
+    .addItemButton {
+        font-size: 12px;
+        margin-top: 0;
+        margin-left: 10px;
+        width: auto;
+        height: auto;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-left: 3rem;
+    }
 }
