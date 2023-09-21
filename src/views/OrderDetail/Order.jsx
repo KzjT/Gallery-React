@@ -25,7 +25,7 @@ if (!items || items.length === 0) {
                 <div className="order-items">
                     <h4 className="items-header">Order Items:</h4>
                     <ul className="item-list">
-                        {items.map((item, index) => (
+                        {items.map((item) => (
                             <li key={item.id} className="item">
                                 <div className="product-info">
                                     <img src={item.img} alt={item.name} className="product-image" />

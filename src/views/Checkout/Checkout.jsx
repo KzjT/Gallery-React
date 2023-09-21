@@ -16,6 +16,7 @@ const Checkout = () => {
     const { items, formatter2, removeItem, total,clear } = useContext(CartContext);
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
     const [checkoutComplete, setCheckoutComplete] = useState(false);
+    const [itemsAux, setItemsAux] = useState([])
     const [orderCounter, setOrderCounter] = useState(
         parseInt(localStorage.getItem("orderCounter")) || 2000
     );
@@ -58,6 +59,7 @@ const Checkout = () => {
                     notifySuccessCheckout(orderId);
                     setCheckoutComplete(true);
                     setPurchaseSuccess(true);
+                    setItemsAux([items]);
                 }
             })
             .catch((error) => {
@@ -199,7 +201,7 @@ const Checkout = () => {
                     firstName={buyerData.firstName}
                     lastName={buyerData.lastName}
                     email={buyerData.email}
-                    items={items}
+                    items={itemsAux}
                     total={total()}
                 />
                 
