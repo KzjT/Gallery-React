@@ -7,9 +7,9 @@ export const CartProvider = ({ children }) => {
     const [count, setCount] = useState(1);
     const [orderCounter] = useState(2000);
 
-    const formatter2 = new Intl.NumberFormat("es-AR", {
+    const formatter2 = new Intl.NumberFormat("es-ES", {
         style: "currency",
-        currency: "ARS",
+        currency: "EUR", 
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,
     });

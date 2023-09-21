@@ -35,7 +35,7 @@ export const Footer2 = () => {
             <div className="footer-content">
                 <div className="github-content">
                     <a
-                        href="https://github.com/Lukjjz95"
+                        href="https://github.com/Lukjjz95/Gallery-React"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="github-link"

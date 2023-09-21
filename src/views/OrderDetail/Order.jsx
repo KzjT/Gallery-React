@@ -20,7 +20,7 @@ if (!items || items.length === 0) {
                 <h3 className="order-header">Order Details</h3>
                 <div className="order-info">
                     <p className="order-id">Order #{id}</p>
-                    <p className="order-date">Fecha de compra: {formattedDateTime}</p>
+                    <p className="order-date">Date of purchase: {formattedDateTime}</p>
                 </div>
                 <div className="order-items">
                     <h4 className="items-header">Order Items:</h4>
@@ -40,7 +40,7 @@ if (!items || items.length === 0) {
                     </ul>
                     <div className="order-summary">
                         <p>Subtotal: {formatter2.format(total)}</p>
-                        <p>Envío: $0</p>
+                        <p>shipping: $0</p>
                         <p className='total-order'>Total: {formatter2.format(total)}</p>
                     </div>
                 </div>
