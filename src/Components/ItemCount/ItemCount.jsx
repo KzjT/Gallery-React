@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ToastContainer } from "react-toastify";
+import "./ItemCount.scss"
 import { notifyAddProduct, notifyNoStockAvaliable } from "../../helpers/noti-toasty";
 import "react-toastify/dist/ReactToastify.css";
 import { Button } from "react-bootstrap";
