@@ -13,8 +13,9 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import Contact from './views/Contact/Contact';
 import { CartProvider } from './contexts/CartContext';
 import Checkout from './views/Checkout/Checkout';
+import OrderDetails from './views/OrderDetail/OrderDetails';
 
-function App({onAdd, stock}) {
+function App() {
 
   return (
     <CartProvider >
@@ -30,7 +31,8 @@ function App({onAdd, stock}) {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/detail/:id" element={<ItemDetailContainer />} />
-          <Route path="/checkout" element={<Checkout onAdd={onAdd} stock={stock} />}/>
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/myOrder/:id" element={<OrderDetails />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         {/*<Footer />*/}

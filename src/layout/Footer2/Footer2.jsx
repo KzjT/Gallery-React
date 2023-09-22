@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import "./Footer2.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import  {scrollToTop } from "../../helpers/xzy"
+import { scrollToTop } from "../../helpers/xzy"
+import { ModalFooter } from "react-bootstrap";
 export const Footer2 = () => {
 
-        scrollToTop(window);
+    scrollToTop(window);
     return (
-        <footer className="footer2">
+        <ModalFooter className="footer2">
             <ul className="nav justify-content-center border-bottom pb-3 mb-3 ul-footer2">
                 <li className="nav-item footer-item">
                     <Link to="/" onClick={scrollToTop} className="nav-link px-2 text-body-secondary">
@@ -26,7 +27,7 @@ export const Footer2 = () => {
                     </Link>
                 </li>
                 <li className="nav-item footer-item">
-                    <Link to="/Contact"onClick={scrollToTop} className="nav-link px-2 text-body-secondary">
+                    <Link to="/Contact" onClick={scrollToTop} className="nav-link px-2 text-body-secondary">
                         Contact
                     </Link>
                 </li>
@@ -49,7 +50,7 @@ export const Footer2 = () => {
                     <p className="github-text">Proyecto realizado por Lukjjz</p>
                 </div>
             </div>
-        </footer>
+        </ModalFooter>
     );
 };
 

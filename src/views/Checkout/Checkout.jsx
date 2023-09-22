@@ -1,19 +1,19 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import "./Checkout.scss";
 import { ToastContainer } from "react-toastify";
 import emptyCart from "../../assets/carrito_vacio.webp";
 import "react-toastify/dist/ReactToastify.css";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { buildXZY, clearBuyerData, validateBuyerData, } from "../../helpers/xzy";
-import { notifyErrorCheckout, notifySuccessCheckout, } from "../../helpers/noti-toasty";
+import { buildXZY, validateBuyerData } from "../../helpers/xzy";
+import { notifyErrorCheckout, notifySuccessCheckout } from "../../helpers/noti-toasty";
 import { Form, Button } from "react-bootstrap";
-import Order from "../OrderDetail/Order";
-import { Link } from "react-router-dom";
+import OrderDetails from "../OrderDetail/OrderDetails";
+import { useNavigate } from "react-router-dom";
 
 
 const Checkout = () => {
-    const { items, formatter2, removeItem, total,clear } = useContext(CartContext);
+    const { items, formatter2, total, clear } = useContext(CartContext);
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
     const [checkoutComplete, setCheckoutComplete] = useState(false);
     const [orderCounter, setOrderCounter] = useState(
@@ -28,12 +28,14 @@ const Checkout = () => {
     const db = getFirestore();
     const orderCollection = collection(db, "orders");
 
+
     const handleInputChange = (ev) => {
         setBuyerData((prev) => ({
             ...prev,
             [ev.target.name]: ev.target.value,
         }));
     };
+    const navigate = useNavigate();
 
     const handleBuy = () => {
         if (!validateBuyerData(buyerData, items)) {
@@ -54,10 +56,11 @@ const Checkout = () => {
         addDoc(orderCollection, order)
             .then(({ id }) => {
                 if (id) {
-                    clearBuyerData(setBuyerData);
+                    clear();
                     notifySuccessCheckout(orderId);
                     setCheckoutComplete(true);
                     setPurchaseSuccess(true);
+                    navigate(`/myOrder/${id}`);
                 }
             })
             .catch((error) => {
@@ -65,72 +68,26 @@ const Checkout = () => {
             });
     };
 
-    useEffect(() => {
-        localStorage.setItem("orderCounter", orderCounter.toString());
-    }, [orderCounter]);
-    const orderId = orderCounter.toString();
-
-
     if (!items || items.length === 0) {
         return (
             <div className="checkout-container">
                 <img src={emptyCart} alt="Empty Cart" />
                 <div className="order-actions">
-                    <Link to="/" onClick={clear} className="btn btn-primary btn-order">Home</Link>
+                    <Button onClick={clear} className="btn btn-primary btn-order">
+                        Home
+                    </Button>
                 </div>
             </div>
         );
     }
 
     return (
-        <div className="checkout-container">
+        <div className="checkout-container footer-content">
             <h2>Checkout</h2>
 
             {!checkoutComplete && (
                 <div>
                     <table className="product-table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Product</th>
-                                <th>Unit price</th>
-                                <th>Quantity</th>
-                                <th>Amount</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {items.map((item) => (
-                                <tr key={item.id}>
-                                    <td className="product-image-cell">
-                                        <img
-                                            src={item.img}
-                                            alt={item.name}
-                                            className="product-image"
-                                        />
-                                    </td>
-                                    <td>{item.name}</td>
-                                    <td>{formatter2.format(item.price)}</td>
-                                    <td>
-                                        <div className="btn-checkout">
-                                            {item.quantity}
-                                        </div>
-                                    </td>
-                                    <td>{formatter2.format(item.quantity * item.price)}</td>
-                                    <td>
-                                        <button
-                                            type="button"
-                                            className="remove-button btn btn-danger"
-                                            onClick={() => {
-                                                removeItem(item.id);
-                                            }}
-                                        >
-                                            🗑
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
                     </table>
                     <div className="total-container">
                         <span>Total:</span>
@@ -194,17 +151,17 @@ const Checkout = () => {
             )}
             <ToastContainer />
             {purchaseSuccess && (
-                <Order
-                    id={orderId}
-                    firstName={buyerData.firstName}
-                    lastName={buyerData.lastName}
-                    email={buyerData.email}
-                    items={items}
-                    total={total()}
-                />
-                
+                <div>
+                    <OrderDetails
+                        id={orderCounter.toString()}
+                        firstName={buyerData.firstName}
+                        lastName={buyerData.lastName}
+                        email={buyerData.email}
+                        items={items}
+                        total={total}
+                    />
+                </div>
             )}
-            
         </div>
     );
 };

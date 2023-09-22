@@ -1,8 +1,13 @@
 .footer2 {
     background-image: url(../../assets/background.svg);
     border: 15px #297ea6 solid;
-width: 100%;
-
+    width: 100%;
+    display: flex;
+    height: max-content;
+    margin-bottom: auto;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 
 
     @media (max-width: 768px) {
@@ -10,8 +15,18 @@ width: 100%;
         border: 10px #297ea6 solid;
         width: 100%;
         padding: 20px;
-        text-align: center;
+        text-align: end;
     }
+
+.root{
+    height: auto;
+    max-height: auto;
+}
+
+#root{
+    height: auto;
+    max-height: auto;
+}
 
     .footerText,
     .nav-link {

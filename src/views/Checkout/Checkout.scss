@@ -1,7 +1,8 @@
 .checkout-container {
     max-width: 800px;
     margin: 0 auto;
-    height: auto;
+    height: 100%;
+    max-height: 100%;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -86,6 +87,7 @@ h2 {
     color: gray !important;
     opacity: 0.3;
 }
+
 @media (max-width: 768px) {
     .btn-checkout {
         display: flex;
@@ -109,7 +111,7 @@ h2 {
         gap: 5px;
 
         label {
-            font-weight:100;
+            font-weight: 100;
         }
 
         input[type="text"],
@@ -136,6 +138,7 @@ h2 {
 
 
 @media (max-width: 500px) {
+
     .product-table th,
     .product-table tbody,
     .product-table td {
@@ -149,5 +152,3 @@ h2 {
         width: 50%;
     }
 }
-
-
