@@ -34,7 +34,6 @@ export const ItemListContainer = () => {
             });
     }, [categoryId]);
 
-
     const goToPreviousPage = () => {
         if (currentPage > 0) {
             setCurrentPage(currentPage - 1);
@@ -50,20 +49,6 @@ export const ItemListContainer = () => {
     return (
         <div className='itemListContainer-sty container-fluid my-2 '>
             <div className="pagination-container">
-                <button
-                    onClick={goToPreviousPage}
-                    disabled={currentPage === 0}
-                    className="pagination-button pagination-top"
-                >
-                    Página anterior
-                </button>
-                <button
-                    onClick={goToNextPage}
-                    disabled={endIndex >= productos.length}
-                    className="pagination-button pagination-top"
-                >
-                    Página siguiente
-                </button>
 
                 <ItemList productos={productosEnPagina} />
 
