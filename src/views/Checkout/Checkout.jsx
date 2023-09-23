@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Checkout = () => {
-    const { items, formatter2, total, clear } = useContext(CartContext);
+    const { items, formatter2, total, clear, removeItem } = useContext(CartContext);
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
     const [checkoutComplete, setCheckoutComplete] = useState(false);
     const [orderCounter, setOrderCounter] = useState(
@@ -56,11 +56,12 @@ const Checkout = () => {
         addDoc(orderCollection, order)
             .then(({ id }) => {
                 if (id) {
-                    clear();
                     notifySuccessCheckout(orderId);
                     setCheckoutComplete(true);
                     setPurchaseSuccess(true);
                     navigate(`/myOrder/${id}`);
+                    clear();
+
                 }
             })
             .catch((error) => {
@@ -84,6 +85,51 @@ const Checkout = () => {
     return (
         <div className="checkout-container footer-content">
             <h2>Checkout</h2>
+
+            <table className="product-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Product</th>
+          <th>Unit price</th>
+          <th>Quantity</th>
+          <th>Amount</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((item) => (
+          <tr key={item.id}>
+            <td className="product-image-cell">
+              <img
+                src={item.img}
+                alt={item.name}
+                className="product-image"
+              />
+            </td>
+            <td>{item.name}</td>
+            <td>{formatter2.format(item.price)}</td>
+            <td>
+              <div className="btn-checkout">
+                {item.quantity}
+              </div>
+            </td>
+            <td>{formatter2.format(item.quantity * item.price)}</td>
+            <td>
+              <button
+                type="button"
+                className="remove-button btn btn-danger"
+                onClick={() => {
+                  removeItem(item.id);
+                }}
+              >
+                🗑
+              </button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
 
             {!checkoutComplete && (
                 <div>
