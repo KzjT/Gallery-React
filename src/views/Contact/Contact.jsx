@@ -3,7 +3,8 @@ import Map from "../../Components/Map/Map";
 import "./Contact.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import {notifySuccesContact, notifyErrorInputsIncomplete,notifyServerErrorSending} from "../../helpers/noti-toasty"
 import 'react-toastify/dist/ReactToastify.css';
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 
@@ -17,16 +18,7 @@ export const Contact = () => {
         const message = event.target.message.value;
 
         if (!name || !email || !message) {
-            toast.error(`Please complete all fields correctly before sending a message`, {
-                position: "top-right",
-                autoClose: 3000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+            notifyErrorInputsIncomplete();
             return;
         }
 
@@ -39,21 +31,10 @@ export const Contact = () => {
         addDoc(contactCollection, contactData)
             .then(() => {
                 event.target.reset();
-
-                toast.success(`Thanks for contacting us, ${name}. We will be responding to your query shortly.`);
+                notifySuccesContact(name);
             })
             .catch((error) => {
-                console.error("Error adding comment: ", error);
-                toast.error("An error occurred while submitting your message. Please try again later.", {
-                    position: "top-right",
-                    autoClose: 3000,
-                    hideProgressBar: true,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
+                notifyServerErrorSending(error)
             });
     };
 

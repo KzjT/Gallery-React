@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import "./Hero.scss"
 
 export const Hero = () => {
-
     return (
-
         <header className="hero">
             <div className="hero-video-container">
                 <video autoPlay muted loop className="hero-video">

@@ -4,12 +4,11 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
     const [items, setItems] = useState([]);
-    const [count, setCount] = useState(1);
     const [orderCounter] = useState(2000);
 
     const formatter2 = new Intl.NumberFormat("es-ES", {
         style: "currency",
-        currency: "EUR", 
+        currency: "EUR",
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,
     });
@@ -46,18 +45,6 @@ export const CartProvider = ({ children }) => {
         });
     };
 
-    const countSuma = ({ stock }) => {
-        if (count < stock) {
-            setCount(count + 1);
-        }
-    };
-
-    const countResta = () => {
-        if (count > 1) {
-            setCount(count - 1);
-        }
-    };
-
     const removeItem = (id) => {
         const updatedItems = items.filter((item) => item.id !== id);
         setItems(updatedItems);
@@ -85,8 +72,6 @@ export const CartProvider = ({ children }) => {
         total,
         scrollToTop,
         formatter2,
-        countSuma,
-        countResta,
         orderCounter,
         setItems: setItems,
     };

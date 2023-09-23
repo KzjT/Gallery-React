@@ -18,7 +18,6 @@ const Checkout = () => {
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
     const [checkoutComplete, setCheckoutComplete] = useState(false);
     const [processingOrder, setProcessingOrder] = useState(false);
-    const [orderCompleted, setOrderCompleted] = useState(false);
     const [orderCounter, setOrderCounter] = useState(
         parseInt(localStorage.getItem("orderCounter")) || 2000
     );
@@ -61,7 +60,6 @@ const Checkout = () => {
         addDoc(orderCollection, order)
             .then(({ id }) => {
                 if (id) {
-                    setOrderCompleted(true);
                     clear();
                     notifySuccessCheckout(orderId);
                     setCheckoutComplete(true);
@@ -78,20 +76,20 @@ const Checkout = () => {
             });
     };
 
-    if (!items || items.length === 0  ) {
+    if (!items || items.length === 0) {
         return (
             <div className="checkout-container">
                 <img src={emptyCart} alt="Empty Cart" />
                 <div className="order-actions">
-                <Button onClick={() => { clear(); navigate('/'); }} className="btn btn-primary btn-order">
-                    Home
-                </Button>
-            </div>
+                    <Button onClick={() => { clear(); navigate('/'); }} className="btn btn-primary btn-order">
+                        Home
+                    </Button>
+                </div>
             </div>
         );
     }
 
-    if (processingOrder && orderCompleted ) {
+    if (processingOrder) {
         return (
             <div className="checkout-container footer-content">
                 <h2>Checkout</h2>

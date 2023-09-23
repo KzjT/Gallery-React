@@ -1,8 +1,6 @@
 import React from 'react';
 import "./GalleryHome.scss"
 
-
-
 export const GalleryHome = () => {
     return (
         <div>

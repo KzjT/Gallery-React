@@ -1,7 +1,7 @@
 import React from 'react';
 import './Gallery.scss';
 import ItemListContainer from '../../Components/ItemListContainer/ItemListContainer';
-;
+
 
 export const Gallery = ({ productos }) => {
     return (
@@ -10,7 +10,6 @@ export const Gallery = ({ productos }) => {
             <hr />
             <ItemListContainer productos={productos} />
         </div>
-
     )
 }
 
