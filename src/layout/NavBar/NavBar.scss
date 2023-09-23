@@ -131,3 +131,19 @@
     background-color:#297ea6;
     color: black;
 }
+
+//barra desplazamiento
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #000; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333; 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
