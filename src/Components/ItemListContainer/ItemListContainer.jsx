@@ -7,6 +7,11 @@ import { db } from '../../firebase/config';
 
 export const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
+    const [currentPage, setCurrentPage] = useState(0);
+    const productosPorPagina = 10;
+    const startIndex = currentPage * productosPorPagina;
+    const endIndex = (currentPage + 1) * productosPorPagina;
+    const productosEnPagina = productos.slice(startIndex, endIndex);
     const { categoryId } = useParams();
 
     useEffect(() => {
@@ -29,10 +34,56 @@ export const ItemListContainer = () => {
             });
     }, [categoryId]);
 
+
+    const goToPreviousPage = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
+
+    const goToNextPage = () => {
+        if (endIndex < productos.length) {
+            setCurrentPage(currentPage + 1);
+        }
+    };
+
     return (
         <div className='itemListContainer-sty container-fluid my-2 '>
-            <ItemList productos={productos} />
+            <div className="pagination-container">
+                <button
+                    onClick={goToPreviousPage}
+                    disabled={currentPage === 0}
+                    className="pagination-button pagination-top"
+                >
+                    Página anterior
+                </button>
+                <button
+                    onClick={goToNextPage}
+                    disabled={endIndex >= productos.length}
+                    className="pagination-button pagination-top"
+                >
+                    Página siguiente
+                </button>
+
+                <ItemList productos={productosEnPagina} />
+
+                <button
+                    onClick={goToPreviousPage}
+                    disabled={currentPage === 0}
+                    className="pagination-button pagination-top"
+                >
+                    Página anterior
+                </button>
+                <button
+                    onClick={goToNextPage}
+                    disabled={endIndex >= productos.length}
+                    className="pagination-button pagination-top"
+                >
+                    Página siguiente
+                </button>
+            </div>
         </div>
+
     );
 }
 

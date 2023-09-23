@@ -1,11 +1,8 @@
 .itemListContainer-sty {
-    padding: 20px; 
-    display: flex;
+    padding: 20px;
+    border-radius: 5px;
     overflow: hidden;
-    border-radius: 5px; 
-
 }
-
 
 .itemListContainer-sty h1 {
     font-size: 24px;
@@ -13,25 +10,22 @@
     margin-bottom: 10px;
 }
 
-
 .itemListContainer-sty p {
     font-size: 16px;
     color: #333;
 }
 
-
 .itemListContainer-sty .item-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
-
 
 .itemListContainer-sty .item-list .item {
     width: calc(33.33% - 10px);
-    margin-bottom: 20px; 
-    border: 1px solid #ddd; 
-    border-radius: 5px; 
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 10px;
 }
 
@@ -41,16 +35,45 @@
     margin-bottom: 5px;
 }
 
-
 .itemListContainer-sty .item-list .item .item-description {
     font-size: 14px;
     color: #777;
 }
 
-
 .itemListContainer-sty .item-list .item .item-price {
     font-size: 16px;
     font-weight: bold;
-    color: #007bff; 
+    color: #007bff;
 }
 
+.pagination-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.pagination-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.pagination-container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.pagination-top {
+    margin-bottom: 20px;
+}
+
+.pagination-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
