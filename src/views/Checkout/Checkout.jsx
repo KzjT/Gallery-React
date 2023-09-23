@@ -4,6 +4,7 @@ import "./Checkout.scss";
 import { ToastContainer } from "react-toastify";
 import emptyCart from "../../assets/carrito_vacio.webp";
 import "react-toastify/dist/ReactToastify.css";
+import Loading from "../../Components/Loading/Loading"
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { buildXZY, validateBuyerData } from "../../helpers/xzy";
 import { notifyErrorCheckout, notifySuccessCheckout } from "../../helpers/noti-toasty";
@@ -16,6 +17,8 @@ const Checkout = () => {
     const { items, formatter2, total, clear, removeItem } = useContext(CartContext);
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
     const [checkoutComplete, setCheckoutComplete] = useState(false);
+    const [processingOrder, setProcessingOrder] = useState(false);
+    const [orderCompleted, setOrderCompleted] = useState(false);
     const [orderCounter, setOrderCounter] = useState(
         parseInt(localStorage.getItem("orderCounter")) || 2000
     );
@@ -53,31 +56,46 @@ const Checkout = () => {
             total: total(),
         };
 
+        setProcessingOrder(true);
+
         addDoc(orderCollection, order)
             .then(({ id }) => {
                 if (id) {
+                    setOrderCompleted(true);
+                    clear();
                     notifySuccessCheckout(orderId);
                     setCheckoutComplete(true);
                     setPurchaseSuccess(true);
                     navigate(`/myOrder/${id}`);
-                    clear();
 
                 }
             })
             .catch((error) => {
                 console.error("Error adding document: ", error);
+            })
+            .finally(() => {
+                setProcessingOrder(false);
             });
     };
 
-    if (!items || items.length === 0) {
+    if (!items || items.length === 0  ) {
         return (
             <div className="checkout-container">
                 <img src={emptyCart} alt="Empty Cart" />
                 <div className="order-actions">
-                    <Button onClick={clear} className="btn btn-primary btn-order">
-                        Home
-                    </Button>
-                </div>
+                <Button onClick={() => { clear(); navigate('/'); }} className="btn btn-primary btn-order">
+                    Home
+                </Button>
+            </div>
+            </div>
+        );
+    }
+
+    if (processingOrder && orderCompleted ) {
+        return (
+            <div className="checkout-container footer-content">
+                <h2>Checkout</h2>
+                <Loading />
             </div>
         );
     }
@@ -87,49 +105,49 @@ const Checkout = () => {
             <h2>Checkout</h2>
 
             <table className="product-table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Product</th>
-          <th>Unit price</th>
-          <th>Quantity</th>
-          <th>Amount</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        {items.map((item) => (
-          <tr key={item.id}>
-            <td className="product-image-cell">
-              <img
-                src={item.img}
-                alt={item.name}
-                className="product-image"
-              />
-            </td>
-            <td>{item.name}</td>
-            <td>{formatter2.format(item.price)}</td>
-            <td>
-              <div className="btn-checkout">
-                {item.quantity}
-              </div>
-            </td>
-            <td>{formatter2.format(item.quantity * item.price)}</td>
-            <td>
-              <button
-                type="button"
-                className="remove-button btn btn-danger"
-                onClick={() => {
-                  removeItem(item.id);
-                }}
-              >
-                🗑
-              </button>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Product</th>
+                        <th>Unit price</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {items.map((item) => (
+                        <tr key={item.id}>
+                            <td className="product-image-cell">
+                                <img
+                                    src={item.img}
+                                    alt={item.name}
+                                    className="product-image"
+                                />
+                            </td>
+                            <td>{item.name}</td>
+                            <td>{formatter2.format(item.price)}</td>
+                            <td>
+                                <div className="btn-checkout">
+                                    {item.quantity}
+                                </div>
+                            </td>
+                            <td>{formatter2.format(item.quantity * item.price)}</td>
+                            <td>
+                                <button
+                                    type="button"
+                                    className="remove-button btn btn-danger"
+                                    onClick={() => {
+                                        removeItem(item.id);
+                                    }}
+                                >
+                                    🗑
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
 
             {!checkoutComplete && (
                 <div>
@@ -189,13 +207,15 @@ const Checkout = () => {
                             onClick={handleBuy}
                             variant="primary"
                             className="buy-button"
+                            disabled={processingOrder}
                         >
-                            Buy
+                            {processingOrder ? 'Processing...' : 'Buy'}
                         </Button>
                     </Form>
                 </div>
             )}
             <ToastContainer />
+
             {purchaseSuccess && (
                 <div>
                     <OrderDetails
