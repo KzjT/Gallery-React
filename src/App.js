@@ -9,7 +9,7 @@ import Error404 from './views/Error404/Error404';
 import Footer2 from './layout/Footer2/Footer2';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-//import Footer from './Components/Footer1/Footer'; 
+import Footer from './layout/Footer1/Footer'; 
 import Contact from './views/Contact/Contact';
 import { CartProvider } from './contexts/CartContext';
 import Checkout from './views/Checkout/Checkout';
@@ -36,7 +36,7 @@ function App() {
           <Route path="*" element={<Error404 />} />
         </Routes>
 
-        {/*<Footer/>*/}
+        <Footer/>
         <Footer2 />
 
       </BrowserRouter>

@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Nav, Image } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Footer.scss';
 import logo from '../../assets/art_logo.svg';
+import { scrollToTop } from '../../helpers/xzy';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config';
-
+import { NavLink } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
 export const Footer = () => {
     const [categories, setCategories] = useState([]);
+    const [email, setEmail] = useState('');
 
     useEffect(() => {
         const fetchCategories = async () => {
@@ -19,7 +21,7 @@ export const Footer = () => {
                     const data = doc.data();
                     uniqueCategories.add(data.category);
                 });
-                
+
                 const categoriesArray = Array.from(uniqueCategories);
                 setCategories(categoriesArray);
             } catch (error) {
@@ -29,49 +31,112 @@ export const Footer = () => {
         fetchCategories();
     }, []);
 
+    scrollToTop(window);
+
+    const clearEmail = () => {
+        setEmail('');
+    };
+
+    const handleSubscribeClick = () => {
+        toast.success('You have registered for our newsletter, stay tuned for our promotions!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+        clearEmail();
+    };
+
     return (
-        <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 footer1">
-            <div className="col mb-3"></div>
+        <footer className=" py-5">
+            <div className="row">
+                <div className="col-6 col-md-2 mb-3">
+                    <h5>Policies</h5>
+                    <ul className="nav flex-column">
 
-            <div className="col mb-3">
-                <h5 className="footer-item h5Footer">Categories</h5>
-                <ul className="nav flex-column">
-                    {categories.map((category) => (
-                        <Nav.Link
-                            className="nav-link footer-item"
-                            key={category}
-                            as={NavLink}
-                            to={`/category/${category}`}
-                        >
-                            {category}
-                        </Nav.Link>
-                    ))}
-                </ul>
-            </div>
+                        <li className="nav-item mb-2">
+                            <Link to="/Contact" onClick={scrollToTop} className="nav-link p-0 text-muted">
+                                FAQ
+                            </Link>
+                        </li>
+                        <li className="nav-item mb-2">
+                            <Link to="/Contact" onClick={scrollToTop} className="nav-link p-0 text-muted">
+                                shipments
+                            </Link>
+                        </li>
+                        <li className="nav-item mb-2">
+                            <Link to="/Contact" onClick={scrollToTop} className="nav-link p-0 text-muted">
+                                Return policy
+                            </Link>
+                        </li>
+                        <li className="nav-item mb-2">
+                            <Link to="/Contact" onClick={scrollToTop} className="nav-link p-0 text-muted">
+                                Terms and Conditions
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
 
-            <div className="col mb-3 logoFooter">
-                <a href="/" className="d-flex flex-column align-items-center mb-3 link-dark text-decoration-none">
-                    <Image src={logo} alt="ArtAtack Logo" className="logo" />
-                    <span>Art Gallery</span>
-                </a>
-            </div>
+                <div className="col-6 col-md-2 mb-3">
+                    <h5>Sections</h5>
+                    <ul className="nav flex-column">
+                        <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">Home</Link></li>
+                        <li className="nav-item mb-2"><Link to="/AboutUs" className="nav-link p-0 text-muted" onClick={scrollToTop}>About Us</Link></li>
+                        <li className="nav-item mb-2"><Link to="/Gallery" className="nav-link p-0 text-muted" onClick={scrollToTop}>Gallery</Link></li>
+                        <li className="nav-item mb-2"><Link to="/Contact" className="nav-link p-0 text-muted" onClick={scrollToTop}>Contact</Link></li>
+                        <li className="nav-item mb-2"><Link to="/Contact" className="nav-link p-0 text-muted" onClick={scrollToTop}>Help</Link></li>
+                    </ul>
+                </div>
 
-            <div className="col mb-3 section-footer1">
-                <h5 className="footer-item h5Footer">Sections</h5>
-                <ul className="nav flex-column">
-                    <Nav.Link as={NavLink} to="/" className="navbar-link nav-item footer-item">
-                        Home
-                    </Nav.Link>
-                    <Nav.Link as={NavLink} to="/AboutUs" className="navbar-link footer-item">
-                        About Us
-                    </Nav.Link>
-                    <Nav.Link as={NavLink} to="/Gallery" className="navbar-link footer-item">
-                        Gallery
-                    </Nav.Link>
-                    <Nav.Link as={NavLink} to="/Contact" className="navbar-link footer-item">
-                        Contact
-                    </Nav.Link>
-                </ul>
+                <div className="col-6 col-md-2 mb-3">
+                    <h5>Categories</h5>
+                    <ul className="nav flex-column">
+                        {categories.map((category) => (
+                            <li className="nav-item mb-2" key={category}>
+                                <Link
+                                    className="nav-link p-0 text-muted"
+                                    as={NavLink}
+                                    to={`/category/${category}`}
+                                >
+                                    {category}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div className="col-md-5 offset-md-1 mb-3">
+                    <img src={logo} alt="logo" />
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
+                            <input
+                                id="newsletter1"
+                                type="text"
+                                className="form-control"
+                                placeholder="Email address"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <button
+                                className="btn btn-primary"
+                                type="button"
+                                onClick={() => {
+                                    handleSubscribeClick();
+                                }}
+                            >
+                                Subscribe
+                            </button>
+                        </div>
+                        <ToastContainer />
+                    </form>
+                </div>
             </div>
         </footer>
     );

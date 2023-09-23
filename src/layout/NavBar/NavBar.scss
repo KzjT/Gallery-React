@@ -104,7 +104,7 @@
 
 
 .navbar-link .dropdown-menu {
-    background-color: #297ea6;
+    background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -116,7 +116,7 @@
 }
 
 .navbar-link .dropdown-item {
-    color: wheat;
+    color: black;
     padding: 10px 20px;
     font-size: 16px;
     transition: background-color 0.2s ease-in-out;
@@ -128,6 +128,6 @@
 }
 
 .navbar-link .dropdown-item:hover {
-    background-color: wheat;
+    background-color:#297ea6;
     color: black;
 }
