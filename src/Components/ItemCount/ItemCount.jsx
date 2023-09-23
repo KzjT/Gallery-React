@@ -48,7 +48,7 @@ const ItemCount = ({ onAdd, stock }) => {
             >
                 +
             </Button>
-            <Button onClick={handleAddToCart} className="btn btn-success addItemButton">
+            <Button onClick={handleAddToCart} className="btn btn-primary addItemButton">
                 Add to Cart
             </Button>
             <ToastContainer />

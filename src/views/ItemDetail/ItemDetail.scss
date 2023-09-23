@@ -88,10 +88,11 @@
     }
 }
 
-.btn-volver:hover {
-    background-color: black;
+.btn-volver {
+    background-color: black !important;
     color: white;
 }
+
 
 .detail-description {
     font-size: 18px;

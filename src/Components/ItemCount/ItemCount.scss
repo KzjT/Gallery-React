@@ -29,13 +29,10 @@
         border-radius: 5px;
         padding: 10px 20px;
         margin-left: 1rem;
-        background-color: burlywood !important;
+
         border: 0.2px black solid !important;
     }
 
-    .addItemButton:hover {
-        background-color: #5cb85c !important;
-    }
 }
 
 @media (max-width: 768px) {

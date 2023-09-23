@@ -4,6 +4,7 @@ import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { collection, getDocs, where, query } from "firebase/firestore"
 import { db } from '../../firebase/config';
+import { scrollToTop } from "../../helpers/xzy"
 
 export const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
@@ -37,12 +38,14 @@ export const ItemListContainer = () => {
     const goToPreviousPage = () => {
         if (currentPage > 0) {
             setCurrentPage(currentPage - 1);
+            scrollToTop(window);
         }
     };
 
     const goToNextPage = () => {
         if (endIndex < productos.length) {
             setCurrentPage(currentPage + 1);
+            scrollToTop(window);
         }
     };
 
