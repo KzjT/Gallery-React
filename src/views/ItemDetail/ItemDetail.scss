@@ -95,11 +95,15 @@
 
 
 .detail-description {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 10px;
     font-family: sans-serif;
     color: gray;
+    margin-bottom: 7rem;
     font-family: 'Cormorant Garamond', serif;
+    @media (max-width: 768px) {
+    margin-bottom: 50px;
+    }
 }
 
 
