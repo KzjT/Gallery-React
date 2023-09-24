@@ -17,7 +17,10 @@
 }
 
 .navbar-center {
-    @media (max-width: 768px) {
+    justify-content: center;
+    margin-right: 18rem !important;
+    @media (max-width: 1200px) {
+        margin-right:0 !important;
     }
 }
 
@@ -64,12 +67,15 @@
 
 .spanLogo {
     margin-left: 15px;
+    font-size: 48px ;
     @media (max-width: 768px) {
+        font-size: 0 !important;
+        display: none;
+    }
+    @media (max-width: 1200px) {
         width: 50px;
         height: 40px;
-        font-size: 0;
-        display: none;
-        
+        font-size: 20px !important;
     }
 }
 
@@ -83,9 +89,8 @@
 .logo-asd{
     color: burlywood !important;
     font-family: 'Croissant One', cursive;
-    font-size: 48px !important;
-}
 
+}
 .navbar-link .navLink.dropdown-toggle .navbar-link {
     color: black;
     font-size: 35px !important;
@@ -103,7 +108,7 @@
 
 
 .navbar-link .dropdown-menu {
-    background-color: black;
+    background-color: #212529;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -115,7 +120,7 @@
 }
 
 .dropdown-item.active{
-background-color: black !important;
+background-color: #212529 !important;
 }
 
 .dropdown-item.active:hover{

@@ -21,6 +21,10 @@
   color: white;
 }
 
+.btn-primary{
+  border: none;
+}
+
 .btn-primary:hover {
   background-color: rgb(49, 49, 49) !important;
   color: burlywood !important;
@@ -31,7 +35,7 @@
 .contact-info {
   background-color: #f8f9fa;
   padding: 30px;
-  border-left: 3px solid #007bff;
+  border-left: 3px solid burlywood;
   display: flex;
   flex-direction: column;
 }
@@ -48,6 +52,7 @@
 .map-section h3 {
   font-size: 24px;
   margin-bottom: 20px;
+  padding: 10px;
 }
 
 .map-container {
@@ -69,7 +74,6 @@
 @media (max-width: 768px) {
   .contact-info {
     border-left: none;
-    border-top: 3px solid #007bff;
     align-items: center;
     justify-content: center;
   }
