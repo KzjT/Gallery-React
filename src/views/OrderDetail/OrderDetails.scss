@@ -1,6 +1,5 @@
 .order-details {
   max-width: 90%;
-  min-height: calc(100vh - 120px);
   margin: 0 auto;
   padding: 20px;
   background-color: #f9f9f9;
@@ -15,16 +14,19 @@
 
 .order-info {
   margin-bottom: 30px; 
+  margin-top: 2rem;
 }
 
 .order-id {
   font-weight: bold;
   font-size: 20px; 
+  margin-top: 2rem;
 }
 
 .order-date {
   font-size: 16px; 
   color: #888;
+  margin-top: 2rem;
 }
 
 .orderTittle {
@@ -43,7 +45,8 @@
   padding: 15px; 
   background-color: #fff;
   border: 1px solid #ddd;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem; 
 }
 
 .product-info {
@@ -79,6 +82,7 @@
   border-top: 1px solid #ddd;
   padding-top: 15px; 
   text-align: center;
+  margin-top: 2rem; 
 }
 
 .total-order {
@@ -86,6 +90,7 @@
   font-weight: bold;
   margin-top: 3rem;
   color: #e74c3c;
+  gap: 1rem;
 }
 
 .btn-order {
@@ -97,7 +102,7 @@
   font-size: 24px; 
   font-weight: bold;
   color: #fff;
-  background-color: #3498db;
+  background-color: black;
   border: none;
   padding: 15px 25px; 
   cursor: pointer;
