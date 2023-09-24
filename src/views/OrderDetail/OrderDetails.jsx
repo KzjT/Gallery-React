@@ -12,6 +12,15 @@ const OrderDetails = () => {
     const formattedDateTime = `${currentDateTime.toLocaleDateString()}, ${currentDateTime.toLocaleTimeString()}`;
     const { id } = useParams();
 
+    const scrollToTop2 = () => {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }, 100);
+    };
+
     useEffect(() => {
         const db = getFirestore();
         const ordersCollection = collection(db, "orders");
@@ -70,7 +79,7 @@ const OrderDetails = () => {
                 </div>
             </div>
             <div className="order-actions">
-                <Link to="/" onClick={clear} className="btn btn-primary btn-order btn-home-Order">
+                <Link to="/" onClick={()=>{clear(); scrollToTop2();}} className="btn btn-primary btn-order btn-home-Order">
                     Home
                 </Link>
             </div>

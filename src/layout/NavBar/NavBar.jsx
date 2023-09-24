@@ -15,6 +15,16 @@ const NavBar = () => {
         setIsGalleryOpen(!isGalleryOpen); 
 };
 
+
+const scrollToTop2 = () => {
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }, 100);
+};
+
     useEffect(() => {
         const fetchCategories = async () => {
             try {
@@ -40,13 +50,13 @@ const NavBar = () => {
         <Navbar className="Navbar container-fluid navv" bg="dark" variant="dark">
             <Container fluid className="navbar-container">
                 <Navbar.Brand as={NavLink} to="/" className="mr-auto full-left logo-asd">
-                    <Image src={logo} alt="ArtAtack Logo" className="logo" /><span className="spanLogo">Art Gallery</span> 
+                    <Image src={logo} alt="ArtAtack Logo" onClick={scrollToTop2} className="logo" /><span className="spanLogo">Art Gallery</span> 
                 </Navbar.Brand>
                 <Nav className="navbar-center">
-                    <Nav.Link as={NavLink} to="/" className="navbar-link">
+                    <Nav.Link as={NavLink} to="/" onClick={scrollToTop2} className="navbar-link">
                         Home
                     </Nav.Link>
-                    <Nav.Link as={NavLink} to="/aboutUs" className="navbar-link">
+                    <Nav.Link as={NavLink} to="/aboutUs" onClick={scrollToTop2} className="navbar-link">
                         About Us
                     </Nav.Link>
 
@@ -62,12 +72,12 @@ const NavBar = () => {
                         </NavDropdown.Item>
 
                         {categories.map((category) => (
-                            <NavDropdown.Item  key={category} as={NavLink} to={`/category/${category}`} className="navbar-link">
+                            <NavDropdown.Item  key={category} as={NavLink} to={`/category/${category}`} onClick={scrollToTop2} className="navbar-link">
                                 {category}
                             </NavDropdown.Item>
                         ))}
                     </NavDropdown>
-                    <Nav.Link as={NavLink} to="/Contact" className="navbar-link">
+                    <Nav.Link as={NavLink} to="/Contact" onClick={scrollToTop2} className="navbar-link">
                         Contact
                     </Nav.Link>
                 </Nav>

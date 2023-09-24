@@ -29,6 +29,7 @@ const Checkout = () => {
     });
     const db = getFirestore();
     const orderCollection = collection(db, "orders");
+    const navigate = useNavigate();
 
 
     const handleInputChange = (ev) => {
@@ -37,7 +38,15 @@ const Checkout = () => {
             [ev.target.name]: ev.target.value,
         }));
     };
-    const navigate = useNavigate();
+
+    const scrollToTop2 = () => {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }, 100);
+    }
 
     const handleBuy = () => {
         if (!validateBuyerData(buyerData, items)) {
@@ -56,6 +65,7 @@ const Checkout = () => {
         };
 
         setProcessingOrder(true);
+
 
         addDoc(orderCollection, order)
             .then(({ id }) => {
@@ -202,7 +212,8 @@ const Checkout = () => {
                         </Form.Group>
                         <Button
                             type="button"
-                            onClick={handleBuy}
+                            onClick={() => {
+                                handleBuy();scrollToTop2()}}
                             variant="primary"
                             className="buy-button"
                             disabled={processingOrder}

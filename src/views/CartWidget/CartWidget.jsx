@@ -25,6 +25,16 @@ export const CartWidget = () => {
     }
   }, [cartLoaded, setItems]);
 
+  const scrollToTop2 = () => {
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }, 100);
+};
+
+
   const handleToggleModal = () => {
     setShowModal(!showModal);
   };
@@ -119,7 +129,7 @@ export const CartWidget = () => {
               </ul>
               <div className="total">
                 Total: {formatter2.format(total())}
-                <Link to="/checkout" className="go-pay-button btn btn-success">
+                <Link to="/checkout" onClick={scrollToTop2} className="go-pay-button btn btn-success">
                   Go Pay
                 </Link>
               </div>

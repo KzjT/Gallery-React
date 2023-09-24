@@ -24,6 +24,15 @@ export const ItemDetail = ({ producto }) => {
     }
   };
 
+  const scrollToTop2 = () => {
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }, 100);
+}
+
   useEffect(() => {
     setAddedToCart(false);
   }, [producto]);
@@ -54,7 +63,7 @@ export const ItemDetail = ({ producto }) => {
       </div>
       <hr />
       <p className="detail-description" >{producto.description}</p>
-      <Link className="btn btn-primary btn-volver" onClick={handleVolver}>Back</Link>
+      <Link className="btn btn-primary btn-volver" onClick={()=>{handleVolver();scrollToTop2();}}>Back</Link>
     </div>
   );
 }

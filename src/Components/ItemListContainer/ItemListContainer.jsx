@@ -34,7 +34,7 @@ export const ItemListContainer = () => {
                 console.error("Error fetching data:", error);
             });
     }, [categoryId]);
-
+    
     const goToPreviousPage = () => {
         if (currentPage > 0) {
             setCurrentPage(currentPage - 1);

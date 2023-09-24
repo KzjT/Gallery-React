@@ -37,6 +37,16 @@ export const Footer = () => {
         setEmail('');
     };
 
+
+    const scrollToTop2 = () => {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }, 100);
+    };
+
     const handleSubscribeClick = () => {
         toast.success('You have registered for our newsletter, stay tuned for our promotions!', {
             position: "top-right",
@@ -59,22 +69,22 @@ export const Footer = () => {
                     <ul className="nav flex-column">
 
                         <li className="nav-item mb-2">
-                            <Link to="/Contact" onClick={scrollToTop} className="nav-link p-0 text-muted">
+                            <Link to="/Contact" onClick={scrollToTop2} className="nav-link p-0 text-muted">
                                 FAQ
                             </Link>
                         </li>
                         <li className="nav-item mb-2">
-                            <Link to="/Contact" onClick={scrollToTop} className="nav-link p-0 text-muted">
+                            <Link to="/Contact" onClick={scrollToTop2} className="nav-link p-0 text-muted">
                                 shipments
                             </Link>
                         </li>
                         <li className="nav-item mb-2">
-                            <Link to="/Contact" onClick={scrollToTop} className="nav-link p-0 text-muted">
+                            <Link to="/Contact" onClick={scrollToTop2} className="nav-link p-0 text-muted">
                                 Return policy
                             </Link>
                         </li>
                         <li className="nav-item mb-2">
-                            <Link to="/Contact" onClick={scrollToTop} className="nav-link p-0 text-muted">
+                            <Link to="/Contact" onClick={scrollToTop2} className="nav-link p-0 text-muted">
                                 Terms and Conditions
                             </Link>
                         </li>
@@ -84,11 +94,11 @@ export const Footer = () => {
                 <div className="col-6 col-md-2 mb-3">
                     <h5>Sections</h5>
                     <ul className="nav flex-column">
-                        <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">Home</Link></li>
-                        <li className="nav-item mb-2"><Link to="/AboutUs" className="nav-link p-0 text-muted" onClick={scrollToTop}>About Us</Link></li>
-                        <li className="nav-item mb-2"><Link to="/Gallery" className="nav-link p-0 text-muted" onClick={scrollToTop}>Gallery</Link></li>
-                        <li className="nav-item mb-2"><Link to="/Contact" className="nav-link p-0 text-muted" onClick={scrollToTop}>Contact</Link></li>
-                        <li className="nav-item mb-2"><Link to="/Contact" className="nav-link p-0 text-muted" onClick={scrollToTop}>Help</Link></li>
+                        <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted" onClick={scrollToTop2}>Home</Link></li>
+                        <li className="nav-item mb-2"><Link to="/AboutUs" className="nav-link p-0 text-muted" onClick={scrollToTop2}>About Us</Link></li>
+                        <li className="nav-item mb-2"><Link to="/Gallery" className="nav-link p-0 text-muted" onClick={scrollToTop2}>Gallery</Link></li>
+                        <li className="nav-item mb-2"><Link to="/Contact" className="nav-link p-0 text-muted" onClick={scrollToTop2}>Contact</Link></li>
+                        <li className="nav-item mb-2"><Link to="/Contact" className="nav-link p-0 text-muted" onClick={scrollToTop2}>Help</Link></li>
                     </ul>
                 </div>
 
@@ -98,6 +108,7 @@ export const Footer = () => {
                         {categories.map((category) => (
                             <li className="nav-item mb-2" key={category}>
                                 <Link
+                                    onClick={scrollToTop2}
                                     className="nav-link p-0 text-muted"
                                     as={NavLink}
                                     to={`/category/${category}`}

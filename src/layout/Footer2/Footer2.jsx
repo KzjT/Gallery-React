@@ -3,31 +3,39 @@ import { Link } from "react-router-dom";
 import "./Footer2.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { scrollToTop } from "../../helpers/xzy"
 import { ModalFooter } from "react-bootstrap";
 export const Footer2 = () => {
 
-    scrollToTop(window);
+
+    const scrollToTop2 = () => {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }, 100);
+    };
+
     return (
         <ModalFooter className="footer2">
             <ul className="nav justify-content-center border-bottom pb-3 mb-3 ul-footer2">
                 <li className="nav-item footer-item">
-                    <Link to="/" onClick={scrollToTop} className="nav-link px-2 text-body-secondary">
+                    <Link to="/" onClick={scrollToTop2} className="nav-link px-2 text-body-secondary">
                         Home
                     </Link>
                 </li>
                 <li className="nav-item footer-item">
-                    <Link to="/AboutUs" onClick={scrollToTop} className="nav-link px-2 text-body-secondary">
+                    <Link to="/AboutUs" onClick={scrollToTop2} className="nav-link px-2 text-body-secondary">
                         About Us
                     </Link>
                 </li>
                 <li className="nav-item footer-item">
-                    <Link to="/Gallery" onClick={scrollToTop} className="nav-link px-2 text-body-secondary">
+                    <Link to="/Gallery" onClick={scrollToTop2} className="nav-link px-2 text-body-secondary">
                         Gallery
                     </Link>
                 </li>
                 <li className="nav-item footer-item">
-                    <Link to="/Contact" onClick={scrollToTop} className="nav-link px-2 text-body-secondary">
+                    <Link to="/Contact" onClick={scrollToTop2} className="nav-link px-2 text-body-secondary">
                         Contact
                     </Link>
                 </li>

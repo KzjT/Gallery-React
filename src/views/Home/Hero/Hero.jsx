@@ -2,6 +2,16 @@ import { Link } from "react-router-dom";
 import "./Hero.scss"
 
 export const Hero = () => {
+
+    const scrollToTop2 = () => {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }, 100);
+    }
+
     return (
         <header className="hero">
             <div className="hero-video-container">
@@ -11,7 +21,7 @@ export const Hero = () => {
                 <div className="hero-text">
                     <h1>Welcome to our Art Gallery</h1>
                     <p>Explore the world of creativity and discover amazing artworks.</p>
-                    <Link to="/gallery" className="btn btn-success btn-video">View Gallery</Link>
+                    <Link to="/gallery" onClick={scrollToTop2} className="btn btn-success btn-video">View Gallery</Link>
                 </div>
             </div>
         </header>
