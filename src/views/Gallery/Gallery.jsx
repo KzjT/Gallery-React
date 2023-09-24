@@ -5,9 +5,8 @@ import ItemListContainer from '../../Components/ItemListContainer/ItemListContai
 
 export const Gallery = ({ productos }) => {
     return (
-        <div className='container-fluid '>
+        <div className=''>
             <h1 className='h1-tittle'>Gallery</h1>
-            <hr />
             <ItemListContainer productos={productos} />
         </div>
     )

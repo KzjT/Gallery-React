@@ -47,7 +47,7 @@ const scrollToTop2 = () => {
     }, []);
     
     return (
-        <Navbar className="Navbar container-fluid navv" bg="dark" variant="dark">
+        <Navbar className="Navbar container-fluid navv1" bg="dark" variant="dark">
             <Container fluid className="navbar-container">
                 <Navbar.Brand as={NavLink} to="/" className="mr-auto full-left logo-asd">
                     <Image src={logo} alt="ArtAtack Logo" onClick={scrollToTop2} className="logo" /><span className="spanLogo">Art Gallery</span> 

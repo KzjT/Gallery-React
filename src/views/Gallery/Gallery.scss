@@ -1,17 +1,25 @@
-.galleryContainer{
+.galleryContainer {
     display: flex;
     flex-wrap: wrap;
 }
 
-.h1-tittle{
-    font-size: 36px;
+.h1-tittle {
+    font-size: 66px;
     font-weight: bold;
     text-align: center;
     color: burlywood;
-    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Archivo Black", sans-serif;
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    .h1-tittle {
+        font-size: 36px;
+        letter-spacing: 8px;
+    }
 }

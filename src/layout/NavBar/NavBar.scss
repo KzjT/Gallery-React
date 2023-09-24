@@ -1,6 +1,4 @@
-.navv {
-    background-image: url(../../assets/background.svg);
-    border: 3px black solid;
+.navv1 {
     box-sizing: border-box;
     position: sticky !important;
     top: 0;
@@ -10,10 +8,9 @@
     padding: 10px 0;
     font-size: 24px;
     height: 130px;
-
+    background-color: black;
 
     @media (max-width: 768px) {
-        border: 0.5px  #297ea6 solid ;
         font-size: 14px;
         height: 80px;
     }
@@ -85,10 +82,12 @@
 
 .logo-asd{
     color: burlywood !important;
+    font-family: 'Croissant One', cursive;
+    font-size: 48px !important;
 }
 
 .navbar-link .navLink.dropdown-toggle .navbar-link {
-    color: white;
+    color: black;
     font-size: 35px !important;
     font-weight: bold !important;;
     text-decoration: none;
@@ -104,7 +103,7 @@
 
 
 .navbar-link .dropdown-menu {
-    background-color: rgb(255, 255, 255);
+    background-color: black;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -115,8 +114,16 @@
     }
 }
 
-.navbar-link .dropdown-item {
+.dropdown-item.active{
+background-color: black !important;
+}
+
+.dropdown-item.active:hover{
+    background-color: white !important;
     color: black;
+    }
+.navbar-link .dropdown-item {
+    color: white;
     padding: 10px 20px;
     font-size: 16px;
     transition: background-color 0.2s ease-in-out;
@@ -128,19 +135,19 @@
 }
 
 .navbar-link .dropdown-item:hover {
-    background-color:#297ea6;
+    background-color:white;
     color: black;
 }
 
 //barra desplazamiento
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 22px;
     background-color: #000; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #333; 
+    background-color: #212529; 
     border-radius: 6px; 
 }
 
