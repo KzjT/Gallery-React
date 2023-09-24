@@ -4,9 +4,10 @@ import "./Contact.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer } from 'react-toastify';
-import {notifySuccesContact, notifyErrorInputsIncomplete,notifyServerErrorSending} from "../../helpers/noti-toasty"
+import { notifySuccesContact, notifyErrorInputsIncomplete, notifyServerErrorSending } from "../../helpers/noti-toasty"
 import 'react-toastify/dist/ReactToastify.css';
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { Link } from 'react-router-dom';
 
 export const Contact = () => {
     const db = getFirestore();
@@ -74,9 +75,22 @@ export const Contact = () => {
                         <div className="col-md-6 contact-info">
                             <div className="contact-info">
                                 <h3>Contact Information</h3>
-                                <p><i className="fas fa-map-marker-alt"> <FontAwesomeIcon icon={faMapMarkerAlt} /></i> Address: 75001 París, Francia</p>
-                                <p><i className="fas fa-phone-alt"><FontAwesomeIcon icon={faPhoneAlt} /></i> Phone: (+522) 456-7890</p>
-                                <p><i className="fas fa-envelope"><FontAwesomeIcon icon={faEnvelope} /></i> Email: ArtGallery@info.com</p>
+                                <Link target="_blank" rel="noopener noreferrer" to="https://www.google.com/maps?sca_esv=567928140&rlz=1C1UEAD_esAR1051AR1051&output=search&q=louvre+museum&source=lnms&entry=mc&sa=X&ved=2ahUKEwiL79mSpcKBAxVnJrkGHV6LCO0Q0pQJegQIEhAB" className='locationContact'>
+                                    <i className="fas fa-map-marker-alt"> <FontAwesomeIcon icon={faMapMarkerAlt} />
+                                    </i> Address: 75001 París, Francia
+                                </Link>
+
+                                <Link target="_blank" rel="noopener noreferrer" to="tel:+5224567890" className='phoneContact'>
+                                    <i className="fas fa-phone-alt">
+                                        <FontAwesomeIcon icon={faPhoneAlt} />
+                                    </i> Phone: (+522) 456-7890
+                                </Link>
+
+                                <Link target="_blank" rel="noopener noreferrer" to="mailto:ArtGallery@info.com" className='mailContact'>
+                                    <i className="fas fa-envelope">
+                                        <FontAwesomeIcon icon={faEnvelope} />
+                                    </i> Email: ArtGallery@info.com
+                                </Link>
                             </div>
                         </div>
                     </div>
